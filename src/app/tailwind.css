@@ -1541,7 +1541,7 @@ body[data-minimal='true'] .hero-title .accent {
     var(--font-manrope), -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
     'Noto Sans KR', sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.8;
   letter-spacing: normal;
   font-weight: 400;
   color: var(--ink-2);
@@ -3157,8 +3157,8 @@ html[lang='ko'] body {
   font-weight: 500; /* medium body weight, like planwedding */
 }
 html[lang='ko'] .post-article {
-  /* Ghost 정렬: 본문은 planwedding 타이트감 해제(자간 0·굵기 400), 줄간격 1.5 */
-  line-height: 1.5;
+  /* Ghost 정렬: 본문은 planwedding 타이트감 해제(자간 0·굵기 400), 줄간격 1.8 */
+  line-height: 1.8;
   letter-spacing: normal;
   font-weight: 400;
 }
