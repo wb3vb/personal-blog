@@ -1531,19 +1531,13 @@ body[data-minimal='true'] .hero-title .accent {
 .post-footer,
 .post-back,
 .post-series-nav {
-  max-width: 720px;
+  max-width: 760px;
   margin-right: auto;
   margin-left: auto;
 }
 .post-article {
-  /* Ghost 정렬: 본문 Manrope, 자간 0, 굵기 400 (크기 16px·줄간격 1.3은 사용자 지정 유지) */
-  font-family:
-    var(--font-manrope), -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
-    'Noto Sans KR', sans-serif;
   font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: normal;
-  font-weight: 400;
+  line-height: 1;
   color: var(--ink-2);
 }
 .post-article h1,
@@ -1552,8 +1546,6 @@ body[data-minimal='true'] .hero-title .accent {
 .post-article h4,
 .post-article h5,
 .post-article h6 {
-  /* Ghost 정렬: 제목 Lora(세리프) */
-  font-family: var(--font-lora), Georgia, serif;
   font-weight: 700;
   line-height: 1.3;
   letter-spacing: -0.02em;
@@ -1566,24 +1558,24 @@ body[data-minimal='true'] .hero-title .accent {
 .post-article h2 {
   margin: 44px 0 16px;
   padding-bottom: 6px;
-  font-size: 27px;
+  font-size: 26px;
 }
 .post-article h3 {
   margin: 32px 0 12px;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 600;
 }
 .post-article h4 {
   margin: 24px 0 10px;
-  font-size: 19px;
-  font-weight: 700;
+  font-size: 17px;
+  font-weight: 600;
 }
 .post-article p {
-  margin: 26px 0; /* Ghost 정렬: 넉넉한 문단 간격(≈27px) */
+  margin: 14px 0;
 }
 .post-article p strong,
 .post-article li strong {
-  font-weight: 700; /* Ghost 정렬 */
+  font-weight: 600;
   color: var(--ink);
 }
 .post-article :not(pre) > code {
@@ -1598,21 +1590,21 @@ body[data-minimal='true'] .hero-title .accent {
 }
 .post-article ul,
 .post-article ol {
-  margin: 14px 0;
-  padding-left: 28px; /* Ghost 정렬: 들여쓰기 28px */
+  margin: 14px 0 14px 22px;
 }
 .post-article li {
-  margin: 8px 0; /* Ghost 정렬: 항목 간격 8px */
+  margin: 6px 0;
 }
 .post-article blockquote {
-  /* Ghost 정렬: 좌측 4px 액센트 보더 + 본문폰트(Manrope), 배경·세리프·이탤릭·둥근모서리 없음 */
-  margin: 26px 0;
-  padding: 2px 0 2px 20px;
-  border-left: 4px solid var(--primary);
-  font-family: inherit;
-  font-size: 16px;
-  font-style: normal;
-  color: var(--ink-2);
+  margin: 24px 0;
+  padding: 14px 22px;
+  border-left: 3px solid var(--primary);
+  border-radius: 0 10px 10px 0;
+  background: color-mix(in oklab, var(--primary) 6%, var(--surface));
+  font-family: var(--font-serif), serif;
+  font-size: 17px;
+  font-style: italic;
+  color: var(--ink);
 }
 .post-article blockquote p {
   margin: 0;
@@ -1651,21 +1643,6 @@ body[data-minimal='true'] .hero-title .accent {
 .post-article img {
   border: 1px solid var(--border);
   border-radius: 10px;
-}
-/* Ghost 정렬: 이미지 단독 문단은 텍스트 컬럼(720)보다 넓게 브레이크아웃 */
-.post-article p:has(> .cursor-zoom-in:only-child) {
-  width: min(1040px, 92vw);
-  max-width: none;
-  margin-left: 50%;
-  transform: translateX(-50%);
-}
-.post-article p:has(> .cursor-zoom-in:only-child) .cursor-zoom-in {
-  display: block;
-  width: 100%;
-}
-.post-article p:has(> .cursor-zoom-in:only-child) img {
-  width: 100%;
-  height: auto;
 }
 
 /* Pre/code is kept from existing remark styles; we just ensure container fits */
@@ -3157,8 +3134,5 @@ html[lang='ko'] body {
   font-weight: 500; /* medium body weight, like planwedding */
 }
 html[lang='ko'] .post-article {
-  /* Ghost 정렬: 본문은 planwedding 타이트감 해제(자간 0·굵기 400), 줄간격 1.5 */
-  line-height: 1.5;
-  letter-spacing: normal;
-  font-weight: 400;
+  line-height: 1; /* 사용자 지정: KO·EN 공통 1.0 */
 }
