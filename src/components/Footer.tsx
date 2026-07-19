@@ -25,6 +25,11 @@ export default function Footer() {
             href={SiteConfig.author.contacts.twitter}
             size={6}
           />
+          <SocialIcon
+            kind="medium"
+            href={SiteConfig.author.contacts.medium}
+            size={6}
+          />
         </div>
         <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
           <div>{SiteConfig.author.name}</div>

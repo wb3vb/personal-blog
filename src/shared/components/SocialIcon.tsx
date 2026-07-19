@@ -3,6 +3,7 @@ import {
   GithubIcon,
   LinkedinIcon,
   MailIcon,
+  MediumIcon,
   TwitterIcon,
   YoutubeIcon,
 } from './icons/social'
@@ -16,6 +17,7 @@ type IconType =
   | 'youtube'
   | 'linkedin'
   | 'twitter'
+  | 'medium'
 
 const Components: Record<IconType, FC<{className: string}>> = {
   mail: MailIcon,
@@ -24,6 +26,7 @@ const Components: Record<IconType, FC<{className: string}>> = {
   youtube: YoutubeIcon,
   linkedin: LinkedinIcon,
   twitter: TwitterIcon,
+  medium: MediumIcon,
 }
 
 const sizeClasses: Record<number, string> = {

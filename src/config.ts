@@ -60,8 +60,10 @@ export const SiteConfig = {
       email: 'wb3vb.eth@gmail.com',
       facebook: '',
       telegram: '',
-      // TODO: 트위터/X 핸들 (없으면 빈 문자열)
-      twitter: '',
+      // X(구 트위터) 프로필 URL (없으면 빈 문자열)
+      twitter: 'https://x.com/web3vibe',
+      // Medium 프로필 URL (없으면 빈 문자열)
+      medium: 'https://medium.com/@wb3vb.eth',
       github: getContactHref('github', 'wb3vb'),
       rss: '',
       linkedin: '',
