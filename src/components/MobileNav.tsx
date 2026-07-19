@@ -1,0 +1,19 @@
+'use client'
+
+import {MobileNav as SharedMobileNav} from '@/shared/components'
+
+import {SiteConfig} from '@/config'
+import {useLocale} from '@/hooks/useLocale'
+
+export default function MobileNav() {
+  const {pathPrefix} = useLocale()
+  const menu = pathPrefix
+    ? SiteConfig.menu.map((link) =>
+        link.path === '/pages/1'
+          ? {...link, path: `${pathPrefix}/pages/1`}
+          : link,
+      )
+    : SiteConfig.menu
+
+  return <SharedMobileNav menu={menu} />
+}

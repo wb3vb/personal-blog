@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://personal-blog.vercel.app/sitemap.xml
+Sitemap: https://personal-blog.vercel.app/feed.xml
+
+# LLM-friendly resources
+# https://personal-blog.vercel.app/llms.txt
+# https://personal-blog.vercel.app/llms-full.txt
+# https://personal-blog.vercel.app/en/llms-full.txt

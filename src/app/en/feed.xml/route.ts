@@ -1,0 +1,54 @@
+import {NextResponse} from 'next/server'
+
+import {stripTitleEmphasis} from '@/shared/utils'
+
+import {SiteConfig} from '@/config'
+import {getAllPosts} from '@/utils/Post'
+
+export async function GET() {
+  const allPosts = await getAllPosts('en')
+  // 인자 없는 new Date()는 요청 시점 IO로 간주돼 라우트가 동적이 되고, 런타임에
+  // posts를 읽으려다 500이 난다. 최신 글 날짜(빌드 타임 고정값)를 쓴다.
+  const lastBuildDate = new Date(
+    allPosts[0]?.frontMatter.date ?? 0,
+  ).toUTCString()
+
+  const feedXml = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>${SiteConfig.title} (English)</title>
+    <link>${SiteConfig.url}/en</link>
+    <atom:link href="${SiteConfig.url}/en/feed.xml" rel="self" type="application/rss+xml" />
+    <description>${SiteConfig.subtitle}</description>
+    <language>en</language>
+    <lastBuildDate>${lastBuildDate}</lastBuildDate>
+    ${allPosts
+      .map((post) => {
+        const postDate = new Date(post.frontMatter.date)
+        const postUrl = `${SiteConfig.url}/en/${post.fields.slug}`
+        const postDescription =
+          post.frontMatter.description || post.body.substring(0, 150) + '...'
+
+        return `
+        <item>
+          <title><![CDATA[${stripTitleEmphasis(post.frontMatter.title)}]]></title>
+          <link>${postUrl}</link>
+          <guid>${postUrl}</guid>
+          <pubDate>${postDate.toUTCString()}</pubDate>
+          <description><![CDATA[${postDescription}]]></description>
+          ${post.frontMatter.tags
+            .map((tag) => `<category><![CDATA[${tag}]]></category>`)
+            .join('')}
+        </item>
+      `
+      })
+      .join('')}
+  </channel>
+</rss>`
+
+  return new NextResponse(feedXml, {
+    headers: {
+      'Content-Type': 'application/xml',
+    },
+  })
+}
