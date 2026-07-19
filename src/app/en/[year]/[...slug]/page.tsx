@@ -187,11 +187,18 @@ async function EnPostBody({year, slug}: {year: string; slug: string[]}) {
         </Link>
 
         <section className="post-masthead">
-          <div className="info">
-            <div className="post-eyebrow">◆ ESSAY</div>
+          <div className="post-eyebrow">◆ ESSAY</div>
+          <ViewTransition name={transitionName}>
+            <h1 className="post-title">
+              {titleParts.map((part, i) =>
+                part.emphasis ? <em key={i}>{part.text}</em> : part.text,
+              )}
+            </h1>
+          </ViewTransition>
+          <div className="post-meta-row">
             <div className="post-author">
               <ProfileImage
-                size={40}
+                size={36}
                 transitionName={`${transitionName}-avatar`}
               />
               <div>
@@ -201,18 +208,9 @@ async function EnPostBody({year, slug}: {year: string; slug: string[]}) {
                 </div>
               </div>
             </div>
-            {tags && (
-              <ViewTransition name={`${transitionName}-tags`}>
-                <div className="post-tags-row">
-                  {tags.slice(0, 5).map((tag) => (
-                    <Tag key={tag} text={tag} linked={false} />
-                  ))}
-                </div>
-              </ViewTransition>
-            )}
             <div className="post-stats">
               <div>
-                <b>{readingTime}</b>min read
+                <b>{readingTime}</b>min
               </div>
               <div>
                 <b>{postYear}</b>year
@@ -222,13 +220,15 @@ async function EnPostBody({year, slug}: {year: string; slug: string[]}) {
               </div>
             </div>
           </div>
-          <ViewTransition name={transitionName}>
-            <h1 className="post-title">
-              {titleParts.map((part, i) =>
-                part.emphasis ? <em key={i}>{part.text}</em> : part.text,
-              )}
-            </h1>
-          </ViewTransition>
+          {tags && (
+            <ViewTransition name={`${transitionName}-tags`}>
+              <div className="post-tags-row">
+                {tags.slice(0, 5).map((tag) => (
+                  <Tag key={tag} text={tag} linked={false} />
+                ))}
+              </div>
+            </ViewTransition>
+          )}
         </section>
 
         <PostArticle body={body} path={path} />
