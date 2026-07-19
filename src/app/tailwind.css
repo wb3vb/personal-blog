@@ -796,7 +796,7 @@ body[data-minimal='true'] .hero-title .accent {
   color: var(--ink-3);
 }
 .sec-head h2 {
-  font-size: clamp(28px, 4vw, 48px);
+  font-size: 32px; /* 섹션헤더(Popular/Recent/Page N 등) 통일 크기 — was clamp(28px,4vw,48px) */
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -0.03em;
