@@ -2023,6 +2023,49 @@ body[data-minimal='true'] .hero-title .accent {
   line-height: 1.6;
   color: var(--ink-2);
 }
+/* ========= TAG BUBBLE MAP (/tags) ========= */
+.tag-bubbles-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0 60px;
+}
+.tag-bubbles {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  overflow: visible;
+}
+.tag-bubble {
+  cursor: pointer;
+}
+.tag-bubble circle {
+  fill: var(--primary);
+  stroke: transparent;
+  stroke-width: 3;
+  transition:
+    fill-opacity 180ms ease,
+    stroke 180ms ease,
+    filter 180ms ease;
+}
+.tag-bubble text {
+  fill: #fff;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  pointer-events: none;
+}
+.tag-bubble:hover circle,
+.tag-bubble:focus-visible circle {
+  fill-opacity: 1;
+  stroke: color-mix(in oklab, var(--primary) 30%, #fff);
+  filter: drop-shadow(
+    0 6px 20px color-mix(in oklab, var(--primary) 55%, transparent)
+  );
+}
+.tag-bubble:focus-visible {
+  outline: none;
+}
+
 .tag-grid {
   display: flex;
   flex-wrap: wrap;
