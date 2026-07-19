@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'v2'
+const CACHE_VERSION = 'v3'
 const STATIC_CACHE = `static-${CACHE_VERSION}`
 const PAGES_CACHE = `pages-${CACHE_VERSION}`
 const IMAGES_CACHE = `images-${CACHE_VERSION}`
