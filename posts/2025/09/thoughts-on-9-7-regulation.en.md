@@ -50,7 +50,7 @@ The core of these measures is, without question, "1.35 million units supplied in
 
 These measures fail to answer all three of these key questions.
 
-****① The Problem of Location****
+**① The Problem of Location**
 
 What people outside Seoul, on the outskirts of Gyeonggi Province, want is not a mere "house" but **"a house in a place where they want to live."** Yet most of this supply plan sits not in central Seoul, where the demand actually is, but on public land-development sites on the outskirts of Gyeonggi Province. Concentrating supply in areas that lack job-housing proximity, school districts, and infrastructure fails to disperse Seoul's housing demand and only heightens the risk of unsold units. Supply cannot automatically become demand.
 

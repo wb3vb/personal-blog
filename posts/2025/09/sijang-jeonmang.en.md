@@ -8,7 +8,7 @@ date: 2025-09-21 12:02:20
 description: "Korean housing prices are determined by the product of the structural trend of the 'lump-sum deposit lease' and the multiple, the market's valuation yardstick that is the 'interest rate.'"
 ---
 
-****Korean housing prices are determined by the product of the structural trend of the "lump-sum deposit lease" and the multiple, the market's valuation yardstick that is the "interest rate."****
+**Korean housing prices are determined by the product of the structural trend of the "lump-sum deposit lease" and the multiple, the market's valuation yardstick that is the "interest rate."**
 
 The market is now entering a phase of very large potential volatility and upward pressure, a historically rare one in which the intrinsic-value-boosting engine driven by supply scarcity and the multiple engine of expectations for interest-rate normalization can be ignited at the same time. This piece draws on the insights of Shin Seong-cheol.
 

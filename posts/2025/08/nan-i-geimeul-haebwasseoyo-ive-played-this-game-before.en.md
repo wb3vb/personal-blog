@@ -31,7 +31,7 @@ If I were to lay out the stages of investing on this uneven playing field we've 
 
 And I'll define the general elements for growing assets like this:
 
-**(\*)**Asset growth = 1) Capital power + 2) Investing power****
+**(\*) Asset growth = 1) Capital power + 2) Investing power**
 
 ## **1) Capital Power (Preparation)**
 

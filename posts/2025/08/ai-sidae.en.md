@@ -1,5 +1,5 @@
 ---
-title: 'The Age of AI (AI Era)'
+title: 'The Age of AI'
 category: ai
 tags:
   - ai

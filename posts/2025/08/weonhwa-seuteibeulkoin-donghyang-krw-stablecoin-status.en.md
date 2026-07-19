@@ -1,5 +1,5 @@
 ---
-title: 'KRW Stablecoin Trends (KRW-Stablecoin Status)'
+title: 'KRW Stablecoin Trends'
 category: crypto
 tags:
   - stablecoin

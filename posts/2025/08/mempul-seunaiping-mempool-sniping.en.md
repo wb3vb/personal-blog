@@ -14,10 +14,10 @@ description: 'You have probably had it happen: you clearly buy an Ordinal on Mag
 - The Ordinal seller partially signs an off-chain PSBT that essentially says, **"If you send N BTC to my address, I'll swap it for the Ordinal."**
 - A marketplace like Magic Eden holds and protects the seller's off-chain PSBT until the buyer signs the other half.
 - The buyer sends an Ordinal ↔ BTC swap transaction that transfers that amount of BTC.
-- That transaction is broadcast to the Bitcoin network.​
+- That transaction is broadcast to the Bitcoin network.
 - The moment the buyer hits "send" in their Bitcoin wallet, the broadcast transaction lands in a place where transactions gather, called the **"mempool."**
 - The mempool is where all the transactions that have been sent but aren't yet confirmed in a block float around.
-- So your wallet shows an unconfirmed transaction like this, still sitting in the mempool, as "pending."​
+- So your wallet shows an unconfirmed transaction like this, still sitting in the mempool, as "pending."
 
 ![](d72b98-0-MNjIVIInkWzbg-VL.png)
 
@@ -27,11 +27,11 @@ description: 'You have probably had it happen: you clearly buy an Ordinal on Mag
 - So there's a good chance the transaction will keep floating around in the mempool for anywhere up to 10 minutes.
 - And it's during these 10 minutes that the **"snipers"** start scrambling to seize the opportunity.
 - The word "sniper" comes from the military, where it refers to a "marksman first class" (specifically the sharpshooter among them, a highly trained long-range shooting specialist),
-- and, true to the nickname, snipers watch the transactions in the mempool, identify transactions that can turn a quick profit, and get ready to snipe them.​
+- and, true to the nickname, snipers watch the transactions in the mempool, identify transactions that can turn a quick profit, and get ready to snipe them.
 - While a transaction sits in the mempool, anyone can grab the **PSBT**, sign it themselves, and resubmit their own updated transaction.
 - If they spot an attractive transaction, the sniper fires off (broadcasts) a competing transaction carrying a higher fee.
 - This makes use of the Bitcoin network's **"RBF (Replace-By-Fee)"** feature.
-- Normally this feature swaps out an unconfirmed transaction for one with a higher fee, so it confirms quickly.​
+- Normally this feature swaps out an unconfirmed transaction for one with a higher fee, so it confirms quickly.
 - Before Ordinals came along, this was just about bumping the fee to make a transaction faster, so there was nothing wrong with it at all.
 - The problem showed up in the way the Magic Eden secondary market handles the "buy" of an Ordinal.
 - This is because the UTXO signature of the Ordinal seller's transaction is signed with **"ANYONECANPAY (anyone can pay)."**
@@ -41,13 +41,13 @@ Bottom line: anyone reading this can become a sniper, as long as they meet the r
 
 ![](d72b98-0-5YPi_u6AaqpQTwGY.png)
 
-​**The targets snipers go after are clear.**
+**The targets snipers go after are clear.**
 
 1\) Cases where they want to snatch away a transaction that someone fat-fingered and flip it
 
 2\) Cases where they want to snatch away a transaction whose price surges after the initial mint and the start of secondary trading
 
-​
+
 
 - What struck me is that it's roughly a Bitcoin version of MEV (Maximal Extracted Value).
 - *(\*Not the same concept as arbitrarily changing the order of transactions)*
@@ -59,7 +59,7 @@ Bottom line: anyone reading this can become a sniper, as long as they meet the r
 
 \- The upshot is that even pressing the buy button gives no guarantee I'll receive it
 
-​
+
 
 **So is there really no way to prevent sniping in the mempool in the first place?**
 

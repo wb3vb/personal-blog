@@ -1,5 +1,5 @@
 ---
-title: 'Bitter Words (Harsh Criticism)'
+title: 'Bitter Words'
 category: investing
 tags:
   - thoughts
