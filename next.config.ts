@@ -107,14 +107,134 @@ const config: NextConfig = {
         permanent: true,
       },
       {
-        source: '/generate-screenshot',
-        destination: '/2020/12/generate-serverless-thumbnail',
-        permanent: true,
-      },
-      {
         source: '/',
         has: [{type: 'query', key: 'page', value: '(?<no>\\d+)'}],
         destination: '/pages/:no',
+        permanent: true,
+      },
+      // --- Ghost (wb3vb.io) legacy post URLs -> date-based URLs ---
+      {
+        source: '/1-naneun-wae-ideoriumeul-maesuhaneunga-the-possibility-of-deflation',
+        destination:
+          '/2025/08/1-naneun-wae-ideoriumeul-maesuhaneunga-the-possibility-of-deflation',
+        permanent: true,
+      },
+      {
+        source:
+          '/2-naneun-wae-ideoriumeul-maesuhaneunga-seuteiking-doen-ideoriumeun-eonje-pulrilgga',
+        destination:
+          '/2025/08/2-naneun-wae-ideoriumeul-maesuhaneunga-seuteiking-doen-ideoriumeun-eonje-pulrilgga',
+        permanent: true,
+      },
+      {
+        source:
+          '/3-ideorium-syading-sharding-yi-seonggong-yeonghyanggwa-ihu-l1-l2-ceinyi-heureume-daehan-saenggag',
+        destination:
+          '/2025/08/3-ideorium-syading-sharding-yi-seonggong-yeonghyanggwa-ihu-l1-l2-ceinyi-heureume-daehan-saenggag',
+        permanent: true,
+      },
+      {
+        source:
+          '/4-ideorium-poseuteumeoji-post-merge-dipeulreisyeon-idaero-gwaencanheun-geolgga',
+        destination:
+          '/2025/08/4-ideorium-poseuteumeoji-post-merge-dipeulreisyeon-idaero-gwaencanheun-geolgga',
+        permanent: true,
+      },
+      {
+        source: '/ai-sidae',
+        destination: '/2025/08/ai-sidae',
+        permanent: true,
+      },
+      {
+        source: '/biteukoingwa-eosaeghaeyo-sirijeu-2-biteukoin-gaebal-topabogi',
+        destination:
+          '/2025/08/biteukoingwa-eosaeghaeyo-sirijeu-2-biteukoin-gaebal-topabogi',
+        permanent: true,
+      },
+      {
+        source: '/coegeun-saenggagdeul-recent-thoughts',
+        destination: '/2025/08/coegeun-saenggagdeul-recent-thoughts',
+        permanent: true,
+      },
+      {
+        source: '/eoseowa-s-s-s-shared-sequencer-suave-neun-ceoeumiji',
+        destination: '/2025/08/eoseowa-s-s-s-shared-sequencer-suave-neun-ceoeumiji',
+        permanent: true,
+      },
+      {
+        source: '/fred-haedogbeob',
+        destination: '/2025/08/fred-haedogbeob',
+        permanent: true,
+      },
+      {
+        source: '/how-to-study-economy',
+        destination: '/2025/09/how-to-study-economy',
+        permanent: true,
+      },
+      {
+        source: '/hwagryuljeog-sago-probabilistic-thinking',
+        destination: '/2025/08/hwagryuljeog-sago-probabilistic-thinking',
+        permanent: true,
+      },
+      {
+        source:
+          '/kbw2022-bitalrig-gangyeon-post-merge-next-step-for-ethereum-full-ver-beonyeogbon',
+        destination:
+          '/2025/08/kbw2022-bitalrig-gangyeon-post-merge-next-step-for-ethereum-full-ver-beonyeogbon',
+        permanent: true,
+      },
+      {
+        source: '/keuribto-tuja-peureimweokeu-crypto-investment-thesis',
+        destination: '/2025/08/keuribto-tuja-peureimweokeu-crypto-investment-thesis',
+        permanent: true,
+      },
+      {
+        source: '/krw-stablecoin-structure',
+        destination: '/2025/09/krw-stablecoin-structure',
+        permanent: true,
+      },
+      {
+        source: '/mempul-seunaiping-mempool-sniping',
+        destination: '/2025/08/mempul-seunaiping-mempool-sniping',
+        permanent: true,
+      },
+      {
+        source:
+          '/mev-series-3-censorship-resistance-solutions-builder-centralization',
+        destination:
+          '/2025/08/mev-series-3-censorship-resistance-solutions-builder-centralization',
+        permanent: true,
+      },
+      {
+        source: '/nan-i-geimeul-haebwasseoyo-ive-played-this-game-before',
+        destination: '/2025/08/nan-i-geimeul-haebwasseoyo-ive-played-this-game-before',
+        permanent: true,
+      },
+      {
+        source:
+          '/seuteuraipeuwa-seokeulyi-l1-beulrogcein-culsi-geodae-cein-jeonjaengyi-seomag',
+        destination:
+          '/2025/08/seuteuraipeuwa-seokeulyi-l1-beulrogcein-culsi-geodae-cein-jeonjaengyi-seomag',
+        permanent: true,
+      },
+      {
+        source: '/sijang-jeonmang',
+        destination: '/2025/09/sijang-jeonmang',
+        permanent: true,
+      },
+      {
+        source: '/sseunsori-harsh-criticism',
+        destination: '/2025/08/sseunsori-harsh-criticism',
+        permanent: true,
+      },
+      {
+        source: '/thoughts-on-9-7-regulation',
+        destination: '/2025/09/thoughts-on-9-7-regulation',
+        permanent: true,
+      },
+      {
+        source: '/weonhwa-seuteibeulkoin-donghyang-krw-stablecoin-status',
+        destination: '/2025/08/weonhwa-seuteibeulkoin-donghyang-krw-stablecoin-status',
         permanent: true,
       },
       {
