@@ -14,15 +14,16 @@
 | 항목 | KO (`html[lang='ko']`) | EN (`html[lang='en']`) |
 |---|---|---|
 | 한글 글꼴 | Apple SD Gothic Neo → Noto Sans KR (시스템) | (동일, 단 한글 거의 없음) |
-| 라틴/숫자 글꼴 | Inter (웹폰트) | Inter (웹폰트) |
+| 라틴/숫자 글꼴 | UI·목록 **Inter**, **글 본문 Manrope** | (동일) |
 | 본문 크기 | 16px | 16px |
 | 본문 굵기 | **500 (medium)** | 400 (regular) |
 | 본문 자간 | **−0.02em (≈ −0.32px@16px)** | normal |
-| 본문 줄간격(`.post-article`) | **1.7 (27.2px)** | 1.8 (28.8px) |
-| 참조 | planwedding.io/guide 스타일 계승 | 원본(yceffort) 스타일 유지 |
+| 본문 줄간격(`.post-article`) | **1.4 (22.4px)** | **1.4 (22.4px)** |
+| 글 읽기 컬럼 | **720px** | **720px** |
+| 참조 | planwedding.io/guide 계승 + 글 본문 일부 Ghost(wb3vb.io) | 원본(yceffort) 기반 |
 
-측정 검증값(2026-07): KO body `letter-spacing: -0.32px`, `font-weight: 500`; KO `.post-article` `line-height: 27.2px`.
-EN은 `letter-spacing: normal`, `font-weight: 400`, `.post-article line-height: 28.8px`로 영향 없음.
+측정 검증값(2026-07): KO body `letter-spacing: -0.32px`, `font-weight: 500`; `.post-article`는 KO·EN 공통
+`font-family: Manrope`, `line-height: 22.4px(=1.4)`, 읽기 컬럼 `720px`. (자간·굵기는 KO planwedding 유지)
 
 ---
 
@@ -44,7 +45,8 @@ EN은 `letter-spacing: normal`, `font-weight: 400`, `.post-article line-height: 
 
 | 변수 | 글꼴 | 용도 |
 |---|---|---|
-| `--font-sans` | **Inter** | 본문·UI 전반(라틴/숫자). 기본 sans |
+| `--font-sans` | **Inter** | UI·홈·목록 전반(라틴/숫자). 기본 sans |
+| `--font-manrope` | **Manrope** | **글 본문(`.post-article`) 라틴** (한글은 시스템 대체) |
 | `--font-mono` | **JetBrains Mono** | 코드, 메타 라벨(MIN/YEAR 등), 태그 |
 | `--font-serif` | **Fraunces** | 세리프 강조가 필요한 특수 요소 |
 
@@ -104,9 +106,13 @@ html[lang='ko'] body {
   font-weight: 500; /* medium body weight, like planwedding */
 }
 html[lang='ko'] .post-article {
-  line-height: 1.7; /* tighter than default 1.8, still readable for long-form */
+  line-height: 1.4; /* 사용자 지정: KO·EN 공통 1.4 */
 }
 ```
+
+> ⚠️ **글 본문(`.post-article`)은 일부 Ghost(wb3vb.io) 값을 얹었다** — 라틴 폰트 `Manrope`,
+> 줄간격 `1.4`, 읽기 컬럼 `720px`. 단 **자간(−0.02em)·굵기(500)는 planwedding 그대로 유지**한다.
+> 제목·리스트·인용 등은 기존(Inter 산세리프) 그대로. 아래 4.2 표의 줄간격 이력은 참고용이며 현재값은 **1.4**.
 
 - `letter-spacing`는 `html[lang='ko']`에 걸어 KO 전체(제목·본문·네비 등)로 상속시킨다. 자기 자간을 명시한
   요소(제목류)는 각자 값을 유지한다.
@@ -136,7 +142,7 @@ html[lang='ko'] .post-article {
 | 요소 | selector | size | weight | line-height | letter-spacing |
 |---|---|---|---|---|---|
 | 히어로 타이틀 | `.hero-title` | `clamp(44px, 9vw, 132px)` | 900 | 0.88 | −0.045em |
-| 포스트 본문 | `.post-article` | 16px | 400 (KO 500) | 1.8 (KO 1.7) | (KO −0.02em) |
+| 포스트 본문 | `.post-article` (Manrope) | 16px | 400 (KO 500) | **1.4** | (KO −0.02em) |
 | 본문 H1 | `.post-article h1` | 32px | 700 | 1.3 | −0.02em |
 | 본문 H2 | `.post-article h2` | 26px | 700 | 1.3 | −0.02em |
 | 본문 H3 | `.post-article h3` | 20px | 600 | 1.3 | −0.02em |
@@ -217,6 +223,11 @@ computed style 재측정(자간/굵기/줄간격).
 
 ## 10. 결정 로그 (Decisions log)
 
+- **2026-07 — 글 본문에 Ghost 값 일부만 채택(720/1.4/Manrope).** Ghost 전면 정렬을 적용했다가
+  전부 되돌린 뒤(제목 세리프·인용·이미지 브레이크아웃 등 폐기), 사용자가 **읽기 컬럼 720px·줄간격 1.4·본문
+  폰트 Manrope** 세 가지만 재적용 요청. `.post-article` 폰트=Manrope, 줄간격=1.4(KO override 포함),
+  공유 읽기 컬럼 760→720px. **자간·굵기(KO planwedding)와 제목(Inter 산세리프)은 유지.** 줄간격은
+  1.7→1.3→1.0→1.3→1.5→1.8을 오간 뒤 **1.4로 확정**.
 - **2026-07 — KO에 planwedding 한글 스타일 적용.** 사용자가 `planwedding.io/guide`의 한글 폰트 스타일
   (타이트 자간·미디엄 굵기)을 국문판에 이식 요청. `html[lang='ko']` 스코프로 자간 `−0.02em`, 본문 굵기 `500`,
   본문 줄간격 `1.7` 적용. EN은 원본 유지. 줄간격은 planwedding의 ~1.2 대신 장문 가독성을 위해 1.7로 절충(의도적 이탈).
