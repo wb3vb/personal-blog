@@ -1,5 +1,5 @@
 ---
-title: '확률적 사고 (Probabilistic Thinking)'
+title: '확률적 사고'
 category: investing
 tags:
   - investment

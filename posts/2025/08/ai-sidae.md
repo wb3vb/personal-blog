@@ -1,5 +1,5 @@
 ---
-title: 'AI 시대 (AI Era)'
+title: 'AI 시대'
 category: ai
 tags:
   - ai

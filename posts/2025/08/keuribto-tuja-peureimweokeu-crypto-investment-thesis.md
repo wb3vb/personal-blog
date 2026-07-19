@@ -1,5 +1,5 @@
 ---
-title: '크립토 투자 프레임워크(Crypto Investment Thesis)'
+title: '크립토 투자 프레임워크'
 category: investing
 tags:
   - investment

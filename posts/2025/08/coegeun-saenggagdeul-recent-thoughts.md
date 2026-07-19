@@ -1,5 +1,5 @@
 ---
-title: '최근 생각들(Recent Thoughts)'
+title: '최근 생각들'
 category: investing
 tags:
   - investment

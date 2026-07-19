@@ -1,5 +1,5 @@
 ---
-title: '쓴소리 (Harsh Criticism)'
+title: '쓴소리'
 category: investing
 tags:
   - thoughts

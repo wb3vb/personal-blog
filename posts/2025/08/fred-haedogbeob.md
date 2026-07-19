@@ -1,5 +1,5 @@
 ---
-title: 'FRED 해독법 (Decrypting FRED)'
+title: 'FRED 해독법'
 category: economy
 tags:
   - economy

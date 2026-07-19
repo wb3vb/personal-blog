@@ -1,5 +1,5 @@
 ---
-title: '“난 이 게임을 해봤어요!” (I''ve played this game before!)'
+title: '“난 이 게임을 해봤어요!”'
 category: investing
 tags:
   - investment

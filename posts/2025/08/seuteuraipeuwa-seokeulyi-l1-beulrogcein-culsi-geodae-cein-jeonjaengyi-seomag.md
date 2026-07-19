@@ -1,5 +1,5 @@
 ---
-title: '온체인 금융 패러다임 (The On-Chain Finance Paradigm)'
+title: '온체인 금융 패러다임'
 category: crypto
 tags:
   - stablecoin

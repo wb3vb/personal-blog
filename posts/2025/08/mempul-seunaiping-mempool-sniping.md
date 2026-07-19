@@ -1,5 +1,5 @@
 ---
-title: '멤풀 스나이핑(Mempool Sniping)'
+title: '멤풀 스나이핑'
 category: crypto
 tags:
   - bitcoin
