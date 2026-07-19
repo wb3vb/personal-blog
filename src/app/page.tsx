@@ -6,7 +6,7 @@ import type {Metadata} from 'next'
 
 import Hero from '@/components/HeroE'
 import PostCard from '@/components/PostCard'
-import RecentRow from '@/components/RecentRow'
+import RecentList from '@/components/RecentList'
 import {SiteConfig} from '@/config'
 import {buildOgImageUrl} from '@/utils/og'
 import {getAllPosts, getAllTagsFromPosts, getFeaturedPosts} from '@/utils/Post'
@@ -42,12 +42,16 @@ async function getCachedHomeData() {
 }
 
 async function getHomeData() {
-  const [{popular: posts, recent: recentPosts}, allPosts, tags] =
-    await Promise.all([
-      getFeaturedPosts('ko'),
-      getAllPosts('ko'),
-      getAllTagsFromPosts('ko'),
-    ])
+  const [{popular: posts}, allPosts, tags] = await Promise.all([
+    getFeaturedPosts('ko'),
+    getAllPosts('ko'),
+    getAllTagsFromPosts('ko'),
+  ])
+
+  // Recent = 인기글을 뺀 나머지 전체(날짜 내림차순). 홈에서는 10개만 노출하고
+  // '더보기'로 추가 로딩한다(RecentList).
+  const popularSlugs = new Set(posts.map((p) => p.fields.slug))
+  const recentPosts = allPosts.filter((p) => !popularSlugs.has(p.fields.slug))
 
   const postCount = allPosts.length
   const tagCount = tags.length
@@ -98,7 +102,7 @@ async function HomeContent() {
         <div className="line" />
         <div className="hint">hover · tilt · open</div>
       </div>
-      <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
         {posts.map((post) => (
           <PostCard key={post.fields.slug} post={post} />
         ))}
@@ -116,11 +120,7 @@ async function HomeContent() {
             <div className="line" />
             <div className="hint">latest writing</div>
           </div>
-          <section className="rec-list">
-            {recentPosts.map((post, i) => (
-              <RecentRow key={post.fields.slug} post={post} index={i} />
-            ))}
-          </section>
+          <RecentList posts={recentPosts} />
         </>
       )}
     </div>

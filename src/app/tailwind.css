@@ -1196,6 +1196,38 @@ body[data-minimal='true'] .hero-title .accent {
   }
 }
 
+/* Recent 섹션 '더보기' 버튼 */
+.rec-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+.rec-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 22px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink-2);
+  cursor: pointer;
+  transition: all 200ms;
+}
+.rec-more-btn:hover {
+  border-color: color-mix(in oklab, var(--primary) 50%, var(--border));
+  box-shadow: 0 8px 24px -16px color-mix(in oklab, var(--primary) 80%, transparent);
+  color: var(--ink);
+}
+.rec-more-count {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  color: var(--ink-3);
+}
+
 /* ========= PAGINATION ========= */
 .pagination {
   display: flex;

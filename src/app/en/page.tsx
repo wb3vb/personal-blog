@@ -6,7 +6,7 @@ import type {Metadata} from 'next'
 
 import Hero from '@/components/HeroE'
 import PostCard from '@/components/PostCard'
-import RecentRow from '@/components/RecentRow'
+import RecentList from '@/components/RecentList'
 import {SiteConfig} from '@/config'
 import {getAllPosts, getAllTagsFromPosts, getFeaturedPosts} from '@/utils/Post'
 
@@ -29,11 +29,15 @@ async function getCachedEnHomeData() {
 }
 
 async function getEnHomeData() {
-  const [{popular, recent}, allPosts, tags] = await Promise.all([
+  const [{popular}, allPosts, tags] = await Promise.all([
     getFeaturedPosts('en'),
     getAllPosts('en'),
     getAllTagsFromPosts('en'),
   ])
+
+  // Recent = popular 제외 나머지 전체(날짜 내림차순). 홈은 10개 노출 + 더보기(RecentList).
+  const popularSlugs = new Set(popular.map((p) => p.fields.slug))
+  const recent = allPosts.filter((p) => !popularSlugs.has(p.fields.slug))
 
   const postCount = allPosts.length
   const tagCount = tags.length
@@ -84,7 +88,7 @@ async function EnHomeContent() {
         <div className="line" />
         <div className="hint">hover · tilt · open</div>
       </div>
-      <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
         {popular.map((post) => (
           <PostCard key={post.fields.slug} post={post} pathPrefix="/en" />
         ))}
@@ -102,16 +106,7 @@ async function EnHomeContent() {
             <div className="line" />
             <div className="hint">latest writing</div>
           </div>
-          <section className="rec-list">
-            {recent.map((post, i) => (
-              <RecentRow
-                key={post.fields.slug}
-                post={post}
-                index={i}
-                pathPrefix="/en"
-              />
-            ))}
-          </section>
+          <RecentList posts={recent} pathPrefix="/en" />
         </>
       )}
     </div>
