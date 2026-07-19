@@ -1,6 +1,6 @@
 import './tailwind.css'
 
-import {Fraunces, Inter, JetBrains_Mono} from 'next/font/google'
+import {Fraunces, Inter, JetBrains_Mono, Lora, Manrope} from 'next/font/google'
 import Script from 'next/script'
 
 import {Analytics as VercelAnalytics} from '@vercel/analytics/react'
@@ -27,6 +27,20 @@ const fraunces = Fraunces({
   display: 'swap',
   variable: '--font-serif',
   style: ['italic', 'normal'],
+})
+
+// Ghost(wb3vb.io) 글쓰기 시스템 정렬: 본문 Manrope(산세리프) + 제목 Lora(세리프).
+// 한글 글리프는 없으므로 스택상 시스템 한글로 대체된다(Ghost와 동일).
+const manrope = Manrope({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-manrope',
+})
+
+const lora = Lora({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-lora',
 })
 
 import AmbientEffects from '@/components/AmbientEffects'
@@ -112,7 +126,7 @@ export default async function Layout({children}: {children: ReactNode}) {
         lang="ko"
         data-scroll-behavior="smooth"
         suppressHydrationWarning
-        className={`${inter.variable} ${jetbrainsMono.variable} ${fraunces.variable}`}
+        className={`${inter.variable} ${jetbrainsMono.variable} ${fraunces.variable} ${manrope.variable} ${lora.variable}`}
       >
         <head>
           <script

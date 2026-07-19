@@ -44,9 +44,11 @@ EN은 `letter-spacing: normal`, `font-weight: 400`, `.post-article line-height: 
 
 | 변수 | 글꼴 | 용도 |
 |---|---|---|
-| `--font-sans` | **Inter** | 본문·UI 전반(라틴/숫자). 기본 sans |
+| `--font-sans` | **Inter** | UI 전반·홈/목록 라틴. 기본 sans |
 | `--font-mono` | **JetBrains Mono** | 코드, 메타 라벨(MIN/YEAR 등), 태그 |
 | `--font-serif` | **Fraunces** | 세리프 강조가 필요한 특수 요소 |
+| `--font-manrope` | **Manrope** | **글 본문(.post-article) 라틴** — Ghost 정렬 |
+| `--font-lora` | **Lora** | **글 제목(.post-article h1~h6)** 세리프 — Ghost 정렬 |
 
 기본 스택 (`body`, `src/app/tailwind.css`):
 
@@ -128,6 +130,31 @@ html[lang='ko'] .post-article {
 1.7로 완화했다. 이 이탈은 의도된 결정이며 되돌리지 말 것(필요 시 §9에서 조정).
 
 ---
+
+## 4-B. 글 본문(`.post-article`) — Ghost(wb3vb.io) 시스템 정렬
+
+읽기 화면(포스트 본문)은 기존 Ghost 블로그(wb3vb.io)의 글쓰기 시스템에 맞춰 정렬한다.
+**이 스코프 안에서는 §4의 planwedding 국문 설정(타이트 자간·미디엄 굵기)을 해제**하고 Ghost 값을 쓴다.
+(홈·목록·네비 등 본문 밖은 여전히 §4 planwedding 유지.)
+
+| 항목 | 값 | 비고 |
+|---|---|---|
+| 본문 폰트 | `--font-manrope`(Manrope) + 시스템 한글 | 한글은 Manrope에 없어 시스템 대체(Ghost와 동일) |
+| 제목 폰트 | `--font-lora`(Lora) + `Georgia, serif` | 한글 제목은 시스템 세리프로 대체 |
+| 본문 크기 | **16px** | 사용자 지정 유지(Ghost 원본은 17px) |
+| 줄간격 | **1.3** | 사용자 지정 유지(Ghost 원본은 1.6) |
+| 자간 | **normal(0)** | planwedding −0.02em 해제 |
+| 본문 굵기 | **400** | planwedding 500 해제 |
+| 문단 간격 | **26px** | Ghost ≈27px |
+| 읽기 컬럼 | **720px** | `.post-masthead/.post-article/.post-footer/...` 공유 |
+| h2 / h3 / h4 | 27px / 24px / 19px, 전부 700, Lora | Ghost h2 27·h3 24 |
+| 리스트 | disc, 들여쓰기 28px, 항목 간격 8px | Ghost 동일 |
+| 인용문 | 좌측 4px 액센트 보더 + 본문폰트, 배경·세리프·둥근모서리 없음 | Ghost 스타일 |
+| 강조(strong) | 700 | Ghost 동일 |
+| **이미지 브레이크아웃** | 이미지 단독 문단은 **min(1040px, 92vw)**로 텍스트(720)보다 넓게 | `p:has(> .cursor-zoom-in:only-child)` |
+
+스코핑: `.post-article` 규칙 + `html[lang='ko'] .post-article`에서 planwedding 값을 덮어씀
+(자간 normal·굵기 400·줄간격 1.3). 폰트는 `layout.tsx`에서 `next/font/google`로 로드.
 
 ## 5. 타입 스케일 레퍼런스 (Type scale)
 
@@ -217,6 +244,11 @@ computed style 재측정(자간/굵기/줄간격).
 
 ## 10. 결정 로그 (Decisions log)
 
+- **2026-07 — 글 본문을 Ghost(wb3vb.io) 시스템으로 정렬(§4-B).** 사용자가 기존 Ghost 블로그와 본문
+  타이포를 비교 후 "본문 16px·줄간격 1.3만 유지, 나머지는 Ghost로 정렬" 요청. `.post-article` 스코프로
+  Manrope(본문)+Lora(제목 세리프), 자간 0·굵기 400, 문단 26px, 720px 컬럼, 리스트 28/8px, 인용 4px 보더,
+  이미지 브레이크아웃(1040px)을 적용. **본문 스코프 안에서는 planwedding(§4) 설정을 해제.** 크기·줄간격은
+  Ghost 원본(17px/1.6)이 아닌 사용자 지정(16px/1.3)을 유지.
 - **2026-07 — KO에 planwedding 한글 스타일 적용.** 사용자가 `planwedding.io/guide`의 한글 폰트 스타일
   (타이트 자간·미디엄 굵기)을 국문판에 이식 요청. `html[lang='ko']` 스코프로 자간 `−0.02em`, 본문 굵기 `500`,
   본문 줄간격 `1.7` 적용. EN은 원본 유지. 줄간격은 planwedding의 ~1.2 대신 장문 가독성을 위해 1.7로 절충(의도적 이탈).
