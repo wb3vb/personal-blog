@@ -898,10 +898,12 @@ body[data-minimal='true'] .hero-title .accent {
 .post-row-desc {
   overflow: hidden;
   display: -webkit-box;
+  /* 목록 높이를 일정하게: 항상 2줄 자리를 차지하고 넘치면 말줄임 */
+  min-height: 3.1em;
   font-size: 13px;
   line-height: 1.55;
   color: var(--ink-3);
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 .post-row-meta {
@@ -1028,6 +1030,8 @@ body[data-minimal='true'] .hero-title .accent {
 .post-card p.desc {
   overflow: hidden;
   display: -webkit-box;
+  /* 카드 높이를 일정하게: 항상 2줄 자리 확보 */
+  min-height: 3.1em;
   font-size: 13px;
   line-height: 1.55;
   color: var(--ink-3);

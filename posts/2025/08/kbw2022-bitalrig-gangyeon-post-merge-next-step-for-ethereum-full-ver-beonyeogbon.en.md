@@ -5,7 +5,7 @@ tags:
   - ethereum
 published: true
 date: 2025-08-11 13:13:23
-description: ''
+description: 'Vitalik Buterin covers Proof of Stake, rollup scaling, and the payments and non-financial apps cheap fees unlock. Typed from audio recorded at KBW 2022 and translated.'
 ---
 
 🔗 [\[KBW2022: Vitalik's Talk\] Post Merge: Next Step for Ethereum (full ver. translation)](https://medium.com/@wb3vb.eth/kbw2022-%EB%B9%84%ED%83%88%EB%A6%AD-%EA%B0%95%EC%97%B0-post-merge-next-step-for-ethereum-full-ver-%EB%B2%88%EC%97%AD%EB%B3%B8-ad76a7903910)

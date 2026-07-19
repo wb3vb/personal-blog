@@ -5,7 +5,7 @@ tags:
   - ethereum
 published: true
 date: 2025-08-11 13:12:14
-description: "Am I simply taking the information passed around about Ethereum deflation at face value? Taking this opportunity, in line with the blockchain motto #donttrustverify (don't trust, verify), let me share another perspective on deflation and check my own view on it."
+description: 'A 90% issuance cut after the Merge is read as deflation, but one counterargument says Ethereum turns into a store of value. I see burning as raising security.'
 ---
 
 **Am I simply taking the information passed around about Ethereum deflation at face value? Taking this opportunity, in line with the blockchain motto \#donttrustverify (don’t trust, verify), let me share another perspective on deflation and check my own view on it.**

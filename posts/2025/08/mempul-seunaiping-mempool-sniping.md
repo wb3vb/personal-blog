@@ -5,7 +5,7 @@ tags:
   - bitcoin
 published: true
 date: 2025-08-11 13:19:11
-description: '간혹 매직에덴(Magic Eden)에서 분명 오디널스를 구매했는데 들어오지 않은 경험을 해본 사람이 있을 것이다.'
+description: '매직에덴에서 산 오디널스가 안 들어오는 건 멤풀에 떠 있는 10분 사이 스나이퍼가 RBF로 거래를 가로채기 때문이다. 판매자 PSBT가 ANYONECANPAY로 서명돼 있어 막을 방법은 없다.'
 ---
 
 **간혹 매직에덴(Magic Eden)에서 분명 오디널스를 구매했는데 들어오지 않은 경험을 해본 사람이 있을 것이다.**

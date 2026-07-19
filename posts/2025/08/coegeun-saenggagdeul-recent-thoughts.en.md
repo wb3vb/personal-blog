@@ -5,7 +5,7 @@ tags:
   - investment
 published: true
 date: 2025-08-11 13:37:26
-description: '1) Stablecoin issuers (feat. CRCL): the limits of the structural revenue model'
+description: 'Stablecoin revenue rides on reserve interest, so it gets chopped once rates fall. SLR easing likely feeds buybacks, and I see an Aug-Oct correction then a year-end rally.'
 ---
 
 ## **1) Stablecoin Issuers**(feat. CRCL)**, the Limits of the Structural Revenue Model**

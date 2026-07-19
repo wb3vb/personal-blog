@@ -5,7 +5,7 @@ tags:
   - stablecoin
 published: true
 date: 2025-09-05 01:51:51
-description: '1. 개요'
+description: '초기 원화 스테이블코인은 유통·인프라·발행이 갈린 3자 분리 모델로 굳어질 것으로 본다. 거래는 오프체인 원장에서, 정산만 온체인에서 이뤄지며 Layer-1의 기회는 2단계 확장 체인에 있다.'
 ---
 
 # 1. 개요

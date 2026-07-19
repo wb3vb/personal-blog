@@ -5,7 +5,7 @@ tags:
   - ethereum
 published: true
 date: 2025-08-11 13:13:23
-description: ''
+description: '비탈릭 부테린이 지분증명 전환과 롤업 확장성, 그리고 수수료가 싸질 때 열릴 결제와 비금융 애플리케이션을 짚습니다. KBW 2022 현장 녹음을 직접 타이핑해 옮긴 번역본입니다.'
 ---
 
 🔗 [\[KBW2022: 비탈릭 강연\] Post Merge: Next Step for Ethereum (full ver. 번역본)](https://medium.com/@wb3vb.eth/kbw2022-%EB%B9%84%ED%83%88%EB%A6%AD-%EA%B0%95%EC%97%B0-post-merge-next-step-for-ethereum-full-ver-%EB%B2%88%EC%97%AD%EB%B3%B8-ad76a7903910)

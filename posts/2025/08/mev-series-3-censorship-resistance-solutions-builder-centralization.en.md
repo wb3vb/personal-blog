@@ -5,7 +5,7 @@ tags:
   - ethereum
 published: true
 date: 2025-08-11 13:14:20
-description: "We examine PBS (Proposer Builder Separation) and crLists (censorship resistant List), Ethereum's protocol-level roadmap for censorship resistance, and then briefly look at the Builder centralization that may follow and Flashbots' SUAVE."
+description: 'PBS and crList answer censorship at Ethereum''s protocol level. But they also hand Builders more power, and Flashbots proposes SUAVE against that centralization.'
 ---
 
 **We examine PBS (Proposer Builder Separation) and crLists (censorship resistant List), Ethereum's protocol-level roadmap for censorship resistance, and then briefly look at the Builder centralization that may follow and Flashbots' SUAVE.**

@@ -5,7 +5,7 @@ tags:
   - bitcoin
 published: true
 date: 2025-08-11 13:19:11
-description: 'You have probably had it happen: you clearly buy an Ordinal on Magic Eden, and then it just never arrives.'
+description: 'An Ordinal bought on Magic Eden may never arrive, sniped with RBF while the transaction sits in the mempool. The seller PSBT is signed ANYONECANPAY, so nothing stops it.'
 ---
 
 **You've probably had it happen: you clearly buy an Ordinal on Magic Eden, and then it just never arrives.**

@@ -5,7 +5,7 @@ tags:
   - ethereum
 published: true
 date: 2025-08-11 13:02:12
-description: "After the Ethereum 2.0 chain merge, the Merge, Ethereum's consensus algorithm shifts from Proof-of-Work (PoW) to Proof-of-Stake (PoS). Let's look into the resulting decrease in issuance and the possibility of deflation brought about by the passage of the EIP-1559 proposal."
+description: 'After the Merge, issuance to validators shrinks while the EIP-1559 burn is projected to exceed it. The case for buying is not a price call but which L1 has real revenue.'
 ---
 
 **After the Ethereum 2.0 chain merge, the Merge, Ethereum's consensus algorithm shifts from Proof-of-Work (PoW) to Proof-of-Stake (PoS). Let's look into the resulting decrease in issuance and the possibility of deflation brought about by the passage of the EIP-1559 proposal.**

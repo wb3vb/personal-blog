@@ -5,7 +5,7 @@ tags:
   - ai
 published: true
 date: 2025-08-13 13:19:58
-description: '(A short thought)'
+description: 'AI is getting better than us at writing, medicine, law, and the rest. What is left is becoming someone others want to be around, and saying clearly what you want.'
 ---
 
 (A short thought)

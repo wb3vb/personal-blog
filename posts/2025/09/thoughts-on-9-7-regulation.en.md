@@ -5,7 +5,7 @@ tags:
   - real estate
 published: true
 date: 2025-09-09 11:03:31
-description: '1. Overview'
+description: 'The September 7 measures are less a stabilization plan than a handover of supply to the public sector. Behind the unit count, the lease deposit dies and taxation waits.'
 ---
 
 # **1. Overview**

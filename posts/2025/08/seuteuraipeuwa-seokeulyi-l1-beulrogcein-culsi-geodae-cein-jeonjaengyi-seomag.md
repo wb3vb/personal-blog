@@ -5,7 +5,7 @@ tags:
   - stablecoin
 published: true
 date: 2025-08-18 06:44:47
-description: 'Circle Unveils Layer-1 Blockchain Arc, Reports $428 Million Q2 LossCircle’s Q2 financials showed $658 million in revenue, but a net loss of $482 million due to non-cash IPO-linked items.CoinDeskFrancisco Rodrigues'
+description: '스트라이프와 서클의 자체 L1 구축은 수수료 절감이 아니라 금융 원장 자체를 쥐려는 베팅이라고 본다. 수억 명을 온체인으로 끌어올 기회이자, 담장 친 정원이 Web3에서 재현될 위협이기도 하다.'
 ---
 
 🔗 [Circle Unveils Layer-1 Blockchain Arc, Reports \$428 Million Q2 Loss](https://www.coindesk.com/business/2025/08/12/circle-unveils-layer-1-blockchain-arc-reports-usd428-million-q2-loss)

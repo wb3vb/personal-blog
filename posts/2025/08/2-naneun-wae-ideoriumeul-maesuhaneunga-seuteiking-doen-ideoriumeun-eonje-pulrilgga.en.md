@@ -5,7 +5,7 @@ tags:
   - ethereum
 published: true
 date: 2025-08-11 13:08:17
-description: 'One of the most common answers to "What will happen once the Merge is complete?" is the FUD that "all the Ethereum locked in the ETH 2.0 Beacon Chain staking contract will be released at once, causing the Ethereum price to crash." This post takes an objective look at that claim.'
+description: 'Staked ETH is not withdrawable right after the Merge; unstaking opens with the Shanghai upgrade. Epoch caps and the churn limit release it slowly, easing sell pressure.'
 ---
 
 **One of the most common answers to “What will happen once the Merge is complete?” is the FUD that “all the Ethereum locked in the ETH 2.0 Beacon Chain staking contract will be released at once, causing the Ethereum price to crash.” Let’s take an objective look at that claim.**

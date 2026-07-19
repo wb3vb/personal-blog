@@ -5,7 +5,7 @@ tags:
   - investment
 published: true
 date: 2025-08-18 06:04:48
-description: 'Even investing logically and diligently can lead to losses.'
+description: 'Logical investing can still lose money, but the higher-probability side wins out over time. Input to frame to output, applied to gold versus gold-miner ETFs by scenario.'
 ---
 
 **Even investing logically and diligently can lead to losses.**

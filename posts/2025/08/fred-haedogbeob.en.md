@@ -5,7 +5,7 @@ tags:
   - economy
 published: true
 date: 2025-08-11 13:42:13
-description: "The link below is a chart I made a while back on FRED to examine U.S. market liquidity, and I'm sharing it so we can all study it together. The U.S. Fed's balance sheet is a table showing the state of its assets and liabilities, and once you can read it even roughly, it's easy to grasp how much money is being released into the market, in other words the flow of market liquidity."
+description: 'Sorts the Fed balance sheet into five FRED lines: reserves, TGA, reverse repo, securities, and loans. Reads each line rising or falling as liquidity added or drained.'
 ---
 
 The link below is a chart I made a while back on FRED to examine U.S. market liquidity, and I'm sharing it so we can all study it together. The U.S. Fed's balance sheet is a table showing the state of its assets and liabilities, and once you can read it even roughly, it's easy to grasp how much money is being released into the market, in other words the flow of market liquidity.

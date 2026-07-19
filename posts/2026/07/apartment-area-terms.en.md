@@ -5,7 +5,7 @@ tags:
   - real estate
 published: true
 date: 2026-07-20 10:00:00
-description: 'What exclusive, supply, contract, service, and usable area actually mean, and why one apartment goes by several pyeong figures at once, explained with the 84㎡ national standard and the Olympic Family Town redevelopment.'
+description: 'One unit has several sizes because each counts a different boundary. Exclusive area first, shared space layered on, applied to the 84㎡ standard and Olympic Family Town.'
 ---
 
 ## Why does one apartment have so many sizes?

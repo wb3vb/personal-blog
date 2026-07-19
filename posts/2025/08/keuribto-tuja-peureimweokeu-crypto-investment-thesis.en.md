@@ -5,7 +5,7 @@ tags:
   - investment
 published: true
 date: 2025-08-11 13:22:04
-description: 'Introduction: A Shift in Investment Perspective'
+description: 'I have no short-term alpha, so I went from bottom-up to top-down. The crypto-dollar-AI cycle, fed by stablecoin demand for Treasuries, is my alpha for 3-5 years.'
 ---
 
 # Introduction: A Shift in Investment Perspective

@@ -5,7 +5,7 @@ tags:
   - bitcoin
 published: true
 date: 2025-08-11 13:17:44
-description: '[Awkward with Bitcoin Series] #2. A Deep Dive into Bitcoin DevelopmentAuthor:web3vibeDecipher Media ｜Decipher Mediawb3vb'
+description: 'Bitcoin has no leader, so code changes move through the mailing list and the BIP process. This traces that path, the groups funding it, and a Korean developer''s account.'
 ---
 
 🔗 [\[Awkward with Bitcoin Series\] \#2. A Deep Dive into Bitcoin Development](https://medium.com/decipher-media/%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%EA%B3%BC-%EC%96%B4%EC%83%89%ED%95%B4%EC%9A%94-%EC%8B%9C%EB%A6%AC%EC%A6%88-2-%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8-%EA%B0%9C%EB%B0%9C-%ED%86%BA%EC%95%84%EB%B3%B4%EA%B8%B0-300a1a64906d)

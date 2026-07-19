@@ -5,7 +5,7 @@ tags:
   - investment
 published: true
 date: 2025-08-11 13:47:42
-description: "I'm not 'buying' the saying that happiness can't be bought with money."
+description: 'Saving a paycheck and investing hard alone will not reach financial freedom. This forced Squid Game takes capital, investing, borrowing, and maintaining power.'
 ---
 
 ## I'm not 'buying' the saying that happiness can't be bought with money.

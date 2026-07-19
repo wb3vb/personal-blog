@@ -5,7 +5,7 @@ tags:
   - stablecoin
 published: true
 date: 2025-09-05 01:51:51
-description: '1. Overview'
+description: 'KRW stablecoins likely split distribution, infrastructure and issuance three ways. Trades clear off-chain, settle on-chain, so the Layer-1 opening is stage-two expansion.'
 ---
 
 # 1. Overview

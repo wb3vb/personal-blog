@@ -5,7 +5,7 @@ tags:
   - ethereum
 published: true
 date: 2025-08-11 13:14:20
-description: '검열 저항을 위한 이더리움의 프로토콜 단에서 로드맵인 PBS(Proposer Builder Separation)와 crLists(censorship resistant List)에 대해 알아보고, 이후 발생할 수 있는 Builder 중앙화와 Flashbots의 SUAVE에 대해 간략히 알아봅니다.'
+description: '검열 저항을 위한 이더리움 프로토콜 차원의 해법인 PBS와 crList를 정리한다. 다만 이 구조는 Builder 권한을 키워 중앙화를 낳고, 플래시봇은 그 답으로 SUAVE를 내놓는다.'
 ---
 
 **검열 저항을 위한 이더리움의 프로토콜 단에서 로드맵인 PBS(Proposer Builder Separation)와 crLists(censorship resistant List)에 대해 알아보고, 이후 발생할 수 있는 Builder 중앙화와 Flashbots의 SUAVE에 대해 간략히 알아봅니다.**

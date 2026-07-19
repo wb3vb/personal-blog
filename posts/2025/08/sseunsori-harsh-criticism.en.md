@@ -5,7 +5,7 @@ tags:
   - thoughts
 published: true
 date: 2025-08-12 11:58:25
-description: 'First, look at the graph above'
+description: 'The index rises, institutions chase alpha, individuals ride beta. Arrogance and bigger bets drag them to zero, so stop fighting the market and trust time.'
 ---
 
 ![](371b52-1737205768.png)

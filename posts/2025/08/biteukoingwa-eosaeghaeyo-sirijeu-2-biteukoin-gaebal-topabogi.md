@@ -5,7 +5,7 @@ tags:
   - bitcoin
 published: true
 date: 2025-08-11 13:17:44
-description: '[비트코인과 어색해요 시리즈] #2. 비트코인 개발 톺아보기Author:web3vibeDecipher Media ｜디사이퍼 미디어wb3vb'
+description: '리더 없는 오픈소스 프로젝트인 비트코인이 메일링 리스트와 BIP를 거쳐 코드를 바꾸는 절차를 정리했다. 개발을 후원하는 기관들과 국내 개발자 인터뷰도 함께 담았다.'
 ---
 
 🔗 [\[비트코인과 어색해요 시리즈\] \#2. 비트코인 개발 톺아보기](https://medium.com/decipher-media/%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%EA%B3%BC-%EC%96%B4%EC%83%89%ED%95%B4%EC%9A%94-%EC%8B%9C%EB%A6%AC%EC%A6%88-2-%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8-%EA%B0%9C%EB%B0%9C-%ED%86%BA%EC%95%84%EB%B3%B4%EA%B8%B0-300a1a64906d)

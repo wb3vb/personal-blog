@@ -5,7 +5,7 @@ tags:
   - ethereum
 published: true
 date: 2025-08-11 13:16:26
-description: '본 게시글은 서울대학교 블록체인 학회 디사이퍼(Decipher)에서 ‘Shared Sequencer & SUAVE’를 주제로 Weekly Session에서 발표한 내용을 담았습니다. 본 글은 단일 시퀀서를 사용한 현 롤업의 한계점을 해결하기 위한 공유 시퀀서에 대한 내용과 Flashbots의 SUAVE에 대한 내용을 다루고 있습니다.'
+description: '단일 시퀀서 롤업의 SPOF와 MEV 독점 한계를 짚고, 공유 시퀀서와 Flashbots의 SUAVE를 정리한다. 둘을 제안자와 빌더로 결합하면 크로스 체인 거래의 효율성과 안전성을 얻는다고 본다.'
 ---
 
 본 게시글은 *서울대학교 블록체인 학회 디사이퍼(Decipher)에서 ‘Shared Sequencer & SUAVE’를 주제로 Weekly Session에서 발표한 내용을 담았습니다. 본 글은 단일 시퀀서를 사용한 현 롤업의 한계점을 해결하기 위한 공유 시퀀서에 대한 내용과 Flashbots의 SUAVE에 대한 내용을 다루고 있습니다.*

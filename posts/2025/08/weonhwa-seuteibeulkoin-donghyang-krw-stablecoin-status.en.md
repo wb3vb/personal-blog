@@ -5,7 +5,7 @@ tags:
   - stablecoin
 published: true
 date: 2025-08-27 07:30:43
-description: 'Regulatory status and legislative trends for KRW stablecoins'
+description: 'Only the Bank of Korea may issue currency, so private KRW stablecoins are effectively blocked. Four 2025 bills are compared on licensing, reserves, and interest.'
 ---
 
 **Regulatory status and legislative trends for KRW stablecoins**

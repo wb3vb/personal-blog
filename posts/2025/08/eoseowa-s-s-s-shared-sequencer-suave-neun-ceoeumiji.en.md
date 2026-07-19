@@ -5,7 +5,7 @@ tags:
   - ethereum
 published: true
 date: 2025-08-11 13:16:26
-description: "This post is based on a presentation delivered at a Weekly Session of Decipher, the Seoul National University Blockchain Academy, on the topic of 'Shared Sequencer & SUAVE.' It covers shared sequencers, which address the limitations of current rollups that use a single sequencer, as well as Flashbots' SUAVE."
+description: 'Single-sequencer rollups face SPOF and MEV monopoly, so shared sequencers and SUAVE step in. As proposer and builder, the two make cross-chain trades efficient and safe.'
 ---
 
 This post *is based on a presentation delivered at a Weekly Session of Decipher, the Seoul National University Blockchain Academy, on the topic of 'Shared Sequencer & SUAVE.' This article covers shared sequencers, which address the limitations of current rollups that use a single sequencer, as well as Flashbots' SUAVE.*

@@ -5,7 +5,7 @@ tags:
   - investment
 published: true
 date: 2025-09-26 23:13:01
-description: "I sometimes get asked: I want to invest, but I have no idea what to study first."
+description: 'I laid out my own study order: capitalism, money supply, bonds, rates, real estate, stocks, commodities, coins, geography. Each step explains why it sits there.'
 ---
 
 ## I sometimes get asked: I want to invest, but I have no idea what to study first.
