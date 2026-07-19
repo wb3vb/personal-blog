@@ -1531,13 +1531,16 @@ body[data-minimal='true'] .hero-title .accent {
 .post-footer,
 .post-back,
 .post-series-nav {
-  max-width: 760px;
+  max-width: 720px;
   margin-right: auto;
   margin-left: auto;
 }
 .post-article {
+  font-family:
+    var(--font-manrope), -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+    'Noto Sans KR', sans-serif;
   font-size: 16px;
-  line-height: 1;
+  line-height: 1.4;
   color: var(--ink-2);
 }
 .post-article h1,
@@ -3134,5 +3137,5 @@ html[lang='ko'] body {
   font-weight: 500; /* medium body weight, like planwedding */
 }
 html[lang='ko'] .post-article {
-  line-height: 1; /* 사용자 지정: KO·EN 공통 1.0 */
+  line-height: 1.4; /* 사용자 지정: KO·EN 공통 1.4 */
 }

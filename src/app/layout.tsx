@@ -1,6 +1,6 @@
 import './tailwind.css'
 
-import {Fraunces, Inter, JetBrains_Mono} from 'next/font/google'
+import {Fraunces, Inter, JetBrains_Mono, Manrope} from 'next/font/google'
 import Script from 'next/script'
 
 import {Analytics as VercelAnalytics} from '@vercel/analytics/react'
@@ -27,6 +27,13 @@ const fraunces = Fraunces({
   display: 'swap',
   variable: '--font-serif',
   style: ['italic', 'normal'],
+})
+
+// 글 본문 라틴 폰트(한글은 없어 시스템 대체)
+const manrope = Manrope({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-manrope',
 })
 
 import AmbientEffects from '@/components/AmbientEffects'
@@ -112,7 +119,7 @@ export default async function Layout({children}: {children: ReactNode}) {
         lang="ko"
         data-scroll-behavior="smooth"
         suppressHydrationWarning
-        className={`${inter.variable} ${jetbrainsMono.variable} ${fraunces.variable}`}
+        className={`${inter.variable} ${jetbrainsMono.variable} ${fraunces.variable} ${manrope.variable}`}
       >
         <head>
           <script
