@@ -3046,3 +3046,16 @@ code {
 .prose h2[id^='table-of-contents'] + ul > li > ul > li > ul > li > ul > li > a {
   @apply text-xs text-gray-400 dark:text-gray-500 no-underline hover:text-primary-600 dark:hover:text-primary-400 block py-0.5 transition-colors;
 }
+
+/* ========= KR TYPOGRAPHY (planwedding.io-inspired: tight tracking + medium weight) =========
+   Applied ONLY on Korean pages (html[lang='ko']); English pages keep the default Inter style.
+   Full spec & rationale: font.md */
+html[lang='ko'] {
+  letter-spacing: -0.02em; /* ≈ planwedding -0.3px @16px — tight Korean tracking */
+}
+html[lang='ko'] body {
+  font-weight: 500; /* medium body weight, like planwedding */
+}
+html[lang='ko'] .post-article {
+  line-height: 1.7; /* tighter than default 1.8, still readable for long-form */
+}
