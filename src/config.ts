@@ -26,9 +26,9 @@ export const SiteConfig = {
   location: 'SEOUL', // TODO: 거주 도시
   hero: {
     // TODO: 홈 히어로 대형 문구 (3줄). 2번째 줄이 그라데이션 강조된다.
-    titleLines: ['BUILD.', 'LEARN,', 'REPEAT.'],
+    titleLines: ['MOVE.', 'MAKE,', 'HAPPEN.'],
     tagline:
-      'a developer writing about the things I build and learn, one post at a time.',
+      'Nothing happens unless you do something, so I keep building, learning, and writing it down.',
     // TODO: About 페이지 소개 문단
     aboutIntro:
       '확장 가능한 시스템과 개발자 경험에 관심이 많습니다. 여기에 배우고 만든 것을 기록합니다.',
@@ -37,14 +37,17 @@ export const SiteConfig = {
   menu: [
     {
       label: 'Posts',
+      labelKo: '글',
       path: '/pages/1',
     },
     {
       label: 'Tags',
+      labelKo: '태그',
       path: '/tags',
     },
     {
       label: 'About',
+      labelKo: '소개',
       path: '/about',
     },
   ],

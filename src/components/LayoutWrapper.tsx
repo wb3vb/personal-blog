@@ -30,9 +30,9 @@ function HeaderLogo() {
           <Image
             src={profile}
             alt=""
-            width={40}
-            height={40}
-            className="h-10 w-10 rounded-full"
+            width={32}
+            height={32}
+            className="h-8 w-8 rounded-full"
             priority
           />
         </span>
@@ -70,6 +70,7 @@ function HeaderNav() {
       {menu.map((link) => {
         const external = link.path.startsWith('http')
         const active = !external && isActive(link.path)
+        const label = pathPrefix ? link.label : (link.labelKo ?? link.label)
         const common = {
           className: 'nav-link',
           'data-active': active ? 'true' : 'false',
@@ -84,7 +85,7 @@ function HeaderNav() {
               rel="noopener noreferrer"
               {...common}
             >
-              <span className="nav-link-label">{link.label}</span>
+              <span className="nav-link-label">{label}</span>
               <svg
                 className="nav-link-ext"
                 width="11"
@@ -105,7 +106,7 @@ function HeaderNav() {
         }
         return (
           <Link key={link.label} href={link.path} {...common}>
-            <span className="nav-link-label">{link.label}</span>
+            <span className="nav-link-label">{label}</span>
           </Link>
         )
       })}
