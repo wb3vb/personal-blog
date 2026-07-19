@@ -66,7 +66,8 @@ export const SiteConfig = {
       medium: 'https://medium.com/@wb3vb.eth',
       github: getContactHref('github', 'wb3vb'),
       rss: '',
-      linkedin: '',
+      // LinkedIn 프로필 URL (없으면 빈 문자열). 끝 슬래시 없이 저장해야 라벨이 핸들로 표시됨
+      linkedin: 'https://www.linkedin.com/in/web3vibe',
       instagram: '',
       line: '',
       gitlab: '',

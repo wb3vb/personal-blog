@@ -26,6 +26,11 @@ export default function Footer() {
             size={6}
           />
           <SocialIcon
+            kind="linkedin"
+            href={SiteConfig.author.contacts.linkedin}
+            size={6}
+          />
+          <SocialIcon
             kind="medium"
             href={SiteConfig.author.contacts.medium}
             size={6}
