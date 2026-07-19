@@ -186,21 +186,9 @@ function Header() {
 const LayoutWrapper = ({children}: {children: ReactNode}) => {
   const pathname = usePathname()
   const isEn = pathname?.startsWith('/en')
-  let containerClass = 'xl:max-w-5xl'
+  // Unified container width across all pages (see SectionContainer: max-w-[1120px]).
+  const containerClass = ''
   const wide = false
-
-  if (pathname === '/' || pathname === '/en') {
-    containerClass = 'xl:max-w-7xl'
-  } else if (pathname === '/about') {
-    containerClass = 'max-w-6xl'
-  } else if (
-    pathname?.startsWith('/pages') ||
-    pathname?.startsWith('/en/pages')
-  ) {
-    containerClass = 'xl:max-w-7xl'
-  } else if (pathname?.startsWith('/tags')) {
-    containerClass = 'xl:max-w-7xl'
-  }
 
   return (
     <>

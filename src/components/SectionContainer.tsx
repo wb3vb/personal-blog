@@ -11,7 +11,7 @@ export default function SectionContainer({
 }) {
   const baseClass = wide
     ? 'mx-auto max-w-none w-[95vw] px-4 sm:px-6 lg:px-8'
-    : 'mx-auto max-w-3xl px-4 sm:px-6 lg:max-w-5xl lg:px-8'
+    : 'mx-auto w-full max-w-[1120px] px-4 sm:px-6 lg:px-8'
 
   return <div className={`${baseClass} ${className ?? ''}`}>{children}</div>
 }
