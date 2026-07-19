@@ -11,10 +11,10 @@ import {SiteConfig} from '@/config'
 import {getAllPosts, getAllTagsFromPosts, getFeaturedPosts} from '@/utils/Post'
 
 export const metadata: Metadata = {
-  title: `${SiteConfig.title} — English`,
+  title: `${SiteConfig.title} · English`,
   description: SiteConfig.subtitle,
   openGraph: {
-    title: `${SiteConfig.title} — English`,
+    title: `${SiteConfig.title} · English`,
     description: SiteConfig.subtitle,
     url: `${SiteConfig.url}/en`,
   },

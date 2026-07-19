@@ -82,7 +82,7 @@ const Hero = memo(function Hero({
         </h1>
         <div className="hero-sub">
           <p>
-            A blog by <b style={{color: 'var(--ink)'}}>{SiteConfig.title}</b> —{' '}
+            A blog by <b style={{color: 'var(--ink)'}}>{SiteConfig.title}</b>,{' '}
             {SiteConfig.hero.tagline}
           </p>
           <div className="hero-stats">

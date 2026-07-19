@@ -4,10 +4,10 @@ tags:
   - economy
 published: true
 date: 2025-08-11 13:42:13
-description: "The link below is a chart I made a while ago on FRED for examining U.S. market liquidity, and I am releasing it so we can all study together. The U.S. Fed's balance sheet is a table showing the status of the Fed's assets and liabilities, and being able to read it even roughly makes it easy to grasp how much money is being released into the market — that is, the flow of market liquidity."
+description: "The link below is a chart I made a while back on FRED to examine U.S. market liquidity, and I'm sharing it so we can all study it together. The U.S. Fed's balance sheet is a table showing the state of its assets and liabilities, and once you can read it even roughly, it's easy to grasp how much money is being released into the market, in other words the flow of market liquidity."
 ---
 
-The link below is a chart I made a while ago on FRED for examining U.S. market liquidity, and I am releasing it so we can all study together. The U.S. Fed's balance sheet is a table showing the status of the Fed's assets and liabilities, and being able to read it even roughly makes it easy to grasp how much money is being released into the market — that is, the flow of market liquidity.
+The link below is a chart I made a while back on FRED to examine U.S. market liquidity, and I'm sharing it so we can all study it together. The U.S. Fed's balance sheet is a table showing the state of its assets and liabilities, and once you can read it even roughly, it's easy to grasp how much money is being released into the market, in other words the flow of market liquidity.
 
 🔗 [FRED Graph](https://fred.stlouisfed.org/graph/?g=1rdfH&ref=wb3vb.io)
 
@@ -27,7 +27,7 @@ The link below is a chart I made a while ago on FRED for examining U.S. market l
 **- Chart rising:** It scoops up the water (money) in the market to fill its own reservoir, producing a tightening effect that reduces liquidity
 **- Chart falling:** The government is executing various policies, and this money flows into the private sector, producing the effect of increasing market liquidity
 - The 2025 TGA chart has kept declining so far, meaning money has kept being released into the market
-- However, the OBBB (the Big and Beautiful Bill) recently passed, the debt ceiling was raised significantly (by $5 trillion), and the balance will have to be refilled before long.
+- But the OBBB (the Big and Beautiful Bill) just passed, the debt ceiling was raised sharply (by $5 trillion), and the balance will have to be refilled before long.
 - Refilling the balance means market liquidity is about to be absorbed. It feels a bit like an annual event
 
 ------------------------------------------------------------------------
@@ -45,11 +45,11 @@ The link below is a chart I made a while ago on FRED for examining U.S. market l
 ## **\[Purple\] 4. Assets: Securities Held Outright (Securities Holdings)**
 
 \- Refers to the Treasuries, mortgage-backed securities (MBS), etc. that the Fed has purchased and holds
-The Fed's most central policy tools, quantitative easing (QE) and quantitative tightening (QT), are carried out through this item.
+The Fed runs its two most central policy tools, quantitative easing (QE) and quantitative tightening (QT), through this item.
 **- Chart rising:** The Fed buys bonds (QE) \> money is released into the market \> liquidity expands
 **- Chart falling:** The Fed sells bonds (QT) \> money is absorbed from the market \> liquidity tightens
 - Currently the U.S. is carrying out QT, and while it is scheduled to run until February next year (?), it is expected to last longer.
-- The news talks about tapering, which simply means doing it gradually (e.g., QT tapering — gradually reducing QT)
+- The news talks about tapering, which just means doing it gradually (for example, QT tapering, which means winding QT down bit by bit)
 - That is why the market cheers at even a mere signal that the Fed will end QT
 
 ------------------------------------------------------------------------

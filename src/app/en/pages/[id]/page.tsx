@@ -13,7 +13,7 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const params = await props.params
   const {id} = params
-  const pageTitle = `Page ${id} — ${SiteConfig.title} (English)`
+  const pageTitle = `Page ${id} · ${SiteConfig.title} (English)`
 
   return {
     title: pageTitle,

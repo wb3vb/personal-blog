@@ -17,19 +17,19 @@ description: "Am I simply taking the information passed around about Ethereum de
 
 ## 1. Introduction
 
-Through the London hard fork, Ethereum introduced the improvement proposal EIP-1559 to fix the inefficiently high volatility in fees and the transaction experience, and the base fee (base_fee) generated through it is permanently burned.
+Through the London hard fork, Ethereum introduced EIP-1559 to fix the inefficiently high volatility in fees and the transaction experience, and the base fee (base_fee) it generates is permanently burned.
 
 🔗 <https://twitter.com/web3vibe/status/1537686941218787328>
 
 *(A post on the possibility of Ethereum deflation \| Source: @webvibe Twitter)*
 
-Moreover, Ethereum’s current issuance of ~14,700 ETH/day (mining rewards of 13,000 ETH + staking rewards of 1,600 ETH) will, after the Merge, leave only the staking rewards (~1,600 ETH), causing an issuance reduction of about 90%; and if the average gas fee of 16 gwei is maintained, we could theoretically experience zero or negative issuance for Ethereum.
+On top of that, Ethereum’s current issuance of ~14,700 ETH/day (13,000 ETH in mining rewards + 1,600 ETH in staking rewards) will, after the Merge, drop to just the staking rewards (~1,600 ETH). That’s an issuance cut of about 90%, and if the average gas fee stays around 16 gwei, Ethereum could in theory see zero or even negative issuance.
 
 ![](e6c5c1-3jSKUwhZ6cGSJ-GvLTiV2A.png)
 
 *(Projected Ethereum circulating supply \| Source: ultrasound.money)*
 
-On this basis, countless media articles are pouring out the claim that ‘the Merge will ultimately bring about Ethereum’s deflation and the price will rise,’ and we accept this as all too self-evident. Before we begin—did you perhaps, as a child, ever see the ‘tongue map’ below?
+Off the back of this, countless media articles keep pushing the claim that ‘the Merge will ultimately bring about Ethereum’s deflation and the price will rise,’ and we accept it as all too obvious. Before we get going, did you ever see the ‘tongue map’ below as a kid?
 
 ![](e6c5c1-S_St7NnNUVQrBr-vZU1rog.png)
 
@@ -45,13 +45,13 @@ Likewise, am I simply taking the information passed around about Ethereum deflat
 
 *(Sound money vs. ultrasound money \| Source: Google Images)*
 
-There is a meme for Ethereum called ‘ultrasound money🦇🔊,’ which arose to mock the way Bitcoin is called ‘sound money’ because it has a maximum supply cap of 21M. It means that although Ethereum has no maximum supply cap, fee burning will instead make it a currency whose circulating supply actually decreases.
+Ethereum has a meme called ‘ultrasound money🦇🔊,’ which came about to mock the way Bitcoin gets called ‘sound money’ for having a maximum supply cap of 21M. The point is that even though Ethereum has no maximum supply cap, fee burning will instead make it a currency whose circulating supply actually decreases.
 
-Accordingly, conventional wisdom holds that if token deflation occurs, then by the principle of supply and demand, selling pressure decreases and value rises. Furthermore, more investors will hold and stake the Ethereum that has transitioned to Proof of Stake (PoS), creating a win-win for everyone.
+So the conventional wisdom goes: if token deflation happens, then by the law of supply and demand, selling pressure drops and value rises. On top of that, more investors will hold and stake the Ethereum that has moved to Proof of Stake (PoS), a win-win for everyone.
 
-However, the counterargument to this is as follows:
+But the counterargument goes like this:
 
-The argument is that the combination of Ethereum’s deflation and Proof of Stake (PoS) will be the starting point for Ethereum to shift, going forward, into the narrative of being a store of value like Bitcoin—and that the Ethereum ecosystem will collapse and drift away from the direction Ethereum actually intends to go.
+In short, the combination of Ethereum’s deflation and Proof of Stake (PoS) will be the point where Ethereum starts to shift into the narrative of being a store of value like Bitcoin, and the Ethereum ecosystem will collapse and drift away from the direction Ethereum actually means to go.
 
 ![](e6c5c1-XKaXWmzdVasD1xfUe_d_jQ.jpeg)
 
@@ -61,33 +61,33 @@ Unpacking this argument a bit further:
 
 1\) The purpose of EIP-1559 is to invigorate the network by providing a pleasant user transaction environment, but the current makeup of actual Ethereum holders is concentrated not among real users but among traders and investors seeking price gains. The upcoming ETHPoW issue also attests to this.
 
-This means that the motive to hold a stake in the asset becomes relatively stronger, so actual transaction activity gradually declines. For example, if it were me—rather than spending my Ethereum on fees—if the staking APR plus the rate of price appreciation I gain by holding were higher, would I really bother to use my Ethereum?
+This means the incentive to hold a stake in the asset gets relatively stronger, so actual transaction activity slowly declines. Take me, for instance. If the staking APR plus the price appreciation I gain from just holding were higher than what I’d spend on fees, would I really bother to use my Ethereum?
 
-Moreover, the ‘security cost’ of the Layer-2s and rollups currently under active development in the belief that they can solve this is paid in Ethereum rather than in a native token, which reduces the supply. In the end, if gold became more precious the more you spent it, who would want to spend gold?
+And the ‘security cost’ of the Layer-2s and rollups now being built in the belief that they can solve this gets paid in Ethereum rather than in a native token, which reduces the supply. After all, if gold got more precious the more you spent it, who would want to spend gold?
 
-A blockchain protocol’s revenue is clearly generated through transaction volume × transaction fees. Yet ironically, Ethereum’s current direction is becoming ever more optimized for ‘hold & stake,’ which means it is heading toward the same narrative as Bitcoin—a ‘store of value.’
+A blockchain protocol’s revenue clearly comes from transaction volume × transaction fees. Yet ironically, Ethereum’s current direction keeps getting more optimized for ‘hold & stake,’ which means it is heading toward the same narrative as Bitcoin: a ‘store of value.’
 
-2\) The second is the argument that “inflation is necessary for growth.” There is a conventional belief about inflation as entrenched as the law of universal gravitation. It is that “inflation is a phenomenon that appears alongside economic growth, while sluggish growth and recession are phenomena that appear alongside deflation.”
+2\) The second is the argument that “inflation is necessary for growth.” There’s a belief about inflation as entrenched as the law of universal gravitation: that “inflation is a phenomenon that appears alongside economic growth, while sluggish growth and recession are phenomena that appear alongside deflation.”
 
 ![](e6c5c1-X8_9SoYxcLLOAS5px0XS0Q.png)
 
 *(Good inflation and bad inflation \| Source: Medium @wyz)*
 
-Thus the argument is that the ecosystem’s economic growth through Ethereum’s smart contracts is spurred by inflation. One might then ask, ‘Is Bitcoin any different?’—but Bitcoin can be described as an investment asset that stores value, and it has a different character from Ethereum, whose aim is to build an economy.
+So the argument is that the ecosystem’s economic growth through Ethereum’s smart contracts is spurred by inflation. You might then ask, ‘Is Bitcoin any different?’ But Bitcoin is better described as an investment asset that stores value, and it has a different character from Ethereum, whose aim is to build an economy.
 
 ## 3. My View on the Pessimistic Argument
 
-1\) Ethereum’s token economy does not move in only one direction; it operates very flexibly. Ethereum’s issuance does not remain deflationary indefinitely, and dynamic gas-fee adjustments are made according to demand for block space and the level of network activity.
+1\) Ethereum’s token economy doesn’t move in only one direction. It’s actually very flexible. Ethereum’s issuance doesn’t stay deflationary indefinitely, and gas fees adjust dynamically according to demand for block space and the level of network activity.
 
 ![](e6c5c1-iRDiVEoCViaf3zeujuVvKQ.jpeg)
 
 *(A Detailed Introduction of Ethereum Gas Fees \| Source: btcc.com)*
 
-Therefore the amount of base fee burned continuously fluctuates in line with network congestion, moving back and forth between inflation and deflation and finding a balance in between. If that explanation is difficult, take another look at the tweet below from @stablekwon, an ‘inflation maxi.’
+So the amount of base fee burned constantly fluctuates with network congestion, swinging back and forth between inflation and deflation and settling somewhere in between. If that’s hard to follow, take another look at the tweet below from @stablekwon, an ‘inflation maxi.’
 
 🔗 <https://twitter.com/stablekwon/status/1523733542492016640>
 
-*(deploying more capital — steady lads \| Source: @stablekwon Twitter)*
+*(deploying more capital, steady lads \| Source: @stablekwon Twitter)*
 
 2\) ‘Deflation’ usually means a fall in the prices of goods and services across the economy as a whole, but that carries a different meaning from Ethereum’s deflation. Why is that?
 
@@ -101,7 +101,7 @@ Invigorating the Ethereum network \> increases the amount of fees burned \> rewa
 
 *(Validators in the PoS system \| Source: Brunch @mobiinside)*
 
-Overall, because the security of a Proof of Stake (PoS) consensus system depends very heavily on the value of the asset, conversely, continuous inflationary pressure reduces the token’s scarcity, and accordingly Ethereum’s network security would decline. A prime example is here 👉#Terra
+In the end, because the security of a Proof of Stake (PoS) consensus system leans so heavily on the value of the asset, constant inflationary pressure works the other way: it eats into the token’s scarcity, so Ethereum’s network security would decline. A prime example is right here 👉#Terra
 
 ## 4. Wrapping Up…
 
@@ -111,7 +111,7 @@ In ‘The Big Short,’ one of the favorite films in my collection:
 
 Mark Twain says, “It ain’t what you don’t know that gets you into trouble. It’s what you know for sure that just ain’t so.”
 
-I hope this can be an opportunity to discard the bias of “well, since it’s a proven result, of course it must be true…” and to listen to a range of views.
+I hope this can be a chance to drop the bias of “well, since it’s a proven result, of course it must be true…” and to listen to a range of views.
 
 5\. Reference
 

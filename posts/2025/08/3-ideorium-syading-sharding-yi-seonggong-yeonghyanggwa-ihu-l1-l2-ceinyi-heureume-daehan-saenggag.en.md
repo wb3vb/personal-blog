@@ -25,62 +25,62 @@ Written by
 
 ## 1. On Scalability
 
-The first stage of Ethereum 2.0 focuses on the tools for securing scalability—regarded as Ethereum’s toughest challenge among the blockchain trilemma (scalability, security, decentralization). Because in Ethereum 1.0 every node must process the transactions that occur, it inevitably suffered bottlenecks whenever a service with high community hype appeared.
+The first stage of Ethereum 2.0 focuses on the tools for securing scalability, widely regarded as Ethereum’s toughest challenge among the blockchain trilemma (scalability, security, decentralization). Because every node in Ethereum 1.0 has to process every transaction that occurs, the network inevitably hit bottlenecks whenever a service with a lot of community hype came along.
 
 ![](ce4d2b-E40i_voouKVR_AQWXaJGKw.png)
 
 *(Example of a bottleneck\| Source: Google Images)*
 
-Approaches to solving blockchain scalability can be broadly divided into two frames: the first is the monolithic approach, and the second is the modular approach. The monolithic approach handles all tasks (execution, security, data availability) on the existing L1, and presents a scalability solution through technical upgrades to its own base chain.
+There are broadly two ways to approach blockchain scalability: the monolithic approach and the modular approach. The monolithic approach handles everything (execution, security, data availability) on the existing L1, offering a scalability solution through technical upgrades to its own base chain.
 
 ![](ce4d2b-N_kt3bjRIoM4BnwfnxLLSQ.jpeg)
 
 *(Monolithic \&amp; modular example \| Source: Bankless)*
 
-The modular format is a concept of dividing up the tasks mentioned above; representative examples are L2 rollups—which build a new off-chain architecture to execute and bundle transactions and then handle posting them to L1—and sharding.
+The modular format is about splitting up the tasks I just mentioned. The main examples are L2 rollups, which build a new off-chain architecture to execute and bundle transactions before posting them to L1, and sharding.
 
 Also, Kobaekjang’s (@
 
 [100y](https://medium.com/u/5e5fe9213d31?source=post_page---user_mention--ff6dfcf9b57e---------------------------------------)) detailed thread on Polygon (MATIC), which shows the future of modular blockchains, is easy to understand, so I highly recommend it as a must-read.
 
-[[Polygon Series]#1: Polygon PoS — The Beginning of a Journey Toward Mass AdoptionWe examine the future of the modular blockchain that Polygon is envisioning, and learn about its first product, the Plasma chain, Polygon PoS.medium.com](https://medium.com/a41-ventures/polygon-%EC%8B%9C%EB%A6%AC%EC%A6%88-1-polygon-pos-mass-adoption%EC%9D%84-%ED%96%A5%ED%95%9C-%EC%97%AC%EC%A0%95%EC%9D%98-%EC%8B%9C%EC%9E%91-b907d20fd84f?source=post_page-----ff6dfcf9b57e---------------------------------------)
+[[Polygon Series]#1: Polygon PoS: The Beginning of a Journey Toward Mass AdoptionWe examine the future of the modular blockchain that Polygon is envisioning, and learn about its first product, the Plasma chain, Polygon PoS.medium.com](https://medium.com/a41-ventures/polygon-%EC%8B%9C%EB%A6%AC%EC%A6%88-1-polygon-pos-mass-adoption%EC%9D%84-%ED%96%A5%ED%95%9C-%EC%97%AC%EC%A0%95%EC%9D%98-%EC%8B%9C%EC%9E%91-b907d20fd84f?source=post_page-----ff6dfcf9b57e---------------------------------------)
 
-The basic concept of sharding is a simplified format in which blockchain data is divided through data partitioning, and then a group of validators—assigned via random sampling—is allocated to each shard to share the work of transaction validation; because this allows parallel processing, it improves Ethereum’s scalability problem.
+At its core, sharding is a simplified format in which blockchain data is split up through data partitioning, and a group of validators, assigned by random sampling, is then allocated to each shard to share the work of transaction validation. Because this allows parallel processing, it eases Ethereum’s scalability problem.
 
 ![](ce4d2b-VnHsnHR36cWPogzwVNuDpw.png)
 
 *(Random sampling committee \| Source: @vbuterin’s blog)*
 
-The plan is to secure stability with an initial 64 shards and DAS (Data Availability Sampling) and then increase the number of shards; while this format has the advantage that scalability improves as validators increase, there are concerns about the method of communication between shard chains and about security against malicious attacks.
+The plan is to secure stability with an initial 64 shards plus DAS (Data Availability Sampling), then gradually increase the shard count. This format has a clear upside in that scalability improves as more validators join, but it also raises questions about how shard chains communicate with one another and how secure they are against malicious attacks.
 
 ## 2. The Direction of Layer-2 Chains
 
-Rollups increase throughput by specializing in executing transaction data off-chain, and by rolling up and delegating the minimal interactions—such as finality and settlement—to the existing Layer-1 chain, they improve Ethereum’s poor scalability and high fees.
+Rollups increase throughput by specializing in executing transaction data off-chain. By rolling up and delegating only the minimal interactions, such as finality and settlement, to the existing Layer-1 chain, they help offset Ethereum’s poor scalability and high fees.
 
-As the development of Ethereum 2.0 has currently been delayed, in 2022 L2 rollup solutions such as Arbitrum, Optimism, and Polygon grew significantly as a medium-to-short-term strategy. So, if one asks, “After Ethereum 2.0’s sharding succeeds, will L2 technology be rendered obsolete?”—I believe the two ecosystems are highly likely to coexist.
+With Ethereum 2.0’s development currently delayed, L2 rollup solutions like Arbitrum, Optimism, and Polygon grew significantly in 2022 as a medium-to-short-term strategy. So if you ask, “After Ethereum 2.0’s sharding succeeds, will L2 technology be rendered obsolete?”, I believe the two ecosystems are very likely to coexist.
 
-Projects that currently hold meaningful users, TVL, and user ecosystems—such as Arbitrum, Optimism, and Polygon—will, I think, find it hard to lose their existing users, and in order to approach mass adoption they will seek flexible ways to achieve higher scalability through integration with shard chains.
+Projects that already hold meaningful users, TVL, and user ecosystems, like Arbitrum, Optimism, and Polygon, will find it hard to lose those users, I think. To get closer to mass adoption, they’ll look for flexible ways to reach higher scalability by integrating with shard chains.
 
 ## 3. The Direction of Layer-1 Chains
 
-The reason I pay attention to the success of Ethereum 2.0—often called the endgame—is, I believe, the possibility of solving the blockchain trilemma. The idea is that by improving processing speed (TPS) through shard chains and lowering the barrier to becoming a validator through the PoS consensus algorithm, all three challenges—securing scalability, security, and decentralization—can be solved.
+The reason I pay attention to the success of Ethereum 2.0, often called the endgame, is what I see as its potential to solve the blockchain trilemma. The idea is that by improving processing speed (TPS) through shard chains and lowering the barrier to becoming a validator through the PoS consensus algorithm, you can tackle all three challenges at once: securing scalability, security, and decentralization.
 
-I judge that the impact of Ethereum 2.0’s success on the L1 ecosystem will not be greatly different either. Ethereum is expected to take on a multi-chain form in which it plays the pivotal role of a ‘Universal Settlement Layer’ and coexists with EVM- and eWASM-compatible L1 chains that possess expertise in specific sectors.
+I don’t think the impact of Ethereum 2.0’s success on the L1 ecosystem will be all that different. I expect Ethereum to take on a multi-chain form where it plays the pivotal role of a ‘Universal Settlement Layer’ and coexists with EVM- and eWASM-compatible L1 chains that specialize in specific sectors.
 
-Until now, the emergence of new metas—such as the arrival of DeFi, NFTs, and DAOs—has begun with Ethereum and spread to the L1 chains. This is because multiple factors act simultaneously, beyond just the dimension of Ethereum’s technical prowess; among them, I think the symbolism of the ‘smart contract standard’ that everyone agrees upon in the ‘social layer’ constituting the ecosystem carries great weight.
+So far, every new meta, whether it was the arrival of DeFi, NFTs, or DAOs, has started with Ethereum and spread out to the L1 chains. That’s because more than one factor is at play at once, well beyond Ethereum’s technical prowess. Among them, I’d give a lot of weight to the symbolism of the ‘smart contract standard’ that everyone agrees on in the ‘social layer’ that makes up the ecosystem.
 
-We often see the term ‘Ethereum killer’ used whenever a new L1 project emphasizing fast transaction speeds and low fees appears. However, rather than forming a narrative in which the success of Ethereum 2.0 makes Ethereum a competitor to be surpassed among the L1 chains, I think the competition to secure a share of the blockchain ecosystem pie—one that emphasizes chain compatibility and user accessibility in terms of UI/UX—will grow even fiercer.
+We often see the term ‘Ethereum killer’ whenever a new L1 project shows up touting fast transaction speeds and low fees. But rather than Ethereum 2.0’s success turning Ethereum into a rival for the L1 chains to overtake, I think what gets fiercer is the competition for a slice of the blockchain ecosystem pie, a fight that comes down to chain compatibility and user accessibility in terms of UI/UX.
 
 ## 4. Wrapping Up
 
-As of January 2022, roughly 300 million people worldwide hold cryptocurrency, and for the countless new users who have not yet encountered blockchain, providing a smooth user experience for Ethereum chain integration and compatibility will be a very significant competitive advantage.
+As of January 2022, roughly 300 million people worldwide hold cryptocurrency, and for the countless new users who haven’t yet touched blockchain, offering a smooth user experience around Ethereum chain integration and compatibility will be a real competitive advantage.
 
-I think the probability that future blockchain web and app services will adopt Ethereum 2.0 will rise further, and it is highly likely to trend toward absorbing the ecosystems of the various L1 chains. The current pace of blockchain adoption is very similar to the pace of internet expansion in the 1990s.
+I think future blockchain web and app services are increasingly likely to adopt Ethereum 2.0, and the trend will probably move toward absorbing the ecosystems of the various L1 chains. The current pace of blockchain adoption looks a lot like the pace of internet expansion in the 1990s.
 
 ![](ce4d2b-YXs7a10F87ghhbDDIhRJrQ.jpeg)
 
 *(Comparison of internet and crypto adoption rates \| Source: CryptoSlate)*
 
-Therefore, like the internet, the adoption of blockchain technology is predicted to rapidly expand into diverse domains—notably finance, gaming, art, and entertainment. Accordingly, as mentioned above, until that point is reached, L1 chains must pursue the following strategies: 1) leveraging their strengths to the fullest to establish PMF (Product Market Fit) and focusing on building a strong blockchain ecosystem and forming a narrative within a specific sector, 2) strengthening Ethereum chain compatibility, and 3) building a globally centered community.
+And just like the internet, blockchain technology will likely spread fast into all kinds of domains, notably finance, gaming, art, and entertainment. Until it gets there, the L1 chains need to pursue a few strategies: 1) playing to their strengths to establish PMF (Product Market Fit) while focusing on building a strong blockchain ecosystem and a narrative within a specific sector, 2) strengthening Ethereum chain compatibility, and 3) building a globally centered community.
 
-Because dApps built on blockchain have the characteristic of ‘composability,’ I believe that a reverse strategy of merely grafting blockchain onto existing Web2 systems from a fragmentary perspective cannot lead the blockchain market. Therefore, just as the various DEXs derived from Uniswap expanded into lending, borrowing, and margin trading, continuous research into models will be needed—for example: 1) combinations of P2E, NFTs, and DeFi, 2) uncollateralized DeFi services utilizing soulbound tokens (SBTs), and 3) NFT lending services utilizing the ERC-4907 standard, which separates ownership and usage rights.
+Because dApps built on blockchain have the property of ‘composability,’ I don’t think a reverse strategy of just bolting blockchain onto existing Web2 systems in a piecemeal way can ever lead the blockchain market. Instead, much as the various DEXs that grew out of Uniswap expanded into lending, borrowing, and margin trading, we’ll need to keep researching new models, for example: 1) combinations of P2E, NFTs, and DeFi, 2) uncollateralized DeFi services using soulbound tokens (SBTs), and 3) NFT lending services using the ERC-4907 standard, which separates ownership and usage rights.

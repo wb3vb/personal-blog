@@ -21,15 +21,15 @@ This is all you need to remember.
 This is the return you would have gotten
 if you had invested in index ETFs like the Nasdaq or S&P and done nothing.
 Last year the Nasdaq actually rose about 35%.
-Failing to have produced a 35% return last year
+Not making a 35% return last year
 
-means, to hit you with the hard facts, you did worse than staying still.
+means, to put it bluntly, you did worse than sitting still.
 
 ### Green is the institutional investment return
 
 Capital X time X alpha value
 The market-beating return (alpha) that
-investment institution professionals produce by any means necessary
+the pros at investment firms produce by any means necessary
 Leading hedge funds, asset managers, and the like
 
 This is not the domain of the individual investor.
@@ -37,13 +37,13 @@ This is not the domain of the individual investor.
 ### Purple is the individual investor return
 
 Capital X time X beta value
-In the early days of investing, they show returns that exceed institutions.
+In the early days of investing, their returns beat the institutions.
 It may be beginner's luck, or just a good market.
-However, in a down market they get crushed and even lose their principal.
+But in a down market they get crushed and even lose their principal.
 
 Capital X time X beta value (0) = bankruptcy
 
-And so their confidence converges toward a blown-out account.
+And so their confidence converges on a blown-out account.
 
 ![](371b52-1737205506.png)
 
@@ -51,12 +51,12 @@ In the individual investor's beta return,
 merely touching Zero (a blown-out account) means bankruptcy.
 
 Yet many investors
-invest in things they do not understand well,
+put money into things they don't really understand,
 or, trying to beat the market, touch 'zero'.
 
 ![](371b52-1737205507.png)
 
-It feels roughly like this.
+It feels something like this.
 
 Looking at the orange line
 
@@ -66,7 +66,7 @@ When the market turns bad, your return falls below the index average.
 Losing confidence, you bet even more.
 Finally, betting big on the market,
 
-you eventually crash and touch 'zero'.
+you crash and touch 'zero'.
 
 So what are you supposed to do, you ask?
 You have no talent for investing.
@@ -80,7 +80,7 @@ yet I want to make money
 
 If you can aim for the market's alpha,
 study investing and make the effort to beat the market.
-If, coldly, you conclude you cannot,
+If you coldly conclude you can't,
 
 Capital X time X beta value (market return)
 just remember this: entrust yourself to the market

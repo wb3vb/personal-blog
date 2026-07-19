@@ -3,7 +3,7 @@ import {getContactHref} from '@/shared/utils'
 const isDev = process.env.NODE_ENV === 'development'
 
 /**
- * 사이트 전역 설정 — 개인화가 필요한 값은 전부 이 파일에 모여 있다.
+ * 사이트 전역 설정, 개인화가 필요한 값은 전부 이 파일에 모여 있다.
  * TODO 표시된 값은 배포 전에 본인 값으로 교체할 것.
  */
 export const SiteConfig = {

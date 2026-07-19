@@ -23,17 +23,17 @@ The Ethereum network enjoys great popularity in supporting blockchain-based dece
 
 To solve this problem, the Ethereum ecosystem has introduced various Layer-2 scaling solutions, one of which is the rollup. A rollup is a technology that bundles the transactions occurring on Ethereum mainnet and processes them as a single transaction, greatly improving the network's throughput and reducing transaction fees. The Ethereum community and developers are currently adopting Layer-2 solutions such as rollups in earnest, and they expect that this will allow more users and projects to make use of the Ethereum ecosystem while reducing the burden of high fees. However, current rollups are structured around a single sequencer, which gives rise to problems such as weak censorship resistance and MEV monopolization, and the development of shared sequencers to solve these is also actively underway.
 
-In addition, Flashbots' SUAVE, which has a structure similar to that of a shared sequencer, is expected to achieve even greater effects when it interacts with a shared sequencer. To understand this, let us first take another look at the structure of Layer-2 and rollups and work through it step by step.
+In addition, Flashbots' SUAVE, which has a structure similar to that of a shared sequencer, is expected to achieve even greater effects when it interacts with a shared sequencer. To understand this, let's first revisit the structure of Layer-2 and rollups and work through it step by step.
 
 # 2. Single Sequencer
 
-Currently, most rollups (Arbitrum, Optimism, zkSync, etc.) use a centralized single sequencer. As the name implies, the core role of the sequencer here is to determine, from the memory pool, the order of the transactions to be included in a block, and to submit them to the rollup chain. To understand the role of the sequencer, let us briefly examine the structure and core components of a rollup before proceeding. At present, rollups can be broadly divided into two types, as described below.
+Currently, most rollups (Arbitrum, Optimism, zkSync, etc.) use a centralized single sequencer. As the name implies, the core role of the sequencer here is to determine, from the memory pool, the order of the transactions to be included in a block, and to submit them to the rollup chain. To understand the sequencer's role, it helps to briefly look at the structure and core components of a rollup first. At present, rollups can be broadly divided into two types, as described below.
 
 # 2.1 Smart Contract Rollup
 
-A smart contract rollup is a type of rollup blockchain that posts all of its transactions to a settlement layer such as Ethereum. First, let us briefly summarize and define the role played by a blockchain's settlement layer as follows: 1) it orders blocks, 2) it checks whether data is available (a DA check), and 3) it verifies the correctness of transactions. From a modular blockchain perspective, this can be seen as a processing layer that verifies whether the transactions executed on the execution layer are correct and connects multiple execution layers (rollups).
+A smart contract rollup is a type of rollup blockchain that posts all of its transactions to a settlement layer such as Ethereum. First, a quick summary of what a blockchain's settlement layer does: 1) it orders blocks, 2) it checks whether data is available (a DA check), and 3) it verifies the correctness of transactions. From a modular blockchain perspective, this can be seen as a processing layer that verifies whether the transactions executed on the execution layer are correct and connects multiple execution layers (rollups).
 
-As is well known, in Ethereum's modular stack, a smart contract rollup generally handles execution. It therefore takes the form of delegating the tasks of consensus, data availability, and settlement to Ethereum. As the name suggests, a smart contract rollup relies on a rollup smart contract residing on a settlement layer such as Ethereum to verify blocks. Here, various proof methods are used to efficiently verify whether a block is valid (validity proof) or invalid (fraud proof).
+In Ethereum's modular stack, a smart contract rollup generally handles execution. It therefore takes the form of delegating the tasks of consensus, data availability, and settlement to Ethereum. As the name suggests, a smart contract rollup relies on a rollup smart contract residing on a settlement layer such as Ethereum to verify blocks. Here, various proof methods are used to efficiently verify whether a block is valid (validity proof) or invalid (fraud proof).
 
 ![](ee19e4-N9EdP4pCXEpK7AzteFJzHA.png)
 
@@ -45,7 +45,7 @@ In addition, through the rollup smart contract, a trust-minimized bridge can be 
 
 *Smart Contract Rollup (Source: Celestia)*
 
-As such, in a smart contract rollup, the settlement layer plays an important role, which can be summarized as follows:
+So in a smart contract rollup, the settlement layer plays an important role, which we can summarize as follows:
 
 1.  It serves as a space where connected rollups submit and verify proofs.
 2.  The liquidity held by the settlement layer can be utilized.
@@ -55,7 +55,7 @@ Most of the various widely known rollup solutions today are smart contract rollu
 
 # 2.2 Sovereign Rollup
 
-The sovereign (independent) rollup is a concept first introduced through the ‘Lazyledger’ whitepaper, in the course of researching new blockchain designs using Celestia (a modular blockchain responsible for data availability). In summary, it is a type of blockchain that, similarly to a smart contract rollup, records transactions on another blockchain and checks block ordering and data availability, but handles settlement on its own. Ultimately, it is an independent rollup in which the execution layer and settlement layer are combined—that is, one that processes rollup transactions within the rollup itself and guarantees only data availability through a DA layer.
+The sovereign (independent) rollup is a concept first introduced through the ‘Lazyledger’ whitepaper, in the course of researching new blockchain designs using Celestia (a modular blockchain responsible for data availability). In short, it is a type of blockchain that, like a smart contract rollup, records transactions on another blockchain and checks block ordering and data availability, but handles settlement on its own. So it is an independent rollup that combines the execution and settlement layers, processing rollup transactions within the rollup itself and guaranteeing only data availability through a DA layer.
 
 ![](ee19e4-kEd2Rz6W8MIfoIPxsad2uQ.jpeg)
 
@@ -65,9 +65,9 @@ In the context of the modular stack, a sovereign rollup handles execution and se
 
 Here, the nodes that verify the sovereign rollup are responsible for checking the correctness of transactions. A node therefore verifies the transactions recorded on the DA layer, and if a transaction is invalid, it rejects and ignores that transaction. In the end, the sovereign rollup is responsible for determining the correct chain, and unlike a smart contract rollup, it may optionally have a separate trust-minimized bridge.
 
-In the case of a sovereign rollup that uses Celestia as its data availability layer, it periodically sends a transaction called ‘PayForBlob’ to Celestia in order to store its data.
+A sovereign rollup that uses Celestia as its data availability layer periodically sends a transaction called ‘PayForBlob’ to Celestia to store its data.
 
-In this process, Celestia serves as a single data availability layer shared among multiple rollups, and it stores data in the NMT (Namespace Merkle Tree) format—a Merkle tree with an added field called a Namespace ID—so that a rollup can distinguish and query its own data.
+In this process, Celestia serves as a single data availability layer shared among multiple rollups, and it stores data in the NMT (Namespace Merkle Tree) format, a Merkle tree with an added field called a Namespace ID, so that a rollup can distinguish and query its own data.
 
 ![](ee19e4-UyLo0-Js-VuLNmpBOLBBMw.png)
 
@@ -80,7 +80,7 @@ To summarize the differences between smart contract rollups and sovereign rollup
 
 # 2.3 Single Sequencer Transaction Flow
 
-First, to understand the flow of transactions that occur in a rollup, let us review the basic transaction flow as follows.
+First, to understand how transactions flow through a rollup, let's review the basic transaction flow.
 
 **Monolithic blockchain:**
 
@@ -97,7 +97,7 @@ First, to understand the flow of transactions that occur in a rollup, let us rev
 
 **Rollup blockchain:**
 
-**\<Execution — Rollup\>**
+**\<Execution: Rollup\>**
 
 1.  A user sends the transactions they create to the rollup's mempool.
 2.  The single sequencer selects the transactions to include in a block from the mempool.
@@ -107,23 +107,23 @@ First, to understand the flow of transactions that occur in a rollup, let us rev
 6.  It provides a special rollup feature (soft-commitments) that promises the block will be sent to Ethereum.
 7.  It sends the block's contents and result to Ethereum, requesting verification and storage.
 
-**\<Settlement — Ethereum\>**
+**\<Settlement: Ethereum\>**
 
 1.  Based on the information sent by the rollup, it verifies whether the block's result is valid.
 2.  It includes the result in a block and connects it to the blockchain to store the information.
 3.  It passes the block containing the rollup's result on to other miners to strengthen the security and decentralization of the result.
 
-As explained above, most rollups today use a centralized single sequencer, and the entities operating each network (Optimism: Optimism PBC, Arbitrum: Offchain Labs, etc.) serve as the sequencer for each respective rollup.
+As we saw, most rollups today use a centralized single sequencer, and the entity operating each network (Optimism: Optimism PBC, Arbitrum: Offchain Labs, etc.) serves as the sequencer for that rollup.
 
 # 2.4 Limitation
 
-As described above, the role of the sequencer is entirely assumed by the operating entity that controls the network. While this configuration has advantages for improving scalability, by introducing the additional element of ‘trust’ it comes to carry a series of clear limitations. The first representative limitation that can be cited is the existence of an SPOF (single point of failure). As an example of this, there is a past case with Arbitrum: there have been frequent instances where a hardware fault in the sequencer node caused the sequencer to stop working, and as a result the Arbitrum chain was temporarily rendered unusable.
+As described, the role of the sequencer falls entirely to the operating entity that controls the network. While this configuration has advantages for improving scalability, by introducing the additional element of ‘trust’ it comes to carry a series of clear limitations. The first representative limitation that can be cited is the existence of an SPOF (single point of failure). As an example of this, there is a past case with Arbitrum: there have been frequent instances where a hardware fault in the sequencer node caused the sequencer to stop working, and as a result the Arbitrum chain was temporarily rendered unusable.
 
 ![](ee19e4-B86DvmxJG4eQvKLJYsxSEQ.png)
 
 *(Source: Arbitrum Twitter)*
 
-In addition, one of the sequencer's core roles is the movement of assets from Layer-2 to Layer-1, a process that must go through a validity proof or fraud proof to prove that the transaction is legitimate. This process cannot be performed by the user directly; it is a task that requires a state transition and must be carried out on the user's behalf by the network's sequencer. As noted above, if the sequencer stops working, users become unable to recover their assets, and the generation of Layer-2 blocks also halts (of course, features such as an ‘escape hatch’ are sometimes provided, but the usage fees are high). Moreover, a centralized sequencer is vulnerable in terms of censorship resistance, and if the single sequencer responsible for transaction ordering and Layer-2 block generation has fraudulent intent, it can monopolize all MEV.
+In addition, one of the sequencer's core roles is the movement of assets from Layer-2 to Layer-1, a process that must go through a validity proof or fraud proof to prove that the transaction is legitimate. This process cannot be performed by the user directly; it is a task that requires a state transition and must be carried out on the user's behalf by the network's sequencer. As noted, if the sequencer stops working, users can no longer recover their assets, and the generation of Layer-2 blocks halts as well (of course, features such as an ‘escape hatch’ are sometimes provided, but the usage fees are high). A centralized sequencer is also weak on censorship resistance, and if the single sequencer responsible for transaction ordering and Layer-2 block generation acts in bad faith, it can monopolize all MEV.
 
 Finally, due to the differences between each independent sequencer and solution, interoperability and composability between Layer-2s are poor. Rollups share Layer-1 (e.g., the Ethereum network) as a data availability layer, but because of their individual sequencers and independent infrastructure, users must use cross-sequencer bridges that entail high costs and complexity, which causes the fragmentation and inefficiency of already limited liquidity.
 
@@ -131,11 +131,11 @@ Finally, due to the differences between each independent sequencer and solution,
 
 To overcome the limitations of the single sequencer, major Layer-2 networks (Arbitrum, Optimism, StarkNet, etc.) are proposing methodologies that can realize sequencer decentralization, based on consensus models for electing a separate sequencer (PoA: Proof of Authority, PoS: Proof of Stake, etc.).
 
-In the case of PoS, similar to Ethereum, it is an approach that implements a Layer-2 consensus based on proof of stake in the rollup by utilizing a Layer-2 token. By electing a sequencer and achieving local consensus in this way, censorship resistance and network liveness are strengthened compared to a single sequencer, but constraints follow with respect to interoperability and composability with other Layer-2 networks. Similarly, StarkNet's sequencers also plan to proceed in the direction of participating in consensus by staking their own token, and they guarantee the stability of node operation through a slashing policy.
+With PoS, much like Ethereum, the idea is to run a Layer-2 consensus based on proof of stake in the rollup by using a Layer-2 token. By electing a sequencer and achieving local consensus in this way, censorship resistance and network liveness are strengthened compared to a single sequencer, but constraints follow with respect to interoperability and composability with other Layer-2 networks. Similarly, StarkNet's sequencers also plan to proceed in the direction of participating in consensus by staking their own token, and they guarantee the stability of node operation through a slashing policy.
 
 PoA (Proof of Authority) is an approach in which a trusted consortium of sequencers (e.g., individuals or institutions) takes turns generating blocks. The sequencing order is set differently for each project, and while the risks related to censorship and single points of failure are relatively lower than with a single sequencer, this too takes a form resembling a governance committee and is difficult to regard as fully decentralized. It is expected that Arbitrum, which currently operates a single sequencer, will adopt an approach such as a Sequencer Committee, and Optimism a Multiple Sequencer Module.
 
-The MEV auction (MEVA) approach has not yet been adopted by any rollup, but it is a system similar to Ethereum's PBS (Proposer Builder Separation) and has the advantage of decentralizing MEV without building a separate sequencer. Ultimately, the right to generate blocks is granted to the sequencer that offers the highest bid among the sequencers. However, with this approach as well, there remains a concern about the possibility that authority becomes concentrated in the single most performant and efficient sequencer.
+The MEV auction (MEVA) approach has not yet been adopted by any rollup, but it is a system similar to Ethereum's PBS (Proposer Builder Separation) and has the advantage of decentralizing MEV without building a separate sequencer. In the end, the right to generate blocks goes to the sequencer that offers the highest bid. However, with this approach as well, there remains a concern about the possibility that authority becomes concentrated in the single most performant and efficient sequencer.
 
 # 3. Shared Sequencer
 
@@ -154,11 +154,11 @@ A shared sequencer network provides a modularized system and can play an importa
 - Transaction ordering = shared sequencer
 - Transaction execution = rollup
 
-Through this middleware, rollups can enjoy the benefit of guaranteed censorship resistance—something that only a decentralized network can provide—without having to build a sequencing layer directly. Moreover, because a rollup's transaction data is stored on Layer-1 and each rollup full node maintains state and performs execution, updates are easy and the dependency on the shared sequencer is relatively low. This allows each rollup to focus on differentiating and optimizing its state transition function, and to develop unique capabilities that can provide better service for a variety of use cases. For these reasons, a shared sequencer is sometimes referred to as SaaS (Sequencing as a Service).
+Through this middleware, rollups can enjoy guaranteed censorship resistance, something only a decentralized network can provide, without having to build a sequencing layer themselves. And because a rollup's transaction data is stored on Layer-1 and each rollup full node maintains state and performs execution, updates are easy and the dependency on the shared sequencer is relatively low. This allows each rollup to focus on differentiating and optimizing its state transition function, and to develop unique capabilities that can provide better service for a variety of use cases. For these reasons, a shared sequencer is sometimes referred to as SaaS (Sequencing as a Service).
 
 **While the shared sequencer handles transaction ordering, the rollup handles transaction execution.**
 
-**Sequencing layer — transaction ordering:**
+**Sequencing layer (transaction ordering):**
 
 1.  A user sends a transaction to the mempool of the sequencing layer.
 2.  The operator of the sequencing layer selects the transactions to include in a block from the mempool.
@@ -166,18 +166,18 @@ Through this middleware, rollups can enjoy the benefit of guaranteed censorship 
 4.  It places the valid transactions in the order it has determined and generates a block.
 5.  It sends the block to the rollup's operator.
 
-**Execution layer (rollup) — transaction execution:**
+**Execution layer (rollup), transaction execution:**
 
 1.  The rollup's operator executes the transactions in order to compute the block's result.
 2.  It sends the block's contents and result to Ethereum, requesting verification and storage.
 
-**Settlement layer — settlement (Ethereum):**
+**Settlement layer, settlement (Ethereum):**
 
 1.  Based on the information sent by the rollup, it verifies whether the block's result is valid.
 2.  It includes the result in a block and connects it to the blockchain to store the information.
 3.  It passes the block containing the rollup's result on to other miners to strengthen the security and decentralization of the result.
 
-**Data availability layer — information storage:**
+**Data availability layer (information storage):**
 
 1.  It stores the information that needs to be retained throughout all processes, simply storing it without verifying it.
 
@@ -199,7 +199,7 @@ In this way, a shared sequencer can play an important role in improving the scal
 
 From here, we will look at SUAVE, which is structurally similar to the shared sequencer described above and can operate in a complementary manner. Similar to a shared sequencer, SUAVE also has a universal mempool where transactions from multiple chains gather, and it builds blocks based on that mempool. The difference is that while a shared sequencer focuses on outsourcing the sequencing layer of rollups, SUAVE focuses on efficient block building across both Layer-1 and Layer-2.
 
-With these commonalities and differences, SUAVE and shared sequencers can perform complementary functions, but before getting to that, we need to understand what SUAVE is in more detail. As mentioned earlier, SUAVE is a universal plug-and-play solution being developed by Flashbots, which aims to provide mempool and distributed builder functionality for all chains. According to this design, a SUAVE user can send their transaction to the SUAVE mempool rather than to the destination chain's public mempool. SUAVE turns the transactions in the mempool into a block, and this block can be accepted by the chain as a complete block for the destination chain the user intended. The key here is that the block SUAVE creates is a highly efficient block from an MEV perspective. Flashbots has previously presented, through MEV-Boost, a solution that creates blocks which efficiently extract MEV. SUAVE extends this cross-chain while seeking to solve the builder centralization problem that has been raised in the past. Let us look at SUAVE's design intent and architecture below to see how this is possible.
+With these commonalities and differences, SUAVE and shared sequencers can perform complementary functions, but before getting to that, we need to understand what SUAVE is in more detail. As mentioned earlier, SUAVE is a universal plug-and-play solution being developed by Flashbots, which aims to provide mempool and distributed builder functionality for all chains. According to this design, a SUAVE user can send their transaction to the SUAVE mempool rather than to the destination chain's public mempool. SUAVE turns the transactions in the mempool into a block, and this block can be accepted by the chain as a complete block for the destination chain the user intended. The key here is that the block SUAVE creates is a highly efficient block from an MEV perspective. Flashbots has previously presented, through MEV-Boost, a solution that creates blocks which efficiently extract MEV. SUAVE extends this cross-chain while seeking to solve the builder centralization problem that has been raised in the past. Let's look at SUAVE's design intent and architecture below to see how this is possible.
 
 ![](ee19e4-LubvheTkZVAb27zSxMloYg.png)
 
@@ -247,7 +247,7 @@ The problem with EOF is that it accelerates builder centralization. Through EOF,
 
 # 4.4 Architecture
 
-Let us look at SUAVE's structure in more detail. SUAVE can be divided into three areas: Universal Preference Environment, Optimal Execution Market, and Decentralized Block Building.
+Now let's break down SUAVE's structure in more detail. SUAVE can be divided into three areas: Universal Preference Environment, Optimal Execution Market, and Decentralized Block Building.
 
 ![](ee19e4-63nC-sCkwEF0Ml2D-exJsg.png)
 
@@ -263,19 +263,19 @@ The universal preference environment is the space where users' preferences are a
 
 *SUAVE (Source: Flashbots)*
 
-Let us now take a closer look at the preference concept, which will appear frequently from here on. Since SUAVE is an EVM fork chain, a preference can be expressed like a smart contract. After writing a preference in the form of a smart contract, the user deposits funds into SUAVE in order to execute the preference. Within the range of the deposited funds, they can attach a bid and send their preference to the preference environment. At this point, the recipient of the bid is dynamically determined after the execution of the smart contract (the fulfillment of the preference). For example, if the content of the preference is “the transaction log of block 2 must contain \[x\],” the recipient of the bid is the originator of the transaction corresponding to \[x\]. However, if the content of the preference is “block 3 must be empty,” the recipient of the bid is the miner.
+Let's take a closer look at the preference concept, which comes up frequently from here on. Since SUAVE is an EVM fork chain, a preference can be expressed like a smart contract. After writing a preference in the form of a smart contract, the user deposits funds into SUAVE in order to execute the preference. Within the range of the deposited funds, they can attach a bid and send their preference to the preference environment. At this point, the recipient of the bid is dynamically determined after the execution of the smart contract (the fulfillment of the preference). For example, if the content of the preference is “the transaction log of block 2 must contain \[x\],” the recipient of the bid is the originator of the transaction corresponding to \[x\]. However, if the content of the preference is “block 3 must be empty,” the recipient of the bid is the miner.
 
 The reason the bid recipient is determined dynamically like this is to distribute MEV profit to the entity that contributed to generating the MEV. If a user writes a preference to perform cross-chain MEV, part of the profit the user gains returns, in the form of a bid, to the entities that achieved that MEV. From this perspective, SUAVE is designed so that the payment recipient is not statically specified as an executor or miner, etc., but is dynamically determined as a result of execution.
 
-In that the preference environment is where preferences—corresponding to transactions in SUAVE—gather, the preference environment can be said to correspond to SUAVE's mempool. According to Flashbots, preferences from multiple chains can gather in this mempool. For example, preferences such as a smart contract call deployed on Ethereum and MEV activity on Polygon can all be contained in SUAVE's single mempool.
+Because the preference environment is where preferences (SUAVE's equivalent of transactions) gather, it can be said to correspond to SUAVE's mempool. According to Flashbots, preferences from multiple chains can gather in this mempool. For example, preferences such as a smart contract call deployed on Ethereum and MEV activity on Polygon can all be contained in SUAVE's single mempool.
 
-The reason for constructing a mempool that is universal across all chains like this is to achieve the following two goals. First, it is to enable executors to capture more opportunities to optimize execution. When preferences for multiple chains accumulate in one mempool, the very amount of preferences accumulating in the mempool increases. Thanks to this increased number of preferences, executors can more frequently perform optimizations such as batch-processing similar trades. Second, it is to lower the communication cost of cross-domain MEV. Because preferences from multiple chains accumulate, the executors that turn preferences into bundles and blocks can easily engage with preferences from other domains. They can know how preferences from other domains are ordered, and furthermore they can order those preferences themselves. Through this, they can more easily obtain the aforementioned benefit of ordering transactions cross-chain.
+The reason for constructing a mempool that is universal across all chains like this is to achieve the following two goals. First, it is to enable executors to capture more opportunities to optimize execution. When preferences for multiple chains accumulate in one mempool, the very amount of preferences accumulating in the mempool increases. Thanks to this increased number of preferences, executors can more frequently perform optimizations such as batch-processing similar trades. Second, it is to lower the communication cost of cross-domain MEV. Because preferences from multiple chains accumulate, the executors that turn preferences into bundles and blocks can easily engage with preferences from other domains. They can see how preferences from other domains are ordered, and they can even order those preferences themselves. This makes it easier for them to capture that same benefit of ordering transactions cross-chain.
 
 # 4.6 Optimal Execution Market
 
 The Optimal Execution Market is a space where the role group called executors listens to the mempool described above and then holds an auction (OFA, Orderflow Auction) to provide the optimal execution for a preference.
 
-First, let us explain what an executor is before moving on. Executors look at a preference and generate the optimal transaction bundle that can achieve the preference's goal. They also build blocks by appending their own bundle to another executor's bundle. Compared to the existing MEV-Boost, there is a similar aspect to a builder in that they build a block based on transaction bundles. The difference is that the process of building a block is carried out not by a single executor but by multiple executors collaborating, and that they are also involved in creating the transaction bundles. In other words, they are an entity that takes on the searcher's role of creating bundles while sharing the builder's role. Below is a diagram showing which entities perform each stage of MEV activity in MEV-Boost and in SUAVE.
+First, a quick word on what an executor is. Executors look at a preference and generate the optimal transaction bundle that can achieve the preference's goal. They also build blocks by appending their own bundle to another executor's bundle. Compared to the existing MEV-Boost, there is a similar aspect to a builder in that they build a block based on transaction bundles. The difference is that the process of building a block is carried out not by a single executor but by multiple executors collaborating, and that they are also involved in creating the transaction bundles. In other words, they are an entity that takes on the searcher's role of creating bundles while sharing the builder's role. Below is a diagram showing which entities perform each stage of MEV activity in MEV-Boost and in SUAVE.
 
 ![](ee19e4-6L2WfCognY3c7a_2QPnfjg.png)
 
@@ -285,7 +285,7 @@ Here, there has not yet been any specific mention of how a preference is convert
 
 The reason this is possible is that in the special situation of MEV, the user's very creation of a transaction plays an important role. Generally, in a blockchain, an auction takes the form of a user who wants to include a transaction in a block paying a fee toward the proposer. This is because the authority to include a transaction in a block lies with the proposer. In contrast, in an MEV extraction situation, not only the proposer but also the user who creates the transaction becomes important. This is because the user's transaction is the target of MEV extraction.
 
-Currently, the first draft of the OFA is the recently announced MEV-Share. In MEV-Share, there exists a trusted entity called the Matchmaker, and the MEV profit rebate is also carried out not by auction but by a validity condition specified by the Matchmaker. However, this is an elementary stage for implementing an OFA, and going forward it appears that SGX will be used to eliminate the Matchmaker and implement MEV rebates through auctions among executors.
+Currently, the first draft of the OFA is the recently announced MEV-Share. In MEV-Share, there is a trusted entity called the Matchmaker, and the MEV profit rebate is handled not by auction but by a validity condition the Matchmaker specifies. However, this is an elementary stage for implementing an OFA, and going forward it appears that SGX will be used to eliminate the Matchmaker and implement MEV rebates through auctions among executors.
 
 ![](ee19e4-32rhlZ2O-pfXm1bgrr6jrA.png)
 
@@ -307,13 +307,13 @@ Decentralized Block Building (DBB) is the space where preferences whose executio
 
 So far, we have looked at the three components of SUAVE as divided by Flashbots. However, these three components alone cannot fully explain SUAVE's transaction flow. This is because it has not been clarified how a proposer of a chain external to SUAVE accepts the block generated through DBB, or how a preference's payment is unlocked after the transaction is reflected on the external chain.
 
-First, let us look at how a proposer of an external chain accepts a SUAVE block. To begin with, since SUAVE exists as middleware that produces a complete block, no protocol-level change is needed to accept a SUAVE block. Therefore, a proposer can listen for the blocks SUAVE generates and, if the bid of the SUAVE block is higher than that of a traditional block built from the chain's public mempool, it can choose the SUAVE block. If the proposer is not listening for the blocks generated by SUAVE, the executor can reach the proposer through a third-party channel. For example, it can include its bundle in a block through a PGA (Priority Gas Auction), or it can use MEV-Boost.
+First, let's look at how a proposer of an external chain accepts a SUAVE block. To begin with, since SUAVE exists as middleware that produces a complete block, no protocol-level change is needed to accept a SUAVE block. Therefore, a proposer can listen for the blocks SUAVE generates and, if the bid of the SUAVE block is higher than that of a traditional block built from the chain's public mempool, it can choose the SUAVE block. If the proposer is not listening for the blocks generated by SUAVE, the executor can reach the proposer through a third-party channel. For example, it can include its bundle in a block through a PGA (Priority Gas Auction), or it can use MEV-Boost.
 
 In any case, when a block or bundle is submitted to the destination chain and the user's preference is achieved, this fact is conveyed to SUAVE through an oracle. For example, suppose the payment condition of a preference is to transfer 1 ETH to 0xdeadbeef. The evidence indicating that this condition has been met could be a transfer event. In that case, the transfer event is conveyed to SUAVE through an oracle, and SUAVE sees this and carries out the preference's payment.
 
 # 4.9 Transaction Flow
 
-To wrap up the architecture we have examined so far, let us briefly look at SUAVE's transaction flow.
+To wrap up the architecture we've covered so far, let's briefly walk through SUAVE's transaction flow.
 
 ![](ee19e4-gxF3_C7W7WaVPa1oHdWJww.png)
 
@@ -339,11 +339,11 @@ Using SUAVE, one can also enjoy the decentralization of MEV profit through OFA. 
 
 In addition to this, being able to outsource the roles of the mempool and block builder, and being able to increase the block proposer's revenue source without major changes to the logic, can also be advantages.
 
-In a situation where a concrete design has not yet come out, let us point out the parts that could be tricky in implementing SUAVE, as follows.
+With no concrete design out yet, here are the parts that could be tricky to implement in SUAVE.
 
 First, similarly to what was pointed out in MEV-Share, there may be cases where it is difficult to determine the recipient to whom a preference's bid is paid. What if it was not a single transaction but a transaction bundle that satisfied the payment condition? It is hard to know how one could dynamically figure out at what ratio the bid should return to the users of the bundle. Since this part is related to the decentralization of MEV profit, it appears that more discussion will be needed going forward.
 
-It is also unclear how execution for a preference will be provided. It is said that an executor turns a preference into a form similar to a transaction bundle, but the process by which this is done is not laid out. Therefore, the executor's logic needs to be made more concrete—for example, what kind of smart contract writes a preference, and what the transaction bundles created by executors look like.
+It is also unclear how execution for a preference will be provided. An executor supposedly turns a preference into something like a transaction bundle, but the process by which this happens is not laid out. So the executor's logic needs to be made more concrete, for example what kind of smart contract writes a preference, and what the transaction bundles created by executors look like.
 
 The two issues above are problems that can be resolved as we watch SUAVE's implementation going forward. In contrast, there is a problem that seems unlikely to be resolved in principle, namely the problem that the atomicity of a preference is not guaranteed. For example, consider a cross-chain MEV situation of buying ETH on R1 and selling ETH on R2. For the MEV to succeed, both the transaction sent to R1 and the transaction sent to R2 must succeed. Only if both transactions can be rolled back when even one of them fails can atomicity be said to be guaranteed.
 
@@ -351,7 +351,7 @@ The two issues above are problems that can be resolved as we watch SUAVE's imple
 
 *SUAVE X-Chain Atomicity (Source: dba:)*
 
-However, because the executor is not the block proposer of the two chains, this atomicity is not guaranteed at the protocol level. Therefore, one of the entities—either the user or the executor—must necessarily bear the risk of the case where only one of the two transactions succeeds. For example, if the payment condition is set so that the bid is paid only when both transactions succeed, the executor must bear the risk. On the other hand, if the condition is such that the bid is paid even if only one succeeds, then the risk is borne by the user side. Therefore, while the efficiency of cross-chain MEV in SUAVE may be guaranteed, its safety cannot be said to be guaranteed. Going forward, as a solution that can supplement this atomicity problem, we would like to consider combination with a shared sequencer.
+However, because the executor is not the block proposer of the two chains, this atomicity is not guaranteed at the protocol level. So one of the parties, either the user or the executor, must bear the risk of the case where only one of the two transactions succeeds. For example, if the payment condition is set so that the bid is paid only when both transactions succeed, the executor must bear the risk. On the other hand, if the condition is such that the bid is paid even if only one succeeds, then the risk is borne by the user side. Therefore, while the efficiency of cross-chain MEV in SUAVE may be guaranteed, its safety cannot be said to be guaranteed. Going forward, as a solution that can supplement this atomicity problem, we would like to consider combination with a shared sequencer.
 
 # 5. Shared Sequencer & SUAVE
 
@@ -374,7 +374,7 @@ SUAVE aggregates the preferences of transactions and identifies which transactio
 
 # 6. Outro
 
-Ultimately, we believe that by using SUAVE as the ‘Builder’ and the shared sequencer as the ‘Proposer’ to make the two systems cooperate, high efficiency and safety can be achieved in cross-chain transactions. SUAVE optimizes cross-chain transactions according to users' preferences, while the shared sequencer guarantees that those transactions are processed safely. In this way, by combining SUAVE and a shared sequencer, the blockchain ecosystem can provide a better environment in which users can execute efficient and safe cross-chain transactions. However, we think that, just as with the current Layer-1 (e.g., Ethereum) MEV-Boost, where the existing Ethereum validator set has been decentralized, the problem of centralization has simply flowed down to the builders.
+In the end, we believe that using SUAVE as the ‘Builder’ and the shared sequencer as the ‘Proposer’ to make the two systems cooperate can deliver high efficiency and safety in cross-chain transactions. SUAVE optimizes cross-chain transactions according to users' preferences, while the shared sequencer guarantees that those transactions are processed safely. In this way, by combining SUAVE and a shared sequencer, the blockchain ecosystem can provide a better environment in which users can execute efficient and safe cross-chain transactions. However, we think that, just as with the current Layer-1 (e.g., Ethereum) MEV-Boost, where the existing Ethereum validator set has been decentralized, the problem of centralization has simply flowed down to the builders.
 
 In a cross-chain MEV scenario, a builder must efficiently manage and compose transactions from multiple chains while maintaining high throughput and low latency. This means that the software and hardware resources needed to maintain competitiveness in the cross-chain MEV market are substantial. As the resources that must be invested increase like this, not only does the barrier to market entry rise, but a phenomenon can occur in which a builder that takes more order flow earns more profit and, on that basis, can invest even more resources. In other words, centralization pressure on cross-chain builders arises. This concern also applies to the shared-sequencer builder that plays the role of a cross-chain builder. In a shared sequencer, the builder must handle high throughput and complexity, and as a result it is highly likely that a single high-performance builder will act as the builder for all rollups of the shared sequencer.
 

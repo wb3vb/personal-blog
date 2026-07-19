@@ -9,29 +9,28 @@ description: '(A short thought)'
 
 (A short thought)
 
-**AI is increasingly getting good at the things we are good at.**
+**AI keeps getting better at the things we're good at.**
 
-And ultimately it will do them even better.
-Writing, translation, autonomous driving, medicine, law, and more —
-this applies to every field.
+And eventually it will do them better than we do.
+Writing, translation, autonomous driving, medicine, law, and more. It holds for every field.
 
 AI is smarter and more efficient than us at every task.
-It can respond instantly in whatever language you want,
+It answers instantly in whatever language you want,
 it can recite the entire Bible,
-and it has near-perfect analytical power.
+and its analytical power is close to perfect.
 
 We need a sense of urgency.
 
-So what will I be better at going forward?
-But AI does not get invited to the party.
-We, on the other hand, can be invited.
+So what will I be better at from here on?
+But AI doesn't get invited to the party.
+We do.
 
-People do not want to meet up with AI
+People don't want to meet up with AI
 just because it has an advanced voice mode.
 We want to spend time with people.
-Our role is to become the kind of person others want to be around.
+Our job is to become the kind of person others want to be around.
 
-What ultimately becomes more important is
+What ends up mattering more is
 
 ### Communication
 
@@ -40,35 +39,35 @@ What ultimately becomes more important is
 The value of writing keeps declining,
 and the value of speaking keeps rising.
 
-Communication ability will grow ever more important in the post-AI era,
-because this is one area where AI will not do better than people.
+Communication will only get more important in the post-AI era,
+because it's one area where AI won't beat people.
 
 Even if AI achieves considerable technical feats,
 it cannot match a 'conversation' that carries the **emotional connection**
 and **depth of social interaction** that humans have.
 
-And that is not all.
+And that's not all.
 
 Can you tell AI exactly what you want?
-For example, suppose I have an incredible AI.
+Say I have an incredible AI.
 
-If you ask, that AI will do what you want,
-but if you cannot explain it properly, you might think the AI is dumb.
-Yet the one who failed is not the AI — it is the person asking.
+Ask, and it will do what you want.
+But if you can't explain it properly, you might think the AI is dumb.
+The one who failed, though, isn't the AI. It's the person asking.
 
-'Build a homepage and put in this and that' —
-say that, and the AI builds it.
-'That is not it, make it cooler' —
-this means you yourself do not know how to explain what you want.
+Say 'Build a homepage and put in this and that'
+and the AI builds it.
+Say 'That is not it, make it cooler'
+and that just means you don't know how to explain what you want yourself.
 
 No matter how smart AI is,
-I still have to clearly convey and explain to the AI what I want.
-This is not a problem limited to conversations with AI.
-It also includes the cognitive ability to recognize
-that another person is trying to understand my instructions.
+I still have to spell out clearly what I want.
+And this isn't just about talking to AI.
+It also takes the awareness to notice
+that another person is trying to understand what I'm asking.
 
-Let us prepare.
+Let's prepare.
 
 
-In the end, it is **communication ability**,
-and this is a management skill.
+In the end, it's **communication ability**,
+and that's a management skill.

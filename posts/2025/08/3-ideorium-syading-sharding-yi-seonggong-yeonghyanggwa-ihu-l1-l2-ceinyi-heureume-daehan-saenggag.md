@@ -43,7 +43,7 @@ Written by 
 
 [100y](https://medium.com/u/5e5fe9213d31?source=post_page---user_mention--ff6dfcf9b57e---------------------------------------))님의 쓰레드는 이해하기 쉬우니 필독을 추천드린다.
 
-[[Polygon 시리즈]#1: Polygon PoS — Mass Adoption을 향한 여정의 시작폴리곤이 그리고 있는 모듈러 블록체인(Modular blockchain)의 미래를 살펴보고, 첫 프로덕트인 플라즈마(Plasma) 체인, Polygon PoS에 대해 알아봅니다.medium.com](https://medium.com/a41-ventures/polygon-%EC%8B%9C%EB%A6%AC%EC%A6%88-1-polygon-pos-mass-adoption%EC%9D%84-%ED%96%A5%ED%95%9C-%EC%97%AC%EC%A0%95%EC%9D%98-%EC%8B%9C%EC%9E%91-b907d20fd84f?source=post_page-----ff6dfcf9b57e---------------------------------------)
+[[Polygon 시리즈]#1: Polygon PoS: Mass Adoption을 향한 여정의 시작폴리곤이 그리고 있는 모듈러 블록체인(Modular blockchain)의 미래를 살펴보고, 첫 프로덕트인 플라즈마(Plasma) 체인, Polygon PoS에 대해 알아봅니다.medium.com](https://medium.com/a41-ventures/polygon-%EC%8B%9C%EB%A6%AC%EC%A6%88-1-polygon-pos-mass-adoption%EC%9D%84-%ED%96%A5%ED%95%9C-%EC%97%AC%EC%A0%95%EC%9D%98-%EC%8B%9C%EC%9E%91-b907d20fd84f?source=post_page-----ff6dfcf9b57e---------------------------------------)
 
 샤딩의 기본 개념은 데이터 파티셔닝으로 블록체인 데이터를 나눈 후 각 샤드에 랜덤 샘플링을 통한 검증인 그룹을 할당하여 트랜잭션 검증을 분담하는 간소화된 형식이며 이는 병렬처리가 가능하여 이더리움의 확장성 문제를 개선한다.
 
