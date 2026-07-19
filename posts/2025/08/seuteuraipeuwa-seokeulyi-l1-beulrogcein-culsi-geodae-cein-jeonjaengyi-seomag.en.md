@@ -1,5 +1,6 @@
 ---
 title: 'The On-Chain Finance Paradigm'
+category: crypto
 tags:
   - stablecoin
 published: true

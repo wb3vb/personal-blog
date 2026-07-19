@@ -1,5 +1,6 @@
 ---
 title: '#4. Ethereum Post-Merge Deflation: Is This Really Okay?'
+category: crypto
 tags:
   - ethereum
 published: true

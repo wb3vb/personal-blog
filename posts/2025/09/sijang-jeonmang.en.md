@@ -1,5 +1,6 @@
 ---
 title: 'Korean Real Estate Outlook: Lease Deposit × Interest Rate'
+category: realestate
 tags:
   - real estate
 published: true

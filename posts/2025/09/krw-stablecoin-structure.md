@@ -1,5 +1,6 @@
 ---
 title: '규제가 설계하는 원스코 발행 구조, Layer-1의 전략은?'
+category: crypto
 tags:
   - stablecoin
 published: true

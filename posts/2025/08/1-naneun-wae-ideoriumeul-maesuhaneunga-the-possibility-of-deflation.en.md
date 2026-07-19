@@ -1,5 +1,6 @@
 ---
 title: '#1. Why Do I Buy Ethereum? : The Possibility of Deflation'
+category: crypto
 tags:
   - ethereum
 published: true

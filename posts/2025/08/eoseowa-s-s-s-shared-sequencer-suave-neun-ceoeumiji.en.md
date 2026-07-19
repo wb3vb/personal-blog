@@ -1,5 +1,6 @@
 ---
 title: 'Welcome, Is This Your First Time with S.S.S(Shared Sequencer & SUAVE)?'
+category: crypto
 tags:
   - ethereum
 published: true

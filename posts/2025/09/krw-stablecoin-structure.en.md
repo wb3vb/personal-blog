@@ -1,5 +1,6 @@
 ---
 title: "The KRW Stablecoin Issuance Structure That Regulation Designs: What Is Layer-1's Strategy?"
+category: crypto
 tags:
   - stablecoin
 published: true

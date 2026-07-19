@@ -1,5 +1,6 @@
 ---
 title: 'Probabilistic Thinking'
+category: investing
 tags:
   - investment
 published: true

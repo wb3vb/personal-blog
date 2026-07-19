@@ -1,5 +1,6 @@
 ---
 title: '대한민국 부동산의 미래 (9.7 대책)'
+category: realestate
 tags:
   - real estate
 published: true

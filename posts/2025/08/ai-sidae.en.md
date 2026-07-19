@@ -1,5 +1,6 @@
 ---
 title: 'The Age of AI (AI Era)'
+category: ai
 tags:
   - ai
 published: true

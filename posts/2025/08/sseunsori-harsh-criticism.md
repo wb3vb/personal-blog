@@ -1,5 +1,6 @@
 ---
 title: '쓴소리 (Harsh Criticism)'
+category: investing
 tags:
   - thoughts
 published: true

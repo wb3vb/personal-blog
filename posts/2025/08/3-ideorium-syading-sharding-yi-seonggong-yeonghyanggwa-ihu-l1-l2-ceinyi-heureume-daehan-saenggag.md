@@ -1,5 +1,6 @@
 ---
 title: '#3. 이더리움 샤딩(Sharding)의 성공 영향과 이후 L1 & L2 체인의 흐름에 대한 생각'
+category: crypto
 tags:
   - ethereum
 published: true

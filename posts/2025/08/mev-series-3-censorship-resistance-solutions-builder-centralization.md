@@ -1,5 +1,6 @@
 ---
 title: '[MEV Series]#3: Censorship Resistance Solutions & Builder Centralization'
+category: crypto
 tags:
   - ethereum
 published: true

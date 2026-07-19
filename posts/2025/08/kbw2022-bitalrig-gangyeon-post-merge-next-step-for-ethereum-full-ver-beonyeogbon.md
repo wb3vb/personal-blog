@@ -1,5 +1,6 @@
 ---
 title: '[KBW2022: 비탈릭 강연] Post Merge: Next Step for Ethereum (full ver. 번역본)'
+category: crypto
 tags:
   - ethereum
 published: true

@@ -1,5 +1,6 @@
 ---
 title: 'Bitter Words (Harsh Criticism)'
+category: investing
 tags:
   - thoughts
 published: true

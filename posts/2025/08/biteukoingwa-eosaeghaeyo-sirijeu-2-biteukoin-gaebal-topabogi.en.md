@@ -1,5 +1,6 @@
 ---
 title: '[Awkward with Bitcoin Series] #2. A Deep Dive into Bitcoin Development'
+category: crypto
 tags:
   - bitcoin
 published: true

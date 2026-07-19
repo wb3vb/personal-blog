@@ -1,5 +1,6 @@
 ---
 title: "[KBW2022: Vitalik's Talk] Post Merge: Next Step for Ethereum (full ver. translation)"
+category: crypto
 tags:
   - ethereum
 published: true

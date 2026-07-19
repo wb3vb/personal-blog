@@ -1,5 +1,6 @@
 ---
 title: 'What If You Studied Investing From Scratch?'
+category: investing
 tags:
   - investment
 published: true

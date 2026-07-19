@@ -37,8 +37,8 @@ export const SiteConfig = {
   menu: [
     {
       label: 'Posts',
-      labelKo: '글',
-      path: '/pages/1',
+      labelKo: '포스트',
+      path: '/pages',
     },
     {
       label: 'Tags',

@@ -1,5 +1,6 @@
 ---
 title: 'KRW Stablecoin Trends (KRW-Stablecoin Status)'
+category: crypto
 tags:
   - stablecoin
 published: true

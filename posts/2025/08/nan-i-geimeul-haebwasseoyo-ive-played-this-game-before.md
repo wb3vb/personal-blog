@@ -1,5 +1,6 @@
 ---
 title: '“난 이 게임을 해봤어요!” (I''ve played this game before!)'
+category: investing
 tags:
   - investment
 published: true

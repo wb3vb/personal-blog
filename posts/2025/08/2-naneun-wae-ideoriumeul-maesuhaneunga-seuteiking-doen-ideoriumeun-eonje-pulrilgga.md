@@ -1,5 +1,6 @@
 ---
 title: '#2. 나는 왜 이더리움을 매수하는가? : 스테이킹 된 이더리움은 언제 풀릴까?'
+category: crypto
 tags:
   - ethereum
 published: true

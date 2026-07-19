@@ -1,5 +1,6 @@
 ---
 title: '멤풀 스나이핑(Mempool Sniping)'
+category: crypto
 tags:
   - bitcoin
 published: true

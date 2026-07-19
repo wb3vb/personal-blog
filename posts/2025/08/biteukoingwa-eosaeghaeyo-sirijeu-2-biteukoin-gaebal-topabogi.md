@@ -1,5 +1,6 @@
 ---
 title: '[비트코인과 어색해요 시리즈] #2. 비트코인 개발 톺아보기'
+category: crypto
 tags:
   - bitcoin
 published: true

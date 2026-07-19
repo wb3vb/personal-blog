@@ -1,5 +1,6 @@
 ---
 title: '원화 스테이블코인 동향 (KRW-Stablecoin Status)'
+category: crypto
 tags:
   - stablecoin
 published: true

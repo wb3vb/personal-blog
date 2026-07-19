@@ -1,5 +1,6 @@
 ---
 title: 'How to Decode FRED (Decrypting FRED)'
+category: economy
 tags:
   - economy
 published: true

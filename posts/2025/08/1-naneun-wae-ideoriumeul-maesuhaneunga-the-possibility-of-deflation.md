@@ -1,5 +1,6 @@
 ---
 title: '#1. 나는 왜 이더리움을 매수하는가? : The Possibility of Deflation'
+category: crypto
 tags:
   - ethereum
 published: true

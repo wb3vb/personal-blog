@@ -1,5 +1,6 @@
 ---
 title: 'Crypto Investment Framework (Crypto Investment Thesis)'
+category: investing
 tags:
   - investment
 published: true

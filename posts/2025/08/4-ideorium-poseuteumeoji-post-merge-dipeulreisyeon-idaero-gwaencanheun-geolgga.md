@@ -1,5 +1,6 @@
 ---
 title: '#4. 이더리움 포스트머지(Post-Merge) 디플레이션, 이대로 괜찮은 걸까?'
+category: crypto
 tags:
   - ethereum
 published: true

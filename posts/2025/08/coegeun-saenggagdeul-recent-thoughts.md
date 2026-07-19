@@ -1,5 +1,6 @@
 ---
 title: '최근 생각들(Recent Thoughts)'
+category: investing
 tags:
   - investment
 published: true

@@ -1,5 +1,6 @@
 ---
 title: 'Recent Thoughts'
+category: investing
 tags:
   - investment
 published: true

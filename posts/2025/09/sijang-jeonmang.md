@@ -1,5 +1,6 @@
 ---
 title: '대한민국 부동산 전망: 전세가 x 금리'
+category: realestate
 tags:
   - real estate
 published: true

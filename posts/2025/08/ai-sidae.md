@@ -1,5 +1,6 @@
 ---
 title: 'AI 시대 (AI Era)'
+category: ai
 tags:
   - ai
 published: true

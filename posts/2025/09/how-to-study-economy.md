@@ -1,5 +1,6 @@
 ---
 title: '투자를 처음부터 공부해본다면?'
+category: investing
 tags:
   - investment
 published: true

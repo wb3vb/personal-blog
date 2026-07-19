@@ -1,5 +1,6 @@
 ---
 title: "#2. Why Do I Buy Ethereum?: When Will Staked Ethereum Be Unlocked?"
+category: crypto
 tags:
   - ethereum
 published: true

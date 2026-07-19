@@ -1228,6 +1228,51 @@ body[data-minimal='true'] .hero-title .accent {
   color: var(--ink-3);
 }
 
+/* ========= CATEGORY TABS (/pages) ========= */
+.cat-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 4px 0 26px;
+}
+.cat-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 15px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink-3);
+  cursor: pointer;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+.cat-tab:hover {
+  color: var(--ink);
+  border-color: color-mix(in oklab, var(--primary) 40%, var(--border));
+}
+.cat-tab[data-active='true'] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--bg);
+}
+.cat-tab-count {
+  font-family: var(--font-mono), monospace;
+  font-size: 10.5px;
+  opacity: 0.65;
+}
+.cat-empty {
+  padding: 44px 4px;
+  color: var(--ink-3);
+  font-size: 14.5px;
+}
+
 /* ========= PAGINATION ========= */
 .pagination {
   display: flex;

@@ -1,5 +1,6 @@
 ---
 title: 'The Future of Korean Real Estate (The September 7 Measures)'
+category: realestate
 tags:
   - real estate
 published: true

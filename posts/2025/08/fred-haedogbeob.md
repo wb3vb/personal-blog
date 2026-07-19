@@ -1,5 +1,6 @@
 ---
 title: 'FRED 해독법 (Decrypting FRED)'
+category: economy
 tags:
   - economy
 published: true

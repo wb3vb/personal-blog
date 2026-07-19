@@ -1,5 +1,6 @@
 ---
 title: '"I''ve played this game before!"'
+category: investing
 tags:
   - investment
 published: true

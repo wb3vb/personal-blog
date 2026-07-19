@@ -1,5 +1,6 @@
 ---
 title: '어서와, S.S.S(Shared Sequencer & SUAVE)는 처음이지?'
+category: crypto
 tags:
   - ethereum
 published: true

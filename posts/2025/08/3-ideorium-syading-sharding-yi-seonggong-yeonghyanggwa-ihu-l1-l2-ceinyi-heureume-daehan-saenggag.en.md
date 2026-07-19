@@ -1,5 +1,6 @@
 ---
 title: "#3. Thoughts on the Impact of Ethereum Sharding's Success and the Subsequent Flow of L1 & L2 Chains"
+category: crypto
 tags:
   - ethereum
 published: true

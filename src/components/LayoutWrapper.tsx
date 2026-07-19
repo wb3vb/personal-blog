@@ -48,8 +48,8 @@ function HeaderNav() {
 
   const menu = pathPrefix
     ? SiteConfig.menu.map((link) =>
-        link.path === '/pages/1'
-          ? {...link, path: `${pathPrefix}/pages/1`}
+        link.path === '/pages'
+          ? {...link, path: `${pathPrefix}/pages`}
           : link,
       )
     : SiteConfig.menu
@@ -58,10 +58,7 @@ function HeaderNav() {
     if (path.startsWith('http')) {
       return false
     }
-    if (path.endsWith('/pages/1')) {
-      const base = path.replace(/\/pages\/1$/, '/pages')
-      return pathname === path || pathname.startsWith(`${base}/`)
-    }
+    // '/pages' 는 카테고리 허브 + 번호형 목록(/pages/1 등)까지 활성 처리
     return pathname === path || pathname.startsWith(`${path}/`)
   }
 
