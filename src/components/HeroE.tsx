@@ -65,7 +65,6 @@ const Hero = memo(function Hero({
     <section className="home-hero">
       <div className="home-hero-inner">
         <div className="hero-eyebrow">
-          <span className="dot" />
           LIVE · {SiteConfig.location} · {YEAR}
         </div>
         <h1 ref={titleRef} className="hero-title">

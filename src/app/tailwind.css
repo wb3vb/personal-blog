@@ -213,7 +213,6 @@ body[data-minimal='true'] #grain {
 body[data-minimal='true'] {
   background-image: none;
 }
-body[data-minimal='true'] .hero-eyebrow .dot,
 body[data-minimal='true'] .hero-title .accent {
   animation: none;
 }
@@ -679,24 +678,6 @@ body[data-minimal='true'] .hero-title .accent {
   text-transform: uppercase;
   color: var(--primary);
   gap: 10px;
-}
-.hero-eyebrow .dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  box-shadow: 0 0 12px var(--primary-3);
-  background: var(--primary-3);
-  animation: hero-blink 1.6s ease-in-out infinite;
-}
-
-@keyframes hero-blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.3;
-  }
 }
 
 .hero-title {

@@ -43,7 +43,6 @@ export default async function TagsPage() {
     <div className="page-view">
       <section className="page-hero">
         <div className="hero-eyebrow">
-          <span className="dot" />
           {tags.length} TAGS · {totalPosts} POSTS
         </div>
         <h1 className="page-title">

@@ -16,7 +16,6 @@ export function AboutHero() {
     <section className="about-hero">
       <div>
         <div className="hero-eyebrow">
-          <span className="dot" />
           {SiteConfig.hero.aboutRole} · {SiteConfig.location}
         </div>
         <div className="page-title-fx">
