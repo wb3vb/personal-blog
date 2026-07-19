@@ -701,7 +701,7 @@ body[data-minimal='true'] .hero-title .accent {
 
 .hero-title {
   position: relative;
-  font-size: clamp(56px, 12vw, 180px);
+  font-size: clamp(44px, 9vw, 132px);
   font-weight: 900;
   line-height: 0.88;
   letter-spacing: -0.045em;
