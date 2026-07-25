@@ -51,6 +51,53 @@ if (process.env.NODE_ENV === 'development') {
   watchPostsInDevelopment()
 }
 
+/**
+ * 보안 헤더. 예전에는 vercel.json 에만 있어서 로컬에서는 확인할 수 없었다.
+ * 여기로 모아 개발·프로덕션이 같은 헤더를 쓰게 한다.
+ *
+ * CSP 는 이 사이트가 실제로 쓰는 것만 열어둔 목록이다.
+ * - script 'unsafe-inline': Next 의 부트스트랩 인라인 스크립트와 GA 스니펫이 필요로 한다.
+ *   nonce 를 쓰려면 모든 응답이 동적이 되어야 해서 정적 블로그에는 손해가 크다.
+ * - blob:/worker-src: mermaid 가 다이어그램을 그릴 때 blob 워커를 만든다.
+ * - cdn.jsdelivr.net: 수식(KaTeX) 폰트를 그쪽에서 받아온다.
+ * - vercel: Analytics / Speed Insights 수집 엔드포인트.
+ * 값을 바꾸면 반드시 홈·글·About(three.js)·수식 글·다이어그램 글에서 콘솔 오류를 확인할 것.
+ */
+// React 개발 모드는 디버깅 기능 때문에 eval 을 쓴다(프로덕션 React 는 쓰지 않는다).
+// 개발에서만 열어주고 배포본에는 남기지 않는다.
+const devEval = process.env.NODE_ENV === 'development' ? " 'unsafe-eval'" : ''
+
+const CSP = [
+  "default-src 'self'",
+  "base-uri 'self'",
+  "object-src 'none'",
+  "frame-ancestors 'none'",
+  "form-action 'self'",
+  `script-src 'self' 'unsafe-inline'${devEval} blob: https://www.googletagmanager.com https://va.vercel-scripts.com`,
+  "worker-src 'self' blob:",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data: blob: https:",
+  "font-src 'self' data: https://cdn.jsdelivr.net",
+  "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://vitals.vercel-insights.com https://va.vercel-scripts.com",
+  "manifest-src 'self'",
+  'upgrade-insecure-requests',
+].join('; ')
+
+const SECURITY_HEADERS = [
+  {key: 'Content-Security-Policy', value: CSP},
+  {key: 'X-Content-Type-Options', value: 'nosniff'},
+  {key: 'X-Frame-Options', value: 'DENY'},
+  {key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin'},
+  {
+    key: 'Permissions-Policy',
+    value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=()',
+  },
+  {
+    key: 'Strict-Transport-Security',
+    value: 'max-age=63072000; includeSubDomains',
+  },
+]
+
 const config: NextConfig = {
   // 개발 서버를 띄운 채로 프로덕션 빌드를 검증할 때 .next 충돌을 피하려고 쓴다.
   // 평소에는 비워 두고 기본값(.next)을 그대로 사용한다.
@@ -65,6 +112,9 @@ const config: NextConfig = {
   },
   outputFileTracingIncludes: {
     '/*': ['./posts/**/*'],
+    // 링크 프리뷰 이미지가 런타임에 파일로 읽는 폰트와 초상.
+    // 여기에 적어두지 않으면 배포 번들에서 빠져 프리뷰가 500으로 죽는다.
+    '/api/og': ['./src/assets/og/**/*', './public/thumbnails/**/*'],
   },
   async headers() {
     return [
@@ -74,6 +124,10 @@ const config: NextConfig = {
           {key: 'Service-Worker-Allowed', value: '/'},
           {key: 'Cache-Control', value: 'no-cache'},
         ],
+      },
+      {
+        source: '/:path*',
+        headers: SECURITY_HEADERS,
       },
     ]
   },
@@ -117,7 +171,8 @@ const config: NextConfig = {
       },
       // --- Ghost (wb3vb.io) legacy post URLs -> date-based URLs ---
       {
-        source: '/1-naneun-wae-ideoriumeul-maesuhaneunga-the-possibility-of-deflation',
+        source:
+          '/1-naneun-wae-ideoriumeul-maesuhaneunga-the-possibility-of-deflation',
         destination:
           '/2025/08/1-naneun-wae-ideoriumeul-maesuhaneunga-the-possibility-of-deflation',
         permanent: true,
@@ -161,7 +216,8 @@ const config: NextConfig = {
       },
       {
         source: '/eoseowa-s-s-s-shared-sequencer-suave-neun-ceoeumiji',
-        destination: '/2025/08/eoseowa-s-s-s-shared-sequencer-suave-neun-ceoeumiji',
+        destination:
+          '/2025/08/eoseowa-s-s-s-shared-sequencer-suave-neun-ceoeumiji',
         permanent: true,
       },
       {
@@ -188,7 +244,8 @@ const config: NextConfig = {
       },
       {
         source: '/keuribto-tuja-peureimweokeu-crypto-investment-thesis',
-        destination: '/2025/08/keuribto-tuja-peureimweokeu-crypto-investment-thesis',
+        destination:
+          '/2025/08/keuribto-tuja-peureimweokeu-crypto-investment-thesis',
         permanent: true,
       },
       {
@@ -210,7 +267,8 @@ const config: NextConfig = {
       },
       {
         source: '/nan-i-geimeul-haebwasseoyo-ive-played-this-game-before',
-        destination: '/2025/08/nan-i-geimeul-haebwasseoyo-ive-played-this-game-before',
+        destination:
+          '/2025/08/nan-i-geimeul-haebwasseoyo-ive-played-this-game-before',
         permanent: true,
       },
       {
@@ -237,7 +295,8 @@ const config: NextConfig = {
       },
       {
         source: '/weonhwa-seuteibeulkoin-donghyang-krw-stablecoin-status',
-        destination: '/2025/08/weonhwa-seuteibeulkoin-donghyang-krw-stablecoin-status',
+        destination:
+          '/2025/08/weonhwa-seuteibeulkoin-donghyang-krw-stablecoin-status',
         permanent: true,
       },
       {

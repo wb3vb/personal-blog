@@ -38,6 +38,32 @@ export const SiteConfig = {
       'Eight years in Web3. I take on work with no precedent, which means starting before anyone hands me a plan, and building the tools it needs along the way.',
     aboutRole: 'WEB3 STRATEGY & BD',
   },
+  /**
+   * 링크 프리뷰(Open Graph) 문구의 단일 기준.
+   * 카톡·슬랙·X 등에 링크를 붙였을 때 뜨는 카드에 그대로 들어간다.
+   * About 페이지 내용을 프리뷰가 감당할 길이로 정리한 것이므로,
+   * About 본문을 고치면 여기도 같이 본다.
+   * 국문 링크는 KR, 영문 링크는 EN 배지가 붙는다.
+   */
+  preview: {
+    // 카드에 크게 박히는 제목. 사이트 이름(title)과 달리 프리뷰 전용이다.
+    heading: "wb3vb's blog.",
+    ko: {
+      badge: 'KR',
+      eyebrow: 'WEB3 STRATEGY & BD · SEOUL',
+      lead: '무엇을 만들고 무엇에 걸었는지, 그 판단의 근거를 기록으로 남기는 공간.',
+      about: 'Web3 전략과 BD. 8년째 이 바닥에 있습니다.',
+      resume: 'Web3 전략·BD 경력 정리.',
+    },
+    en: {
+      badge: 'EN',
+      eyebrow: 'WEB3 STRATEGY & BD · SEOUL',
+      lead: 'Where I keep the record of what I build and what I bet on, and the reasoning behind both.',
+      about:
+        'Strategy and business development in Web3. Eight years in, still here.',
+      resume: 'Work history in Web3 strategy and business development.',
+    },
+  },
   menu: [
     {
       label: 'Posts',

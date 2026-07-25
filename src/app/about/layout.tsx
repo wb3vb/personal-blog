@@ -6,18 +6,19 @@ import {buildOgImageUrl} from '@/utils/og'
 
 export const metadata: Metadata = {
   title: 'About - ' + SiteConfig.title,
-  description: 'Frontend-focused full stack engineer based in Korea.',
+  description: SiteConfig.preview.en.about,
   openGraph: {
     title: 'About - ' + SiteConfig.title,
-    description: 'Frontend-focused full stack engineer based in Korea.',
+    description: SiteConfig.preview.en.about,
     url: `${SiteConfig.url}/about`,
     images: [
       {
         url: buildOgImageUrl({
           title: 'About - ' + SiteConfig.title,
-          description: 'Frontend-focused full stack engineer based in Korea.',
+          description: SiteConfig.preview.en.about,
           path: '/about',
           type: 'page',
+          locale: 'en',
         }),
         width: 1200,
         height: 630,

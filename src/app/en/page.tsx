@@ -8,15 +8,44 @@ import Hero from '@/components/HeroE'
 import PostCard from '@/components/PostCard'
 import RecentList from '@/components/RecentList'
 import {SiteConfig} from '@/config'
+import {buildOgImageUrl} from '@/utils/og'
 import {getAllPosts, getAllTagsFromPosts, getFeaturedPosts} from '@/utils/Post'
 
 export const metadata: Metadata = {
-  title: `${SiteConfig.title} · English`,
-  description: SiteConfig.subtitle,
+  title: `wb3vb's blog · ${SiteConfig.preview.en.badge}`,
+  description: SiteConfig.preview.en.lead,
   openGraph: {
-    title: `${SiteConfig.title} · English`,
-    description: SiteConfig.subtitle,
+    title: `wb3vb's blog · ${SiteConfig.preview.en.badge}`,
+    description: SiteConfig.preview.en.lead,
     url: `${SiteConfig.url}/en`,
+    locale: 'en_US',
+    images: [
+      {
+        url: buildOgImageUrl({
+          title: SiteConfig.title,
+          description: SiteConfig.preview.en.lead,
+          path: '/en',
+          type: 'page',
+          locale: 'en',
+        }),
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `wb3vb's blog · ${SiteConfig.preview.en.badge}`,
+    description: SiteConfig.preview.en.lead,
+    images: [
+      buildOgImageUrl({
+        title: SiteConfig.title,
+        description: SiteConfig.preview.en.lead,
+        path: '/en',
+        type: 'page',
+        locale: 'en',
+      }),
+    ],
   },
 }
 

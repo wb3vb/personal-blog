@@ -38,6 +38,8 @@ const BOT_CATEGORIES: Record<string, {name: string; category: BotCategory}> = {
   discordbot: {name: 'discord', category: 'social'},
   telegrambot: {name: 'telegram', category: 'social'},
   whatsapp: {name: 'whatsapp', category: 'social'},
+  'kakaotalk-scrap': {name: 'kakaotalk', category: 'social'},
+  'line-poker': {name: 'line', category: 'social'},
 
   // SEO Tools
   ahrefsbot: {name: 'ahrefs', category: 'seo'},

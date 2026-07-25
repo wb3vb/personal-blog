@@ -58,16 +58,17 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: SiteConfig.title,
-    description: 'Frontend-focused full stack engineer',
+    title: `wb3vb's blog · ${SiteConfig.preview.ko.badge}`,
+    description: SiteConfig.preview.ko.lead,
     url: SiteConfig.url,
     siteName: SiteConfig.title,
     images: [
       {
         url: buildOgImageUrl({
           title: SiteConfig.title,
-          description: 'Frontend-focused full stack engineer',
+          description: SiteConfig.preview.ko.lead,
           type: 'page',
+          locale: 'ko',
         }),
         width: 1200,
         height: 630,
@@ -79,13 +80,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: SiteConfig.title,
-    description: 'Frontend-focused full stack engineer',
+    title: `wb3vb's blog · ${SiteConfig.preview.ko.badge}`,
+    description: SiteConfig.preview.ko.lead,
     images: [
       buildOgImageUrl({
         title: SiteConfig.title,
-        description: 'Frontend-focused full stack engineer',
+        description: SiteConfig.preview.ko.lead,
         type: 'page',
+        locale: 'ko',
       }),
     ],
   },

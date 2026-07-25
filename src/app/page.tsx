@@ -13,22 +13,37 @@ import {getAllPosts, getAllTagsFromPosts, getFeaturedPosts} from '@/utils/Post'
 
 export const metadata: Metadata = {
   title: SiteConfig.title,
-  description: SiteConfig.subtitle,
+  description: SiteConfig.preview.ko.lead,
   openGraph: {
-    title: SiteConfig.title,
-    description: SiteConfig.subtitle,
+    title: `wb3vb's blog · ${SiteConfig.preview.ko.badge}`,
+    description: SiteConfig.preview.ko.lead,
     url: SiteConfig.url,
     images: [
       {
         url: buildOgImageUrl({
           title: SiteConfig.title,
-          description: `${SiteConfig.subtitle}'s blog`,
+          description: SiteConfig.preview.ko.lead,
           path: '/',
           type: 'page',
+          locale: 'ko',
         }),
         width: 1200,
         height: 630,
       },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `wb3vb's blog · ${SiteConfig.preview.ko.badge}`,
+    description: SiteConfig.preview.ko.lead,
+    images: [
+      buildOgImageUrl({
+        title: SiteConfig.title,
+        description: SiteConfig.preview.ko.lead,
+        path: '/',
+        type: 'page',
+        locale: 'ko',
+      }),
     ],
   },
 }

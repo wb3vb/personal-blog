@@ -16,7 +16,7 @@ export default function LanguageSwitch() {
       className="icon-btn text-xs font-semibold"
       aria-label={locale === 'ko' ? 'Switch to English' : '한국어로 전환'}
     >
-      {locale === 'ko' ? 'EN' : 'KO'}
+      {locale === 'ko' ? 'EN' : 'KR'}
     </Link>
   )
 }
