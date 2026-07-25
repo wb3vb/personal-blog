@@ -33,7 +33,7 @@ pnpm check:analytics
 1. [analytics.google.com](https://analytics.google.com) 접속
 2. 좌하단 **관리(톱니바퀴)** 클릭
 3. 속성이 없으면 **속성 만들기**로 생성 (업종/시간대는 한국 기준)
-4. **데이터 스트림 > 웹** 에서 스트림 추가, URL은 실제 블로그 도메인
+4. **데이터 스트림 > 웹** 에서 스트림 추가, URL은 `https://wb3vb.com`
 5. 스트림 상세에서 **측정 ID**(`G-`로 시작) 복사 → `NEXT_PUBLIC_GA_MEASUREMENT_ID`
 6. **관리 > 속성 설정** 에서 **속성 ID**(숫자) 복사 → `GA4_PROPERTY_ID`
 
@@ -87,8 +87,19 @@ pnpm check:analytics
 
 ### 배포 (Vercel)
 
-프로젝트 > **Settings > Environment Variables** 에서 같은 이름으로 세 개를 추가한다.
+프로젝트는 `finality/personal-blog`, 도메인은 `wb3vb.com`이다.
+
+웹에서 하려면 프로젝트 > **Settings > Environment Variables** 에서 같은 이름으로 세 개를 추가한다.
 환경은 Production과 Preview 모두 체크. 추가 후 **재배포**해야 반영된다.
+
+CLI로 하려면 저장소 루트에서 아래를 실행한다. 값은 프롬프트에 붙여 넣는다.
+
+```bash
+vercel env add NEXT_PUBLIC_GA_MEASUREMENT_ID production
+vercel env add GA4_PROPERTY_ID production
+vercel env add GOOGLE_APPLICATION_CREDENTIALS_JSON production
+vercel deploy --prod
+```
 
 ---
 
