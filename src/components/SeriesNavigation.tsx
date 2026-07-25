@@ -8,12 +8,18 @@ interface SeriesNavigationProps {
   seriesName: string
   seriesPosts: Post[]
   currentSlug: string
+  /** 영문 라우트에서는 '/en'. 링크가 같은 로케일 안에 머물게 한다 */
+  pathPrefix?: string
+  /** 로케일별 라벨 */
+  labels?: {kicker: string; list: string}
 }
 
 export default function SeriesNavigation({
   seriesName,
   seriesPosts,
   currentSlug,
+  pathPrefix = '',
+  labels = {kicker: '시리즈', list: '목록 보기'},
 }: SeriesNavigationProps) {
   const currentIndex = seriesPosts.findIndex(
     (post) => post.fields.slug === currentSlug,
@@ -25,7 +31,7 @@ export default function SeriesNavigation({
   return (
     <div className="post-series-nav">
       <div className="series-nav-head">
-        <span className="series-nav-kicker">시리즈</span>
+        <span className="series-nav-kicker">{labels.kicker}</span>
         <h3 className="series-nav-title">{seriesName}</h3>
         <span className="series-nav-progress">
           {currentIndex + 1} / {seriesPosts.length}
@@ -47,7 +53,7 @@ export default function SeriesNavigation({
           >
             <path d="M9 5l7 7-7 7" />
           </svg>
-          <span>목록 보기</span>
+          <span>{labels.list}</span>
         </summary>
         <ol>
           {seriesPosts.map((post, index) => (
@@ -61,7 +67,7 @@ export default function SeriesNavigation({
                   {stripTitleEmphasis(post.frontMatter.title)}
                 </span>
               ) : (
-                <Link href={`/${post.fields.slug}`}>
+                <Link href={`${pathPrefix}/${post.fields.slug}`}>
                   <em>{String(index + 1).padStart(2, '0')}</em>
                   {stripTitleEmphasis(post.frontMatter.title)}
                 </Link>
@@ -75,7 +81,7 @@ export default function SeriesNavigation({
         <div className="series-nav-prevnext">
           {prevPost ? (
             <Link
-              href={`/${prevPost.fields.slug}`}
+              href={`${pathPrefix}/${prevPost.fields.slug}`}
               className="series-nav-link prev"
             >
               <svg
@@ -98,7 +104,7 @@ export default function SeriesNavigation({
           )}
           {nextPost ? (
             <Link
-              href={`/${nextPost.fields.slug}`}
+              href={`${pathPrefix}/${nextPost.fields.slug}`}
               className="series-nav-link next"
             >
               <span>{stripTitleEmphasis(nextPost.frontMatter.title)}</span>

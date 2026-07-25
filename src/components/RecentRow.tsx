@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 import {EmphasizedTitle} from '@/shared/components'
@@ -17,7 +18,7 @@ export default function RecentRow({
 }) {
   const {
     fields: {slug},
-    frontMatter: {date, title: rawTitle, description, tags},
+    frontMatter: {date, title: rawTitle, description, tags, thumbnail},
     readingTime,
   } = post
   const plainTitle = stripTitleEmphasis(rawTitle)
@@ -31,6 +32,11 @@ export default function RecentRow({
         prefetch={false}
       />
       <div className="rn">{String(index + 1).padStart(2, '0')}</div>
+      <div className="rthumb" aria-hidden="true">
+        {thumbnail && (
+          <Image src={thumbnail} alt="" width={144} height={96} sizes="72px" />
+        )}
+      </div>
       <div>
         <h4>
           <EmphasizedTitle title={rawTitle} />

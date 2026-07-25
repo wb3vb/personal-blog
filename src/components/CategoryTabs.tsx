@@ -4,12 +4,13 @@ import {useEffect, useState} from 'react'
 
 import PostRow from './PostRow'
 
-import {CATEGORIES, DEFAULT_CATEGORY, type CategorySlug} from '@/constants/categories'
 import type {Post} from '@/type'
+
+import {DEFAULT_CATEGORY, TABS, type TabSlug} from '@/constants/categories'
 
 const INITIAL = 10
 const STEP = 10
-const VALID = new Set<string>(CATEGORIES.map((c) => c.slug))
+const VALID = new Set<string>(TABS.map((c) => c.slug))
 
 export default function CategoryTabs({
   postsByCat,
@@ -22,17 +23,17 @@ export default function CategoryTabs({
 
   // SSR/최초 렌더는 항상 기본 탭 → 하이드레이션 불일치 없음.
   // 마운트 후 URL의 ?cat= 을 읽어 반영(딥링크 지원).
-  const [active, setActive] = useState<CategorySlug>(DEFAULT_CATEGORY)
+  const [active, setActive] = useState<TabSlug>(DEFAULT_CATEGORY)
   const [visible, setVisible] = useState(INITIAL)
 
   useEffect(() => {
     const c = new URLSearchParams(window.location.search).get('cat')
     if (c && VALID.has(c)) {
-      setActive(c as CategorySlug)
+      setActive(c as TabSlug)
     }
   }, [])
 
-  const selectTab = (slug: CategorySlug) => {
+  const selectTab = (slug: TabSlug) => {
     if (slug === active) {
       return
     }
@@ -55,7 +56,7 @@ export default function CategoryTabs({
         role="tablist"
         aria-label={isEn ? 'categories' : '분류'}
       >
-        {CATEGORIES.map((c) => {
+        {TABS.map((c) => {
           const count = postsByCat[c.slug]?.length ?? 0
           const isActive = c.slug === active
           return (
@@ -66,6 +67,7 @@ export default function CategoryTabs({
               aria-selected={isActive}
               className="cat-tab"
               data-active={isActive}
+              data-slug={c.slug}
               onClick={() => selectTab(c.slug)}
             >
               <span className="cat-tab-label">{isEn ? c.en : c.ko}</span>

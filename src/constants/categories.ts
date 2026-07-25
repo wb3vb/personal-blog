@@ -16,6 +16,12 @@ export type CategorySlug =
   | 'investing'
   | 'etc'
 
+/** 탭에만 존재하는 가상 분류. 글에는 붙지 않고 전체 목록을 가리킨다. */
+export const ALL_SLUG = 'all'
+
+/** 탭 식별자 = 실제 분류 + 전체 */
+export type TabSlug = CategorySlug | typeof ALL_SLUG
+
 export interface CategoryDef {
   slug: CategorySlug
   ko: string
@@ -32,8 +38,14 @@ export const CATEGORIES: CategoryDef[] = [
   {slug: 'etc', ko: '기타', en: 'Etc'},
 ]
 
+/** 실제 탭 목록. '전체'가 맨 앞에 온다. */
+export const TABS: {slug: TabSlug; ko: string; en: string}[] = [
+  {slug: ALL_SLUG, ko: '전체', en: 'All'},
+  ...CATEGORIES,
+]
+
 /** /pages 진입 시 기본으로 열리는 탭. */
-export const DEFAULT_CATEGORY: CategorySlug = 'crypto'
+export const DEFAULT_CATEGORY: TabSlug = ALL_SLUG
 
 /**
  * 태그/키워드 → 분류 (프론트매터 category가 비었을 때의 자동 폴백).
@@ -111,13 +123,17 @@ export function resolveCategory(
   return 'etc'
 }
 
-/** 글 목록을 분류별로 그룹핑(입력 순서=최신순 유지). */
+/**
+ * 글 목록을 분류별로 그룹핑(입력 순서=최신순 유지).
+ * `all` 버킷에는 입력 전체가 순서 그대로 들어간다.
+ */
 export function groupPostsByCategory<
   T extends {frontMatter: {category?: string; tags: string[]}},
->(posts: T[]): Record<CategorySlug, T[]> {
+>(posts: T[]): Record<TabSlug, T[]> {
   const byCat = Object.fromEntries(
     CATEGORIES.map((c) => [c.slug, [] as T[]]),
-  ) as Record<CategorySlug, T[]>
+  ) as Record<TabSlug, T[]>
+  byCat[ALL_SLUG] = [...posts]
   for (const p of posts) {
     byCat[resolveCategory(p.frontMatter.category, p.frontMatter.tags)].push(p)
   }

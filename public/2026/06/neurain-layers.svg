@@ -1,0 +1,71 @@
+<svg width="760" height="560" viewBox="0 0 760 560" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Pretendard', 'Segoe UI', sans-serif">
+  <defs>
+    <marker id="swap" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#8b8bf5"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="560" rx="18" fill="#0e0e14"/>
+  <rect x="0.5" y="0.5" width="759" height="559" rx="18" fill="none" stroke="#26262f"/>
+
+  <text x="380" y="46" text-anchor="middle" fill="#e9e9ef" font-size="20" font-weight="700">Neurain 3층 구조</text>
+  <text x="380" y="70" text-anchor="middle" fill="#8a8a96" font-size="12">위층은 갈아끼우고, 아래층은 내 것으로 남는다</text>
+
+  <!-- Layer 3: AI host -->
+  <rect x="90" y="100" width="580" height="112" rx="12" fill="#15151d" stroke="#3a3a4a" stroke-dasharray="5 4"/>
+  <text x="112" y="128" fill="#8a8a96" font-size="11" font-weight="700">3층 · AI 호스트</text>
+  <text x="112" y="152" fill="#e9e9ef" font-size="14" font-weight="700">지식을 읽고 실제로 일하는 두뇌</text>
+
+  <rect x="112" y="166" width="118" height="32" rx="8" fill="#1c1c28" stroke="#4a4a5e"/>
+  <text x="171" y="187" text-anchor="middle" fill="#c7c7ff" font-size="12">클로드</text>
+  <rect x="240" y="166" width="118" height="32" rx="8" fill="#1c1c28" stroke="#4a4a5e"/>
+  <text x="299" y="187" text-anchor="middle" fill="#c7c7ff" font-size="12">코덱스</text>
+  <rect x="368" y="166" width="118" height="32" rx="8" fill="#1c1c28" stroke="#4a4a5e"/>
+  <text x="427" y="187" text-anchor="middle" fill="#c7c7ff" font-size="12">제미나이</text>
+  <rect x="496" y="166" width="152" height="32" rx="8" fill="#1c1c28" stroke="#4a4a5e" stroke-dasharray="4 3"/>
+  <text x="572" y="187" text-anchor="middle" fill="#8a8a96" font-size="12">아직 안 나온 모델</text>
+
+  <text x="648" y="128" text-anchor="end" fill="#8b8bf5" font-size="11" font-weight="700">교체 자유</text>
+
+  <line x1="380" y1="212" x2="380" y2="240" stroke="#8b8bf5" stroke-width="1.4" marker-end="url(#swap)" marker-start="url(#swap)"/>
+  <text x="398" y="232" fill="#8b8bf5" font-size="11">갈아끼워도 아래는 그대로</text>
+
+  <!-- Layer 2: operating rules -->
+  <rect x="90" y="244" width="580" height="130" rx="12" fill="#171722" stroke="#8b8bf5" stroke-width="1.2"/>
+  <text x="112" y="272" fill="#8b8bf5" font-size="11" font-weight="700">2층 · 운영 규칙 (Neurain)</text>
+  <text x="112" y="296" fill="#e9e9ef" font-size="14" font-weight="700">지식이 안전하게 바뀌는 방식</text>
+
+  <rect x="112" y="310" width="128" height="46" rx="8" fill="#1c1c28" stroke="#4a4a5e"/>
+  <text x="176" y="330" text-anchor="middle" fill="#b9b9c3" font-size="11">명령어 5개</text>
+  <text x="176" y="347" text-anchor="middle" fill="#7a7a88" font-size="10">저장·정리·마감</text>
+
+  <rect x="250" y="310" width="128" height="46" rx="8" fill="#1c1c28" stroke="#4a4a5e"/>
+  <text x="314" y="330" text-anchor="middle" fill="#b9b9c3" font-size="11">검색 파이프라인</text>
+  <text x="314" y="347" text-anchor="middle" fill="#7a7a88" font-size="10">근거를 가려낸다</text>
+
+  <rect x="388" y="310" width="128" height="46" rx="8" fill="#1c1c28" stroke="#4a4a5e"/>
+  <text x="452" y="330" text-anchor="middle" fill="#b9b9c3" font-size="11">안전 게이트</text>
+  <text x="452" y="347" text-anchor="middle" fill="#7a7a88" font-size="10">의미 변경은 확인</text>
+
+  <rect x="526" y="310" width="122" height="46" rx="8" fill="#1c1c28" stroke="#4a4a5e"/>
+  <text x="587" y="330" text-anchor="middle" fill="#b9b9c3" font-size="11">복구 장치</text>
+  <text x="587" y="347" text-anchor="middle" fill="#7a7a88" font-size="10">저장점·휴지통</text>
+
+  <line x1="380" y1="374" x2="380" y2="400" stroke="#6b6b7e" stroke-width="1.4"/>
+
+  <!-- Layer 1: knowledge -->
+  <rect x="90" y="404" width="580" height="112" rx="12" fill="#15151d" stroke="#2e2e3a"/>
+  <text x="112" y="432" fill="#8a8a96" font-size="11" font-weight="700">1층 · 지식 (LLM Wiki)</text>
+  <text x="112" y="456" fill="#e9e9ef" font-size="14" font-weight="700">내 폴더 안의 마크다운 파일들</text>
+
+  <rect x="112" y="470" width="168" height="32" rx="8" fill="#1c1c28" stroke="#4a4a5e"/>
+  <text x="196" y="491" text-anchor="middle" fill="#c7c7ff" font-size="12">raw · 원본 증거</text>
+  <rect x="290" y="470" width="168" height="32" rx="8" fill="#1c1c28" stroke="#4a4a5e"/>
+  <text x="374" y="491" text-anchor="middle" fill="#c7c7ff" font-size="12">wiki · 정리된 지식</text>
+  <rect x="468" y="470" width="180" height="32" rx="8" fill="#1c1c28" stroke="#4a4a5e"/>
+  <text x="558" y="491" text-anchor="middle" fill="#c7c7ff" font-size="12">output · 산출물</text>
+
+  <text x="648" y="432" text-anchor="end" fill="#c7c7ff" font-size="11" font-weight="700">영원히 내 것</text>
+
+  <text x="380" y="542" text-anchor="middle" fill="#8a8a96" font-size="12">모델은 몇 주마다 바뀌지만, 1층과 2층은 내가 소유한다</text>
+</svg>

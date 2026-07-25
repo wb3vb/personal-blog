@@ -5,6 +5,7 @@ import type {HTMLProps, ReactElement} from 'react'
 import CodeBlock from '@/components/CodeBlock'
 import ImageZoom from '@/components/ImageZoom'
 import Mermaid from '@/components/Mermaid'
+import {SiteConfig} from '@/config'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function extractText(node: any): string {
@@ -65,7 +66,7 @@ const MdxComponents = {
     }
 
     const isExternal =
-      /^https?:\/\//.test(href) && !href.includes('personal-blog.vercel.app')
+      /^https?:\/\//.test(href) && !href.includes(new URL(SiteConfig.url).host)
 
     if (isExternal) {
       const {className, ...anchorRest} = rest

@@ -1,4 +1,5 @@
 import {cacheLife, cacheTag} from 'next/cache'
+import Image from 'next/image'
 import Link from 'next/link'
 import {notFound} from 'next/navigation'
 import Script from 'next/script'
@@ -248,6 +249,19 @@ async function PostBody({year, slug}: {year: string; slug: string[]}) {
             </ViewTransition>
           )}
         </section>
+
+        {thumbnail && (
+          <figure className="post-cover">
+            <Image
+              src={thumbnail}
+              alt=""
+              width={2000}
+              height={1333}
+              sizes="(min-width: 760px) 720px, 100vw"
+              priority
+            />
+          </figure>
+        )}
 
         {series && seriesPosts.length > 1 && (
           <SeriesNavigation

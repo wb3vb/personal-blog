@@ -4,6 +4,7 @@ import ListLayout from '@/components/layouts/ListLayout'
 import PageNumber from '@/components/layouts/PageNumber'
 import {DEFAULT_NUMBER_OF_POSTS} from '@/constants'
 import {getAllPosts, getAllTagsFromPosts} from '@/utils/Post'
+import {SiteConfig} from '@/config'
 
 export async function generateMetadata(props: {
   params: Promise<{tag: string; id: string}>
@@ -15,10 +16,10 @@ export async function generateMetadata(props: {
   return {
     title: `${tag}: Page ${id}`,
     alternates: {
-      canonical: `https://personal-blog.vercel.app/tags/${encodeURIComponent(tag)}/pages/${id}`,
+      canonical: `${SiteConfig.url}/tags/${encodeURIComponent(tag)}/pages/${id}`,
     },
     openGraph: {
-      url: `https://personal-blog.vercel.app/tags/${encodeURIComponent(tag)}/pages/${id}`,
+      url: `${SiteConfig.url}/tags/${encodeURIComponent(tag)}/pages/${id}`,
     },
   }
 }

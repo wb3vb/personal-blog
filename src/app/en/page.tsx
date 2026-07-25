@@ -35,9 +35,9 @@ async function getEnHomeData() {
     getAllTagsFromPosts('en'),
   ])
 
-  // Recent = popular 제외 나머지 전체(날짜 내림차순). 홈은 10개 노출 + 더보기(RecentList).
-  const popularSlugs = new Set(popular.map((p) => p.fields.slug))
-  const recent = allPosts.filter((p) => !popularSlugs.has(p.fields.slug))
+  // Recent = 전체 글을 최신 업로드순으로 그대로 나열한다(popular도 제외하지 않음).
+  // 홈은 10개 노출 + 더보기(RecentList).
+  const recent = allPosts
 
   const postCount = allPosts.length
   const tagCount = tags.length

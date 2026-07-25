@@ -7,8 +7,9 @@ const isDev = process.env.NODE_ENV === 'development'
  * TODO 표시된 값은 배포 전에 본인 값으로 교체할 것.
  */
 export const SiteConfig = {
-  // TODO: 첫 배포 후 실제 도메인으로 교체 (예: https://blog.example.com)
-  url: isDev ? 'http://localhost:3000' : 'https://personal-blog.vercel.app',
+  // 사이트 정식 주소. 캐노니컬 URL, 사이트맵, OG 태그, RSS의 기준이 된다.
+  // 도메인을 바꾸면 이 값만 고치면 되도록 다른 파일에서는 하드코딩하지 않는다.
+  url: isDev ? 'http://localhost:3000' : 'https://wb3vb.com',
   pathPrefix: '/',
   // TODO: 블로그 이름
   title: 'wb3vb',
@@ -17,22 +18,25 @@ export const SiteConfig = {
   copyright: 'wb3vb © All rights reserved.',
   disqusShortname: '',
   postsPerPage: 5,
-  // TODO: Google Analytics 4 측정 ID (없으면 빈 문자열 → GA 비활성)
-  googleAnalyticsId: '',
+  // Google Analytics 4 측정 ID (G-XXXXXXXXXX).
+  // 코드에 하드코딩하지 않고 환경변수로 받는다. 값이 없으면 GA 비활성.
+  // 로컬은 .env.local, 배포는 Vercel 환경변수에 NEXT_PUBLIC_GA_MEASUREMENT_ID 설정.
+  googleAnalyticsId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? '',
   useKatex: false,
   // 포스트 하단 "Discussion" 링크가 향하는 GitHub 저장소 (owner/repo)
   discussionRepo: 'wb3vb/personal-blog',
   // 홈/About 히어로 표시 텍스트
   location: 'SEOUL', // TODO: 거주 도시
   hero: {
-    // TODO: 홈 히어로 대형 문구 (3줄). 2번째 줄이 그라데이션 강조된다.
-    titleLines: ['MOVE.', 'MAKE,', 'HAPPEN.'],
+    // 홈 히어로 대형 문구 (3줄). 2번째 줄이 그라데이션 강조된다.
+    // 본인 삶의 모토를 그대로 옮긴 문장이므로 임의로 바꾸지 말 것.
+    titleLines: ['NOTHING', 'HAPPENS', 'UNLESS I DO.'],
     tagline:
-      'Nothing happens unless you do something, so I keep building, learning, and writing it down.',
-    // TODO: About 페이지 소개 문단
+      'Life is not what you are dealt, it is what you decide. I start things, finish them, and write down what actually happened.',
+    // About 페이지 히어로 아래 한 줄 소개 (About 페이지는 영문 단일 언어로 운영)
     aboutIntro:
-      '확장 가능한 시스템과 개발자 경험에 관심이 많습니다. 여기에 배우고 만든 것을 기록합니다.',
-    aboutRole: 'DEVELOPER',
+      'Eight years in Web3. I take on work with no precedent, which means starting before anyone hands me a plan, and building the tools it needs along the way.',
+    aboutRole: 'WEB3 STRATEGY & BD',
   },
   menu: [
     {

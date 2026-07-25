@@ -10,6 +10,7 @@
   },
   "scripts": {
     "build": "next build",
+    "check:analytics": "node scripts/check-analytics.mjs",
     "dev": "next dev",
     "lint": "eslint '**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx,yaml,yml,json}'",
     "lint:fix": "eslint '**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx,yaml,yml,json}' --fix",
@@ -18,6 +19,8 @@
     "prettier": "prettier --check '**/*.{ts,tsx,js,mjs,cjs,jsx,json,yaml,yml,md,css,scss}'",
     "prettier:fix": "prettier --write '**/*.{ts,tsx,js,mjs,cjs,jsx,json,yaml,yml,md,css,scss}'",
     "start": "next start",
+    "style:check": "node scripts/style-stats.mjs --baseline posts/2025 --target posts/2026 --each",
+    "style:pairs": "node scripts/style-pairs.mjs posts/2026",
     "translate": "node scripts/translate.mjs"
   },
   "dependencies": {

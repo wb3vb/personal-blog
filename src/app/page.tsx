@@ -48,10 +48,9 @@ async function getHomeData() {
     getAllTagsFromPosts('ko'),
   ])
 
-  // Recent = 인기글을 뺀 나머지 전체(날짜 내림차순). 홈에서는 10개만 노출하고
-  // '더보기'로 추가 로딩한다(RecentList).
-  const popularSlugs = new Set(posts.map((p) => p.fields.slug))
-  const recentPosts = allPosts.filter((p) => !popularSlugs.has(p.fields.slug))
+  // Recent = 전체 글을 최신 업로드순으로 그대로 나열한다(인기글도 제외하지 않음).
+  // 홈에서는 10개만 노출하고 '더보기'로 추가 로딩한다(RecentList).
+  const recentPosts = allPosts
 
   const postCount = allPosts.length
   const tagCount = tags.length

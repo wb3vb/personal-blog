@@ -52,6 +52,9 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 const config: NextConfig = {
+  // 개발 서버를 띄운 채로 프로덕션 빌드를 검증할 때 .next 충돌을 피하려고 쓴다.
+  // 평소에는 비워 두고 기본값(.next)을 그대로 사용한다.
+  ...(process.env.NEXT_DIST_DIR ? {distDir: process.env.NEXT_DIST_DIR} : {}),
   reactStrictMode: true,
   cacheComponents: true,
   images: {

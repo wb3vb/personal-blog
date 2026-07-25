@@ -1,0 +1,62 @@
+<svg width="760" height="812" viewBox="0 0 760 812" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Pretendard', 'Segoe UI', sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#6b6b7e"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="812" rx="18" fill="#0e0e14"/>
+  <rect x="0.5" y="0.5" width="759" height="811" rx="18" fill="none" stroke="#26262f"/>
+
+  <text x="380" y="46" text-anchor="middle" fill="#e9e9ef" font-size="20" font-weight="700">Neurain 처리 흐름: 질문에서 답변까지</text>
+  <text x="380" y="70" text-anchor="middle" fill="#8a8a96" font-size="12">질문 하나가 3초 동안 거치는 길</text>
+
+  <!-- 질문 -->
+  <rect x="130" y="92" width="500" height="58" rx="12" fill="#171722" stroke="#8b8bf5" stroke-width="1.2"/>
+  <text x="380" y="116" text-anchor="middle" fill="#c7c7ff" font-size="12" font-weight="700">질문</text>
+  <text x="380" y="137" text-anchor="middle" fill="#e9e9ef" font-size="14">"담보금 규정이 어떻게 되더라?"</text>
+
+  <line x1="380" y1="150" x2="380" y2="176" stroke="#6b6b7e" stroke-width="1.4" marker-end="url(#arr)"/>
+
+  <!-- 1단계 -->
+  <rect x="100" y="180" width="560" height="76" rx="12" fill="#15151d" stroke="#2e2e3a"/>
+  <text x="122" y="207" fill="#8b8bf5" font-size="13" font-weight="700">1단계 · 쪼개고 넓힌다</text>
+  <text x="122" y="230" fill="#b9b9c3" font-size="13">질문을 한국어 단어 단위로 분해하고 동의어 사전으로 확장</text>
+  <text x="122" y="248" fill="#8a8a96" font-size="12">담보금 = 준비금, 스테이블 = stablecoin</text>
+
+  <line x1="380" y1="256" x2="380" y2="282" stroke="#6b6b7e" stroke-width="1.4" marker-end="url(#arr)"/>
+
+  <!-- 2단계 -->
+  <rect x="100" y="286" width="560" height="76" rx="12" fill="#15151d" stroke="#2e2e3a"/>
+  <text x="122" y="313" fill="#8b8bf5" font-size="13" font-weight="700">2단계 · 내 문서에서 후보를 추린다</text>
+  <text x="122" y="336" fill="#b9b9c3" font-size="13">웹이 아니라 내 폴더 먼저. 문서 4,700여 개를 점수순으로 스캔</text>
+  <text x="122" y="354" fill="#8a8a96" font-size="12">제목 일치 가점 · 본문 빈도 가점 · 최신 문서 가점</text>
+
+  <line x1="380" y1="362" x2="380" y2="388" stroke="#6b6b7e" stroke-width="1.4" marker-end="url(#arr)"/>
+
+  <!-- 3단계 -->
+  <rect x="100" y="392" width="560" height="94" rx="12" fill="#15151d" stroke="#2e2e3a"/>
+  <text x="122" y="419" fill="#8b8bf5" font-size="13" font-weight="700">3단계 · 근거를 가려낸다</text>
+  <text x="122" y="442" fill="#b9b9c3" font-size="13">같은 주제 문서가 여럿이면 정본을 판정</text>
+  <text x="122" y="460" fill="#8a8a96" font-size="12">최신본 우선 · 구버전 제외 · 내용 충돌은 표시 · 비공개 영역 차단</text>
+  <text x="122" y="478" fill="#8a8a96" font-size="12">근거가 부족하면 "부족하다"고 답하게 설계</text>
+
+  <line x1="380" y1="486" x2="380" y2="512" stroke="#6b6b7e" stroke-width="1.4" marker-end="url(#arr)"/>
+
+  <!-- 4단계 -->
+  <rect x="100" y="516" width="560" height="76" rx="12" fill="#15151d" stroke="#2e2e3a"/>
+  <text x="122" y="543" fill="#8b8bf5" font-size="13" font-weight="700">4단계 · 근거 위에서 답을 조합한다</text>
+  <text x="122" y="566" fill="#b9b9c3" font-size="13">검증을 통과한 문서만 상에 올리고, 내 맥락에 맞춰 답을 작성</text>
+  <text x="122" y="584" fill="#8a8a96" font-size="12">일반론이 아니라 내 규정, 내 결정, 내 예외가 기본값</text>
+
+  <line x1="380" y1="592" x2="380" y2="618" stroke="#6b6b7e" stroke-width="1.4" marker-end="url(#arr)"/>
+
+  <!-- 답변 -->
+  <rect x="100" y="622" width="560" height="94" rx="12" fill="#171722" stroke="#8b8bf5" stroke-width="1.2"/>
+  <text x="122" y="649" fill="#c7c7ff" font-size="13" font-weight="700">답변 + 근거 목록</text>
+  <text x="122" y="672" fill="#e9e9ef" font-size="13">내 사정에 맞춘 답변이 도착한다</text>
+  <text x="122" y="694" fill="#8a8a96" font-size="12">"이 답의 근거: 준비금 규정 정리(6월 12일) · 관련 회의 메모(7월 2일)"</text>
+
+  <line x1="120" y1="744" x2="640" y2="744" stroke="#26262f" stroke-width="1"/>
+  <text x="380" y="774" text-anchor="middle" fill="#8a8a96" font-size="12">자체 측정: 문항 136개 기준 94~95%가 정답 문서를 제대로 물어 온다</text>
+</svg>

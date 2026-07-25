@@ -13,6 +13,11 @@ import type {Locale} from './postPaths'
 import type {FrontMatter, Post, TagWithCount} from '../type'
 
 import {POPULAR_POSTS_COUNT, RECENT_POSTS_COUNT} from '@/constants'
+import {
+  CATEGORIES,
+  resolveCategory,
+  type CategorySlug,
+} from '@/constants/categories'
 
 const THUMB_DIR = `${process.cwd()}/public/thumbnails`
 
@@ -101,6 +106,109 @@ export const getAllTagsFromPosts = cache(async function getAllTagsFromPosts(
     .sort((a, b) => b.count - a.count)
 })
 
+export interface TagGraphNode {
+  id: string
+  label: string
+  /** 'category' = 허브, 'tag' = 주변 노드 */
+  kind: 'category' | 'tag'
+  count: number
+  /** 클릭했을 때 열리는 글 목록 경로 */
+  href: string
+  /** 색을 묶는 기준이 되는 카테고리 슬러그 */
+  group: string
+}
+export interface TagGraphLink {
+  source: string
+  target: string
+  weight: number
+}
+export interface TagGraph {
+  nodes: TagGraphNode[]
+  links: TagGraphLink[]
+}
+
+/**
+ * 태그 관계 그래프.
+ * 카테고리를 허브 노드로 두고 그 아래 태그를 잇는다. 링크는 전부 실제 글에서 나온다.
+ * 같은 글에 함께 달린 태그끼리도 추가로 연결한다(Obsidian 그래프 뷰와 같은 방식).
+ */
+export const getTagGraph = cache(async function getTagGraph(
+  locale: Locale = 'ko',
+): Promise<TagGraph> {
+  const posts = await getAllPosts(locale)
+
+  const catCount = new Map<CategorySlug, number>()
+  const tagCount = new Map<string, number>()
+  /** 태그가 어느 분류에서 가장 많이 나왔는지. 노드 색을 물려줄 기준이 된다. */
+  const tagGroup = new Map<string, Map<CategorySlug, number>>()
+  const catTag = new Map<string, number>()
+  const tagPair = new Map<string, number>()
+
+  for (const post of posts) {
+    // /pages 탭과 같은 규칙으로 분류한다. 그래야 카테고리 노드를 눌렀을 때
+    // 열리는 탭의 글 수와 그래프에 찍힌 숫자가 어긋나지 않는다.
+    const category = resolveCategory(
+      post.frontMatter.category,
+      post.frontMatter.tags,
+    )
+    const tags = [...new Set(post.frontMatter.tags)].sort()
+
+    catCount.set(category, (catCount.get(category) ?? 0) + 1)
+
+    for (const tag of tags) {
+      tagCount.set(tag, (tagCount.get(tag) ?? 0) + 1)
+
+      const seen = tagGroup.get(tag) ?? new Map<CategorySlug, number>()
+      seen.set(category, (seen.get(category) ?? 0) + 1)
+      tagGroup.set(tag, seen)
+
+      const key = `cat:${category}\u0000tag:${tag}`
+      catTag.set(key, (catTag.get(key) ?? 0) + 1)
+    }
+    for (let i = 0; i < tags.length; i++) {
+      for (let j = i + 1; j < tags.length; j++) {
+        const key = `tag:${tags[i]}\u0000tag:${tags[j]}`
+        tagPair.set(key, (tagPair.get(key) ?? 0) + 1)
+      }
+    }
+  }
+
+  const displayName = new Map(CATEGORIES.map((c) => [c.slug, c.en]))
+
+  const nodes: TagGraphNode[] = [
+    ...Array.from(catCount.entries()).map(([slug, count]) => ({
+      id: `cat:${slug}`,
+      label: displayName.get(slug) ?? slug,
+      kind: 'category' as const,
+      count,
+      href: `/pages?cat=${slug}`,
+      group: slug as string,
+    })),
+    ...Array.from(tagCount.entries()).map(([label, count]) => {
+      // 여러 분류에 걸친 태그는 가장 많이 등장한 분류의 색을 따른다
+      const ranked = Array.from(tagGroup.get(label) ?? []).sort(
+        (a, b) => b[1] - a[1],
+      )
+      return {
+        id: `tag:${label}`,
+        label,
+        kind: 'tag' as const,
+        count,
+        href: `/tags/${label}/pages/1`,
+        group: (ranked[0]?.[0] ?? 'etc') as string,
+      }
+    }),
+  ]
+
+  const links: TagGraphLink[] = [...catTag.entries(), ...tagPair.entries()].map(
+    ([key, weight]) => {
+      const [source, target] = key.split('\u0000')
+      return {source, target, weight}
+    },
+  )
+
+  return {nodes, links}
+})
 export const getSeriesPosts = cache(async function getSeriesPosts(
   seriesName: string,
   locale: Locale = 'ko',

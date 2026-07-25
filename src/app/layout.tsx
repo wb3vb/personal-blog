@@ -1,16 +1,18 @@
 import './tailwind.css'
 
-import {Fraunces, Inter, JetBrains_Mono, Manrope} from 'next/font/google'
+import {Fraunces, Inter_Tight, JetBrains_Mono} from 'next/font/google'
 import Script from 'next/script'
 
 import {Analytics as VercelAnalytics} from '@vercel/analytics/react'
 import {SpeedInsights as VercelSpeedInsights} from '@vercel/speed-insights/next'
-import {Providers} from '@/shared/components'
+
 
 import type {Metadata} from 'next'
 import type {ReactNode} from 'react'
 
-const inter = Inter({
+// 라틴/숫자 전반. Inter의 폭 좁은 변형이라 같은 크기에서 밀도가 올라간다.
+// 100~900 전구간이 있어 히어로 900도 가짜 볼드 없이 렌더된다. 근거: typography.md
+const interTight = Inter_Tight({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-sans',
@@ -29,12 +31,7 @@ const fraunces = Fraunces({
   style: ['italic', 'normal'],
 })
 
-// 글 본문 라틴 폰트(한글은 없어 시스템 대체)
-const manrope = Manrope({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-manrope',
-})
+// 글 본문도 --font-sans로 통일했다(2026-07). Manrope 제거로 웹폰트 1종이 줄었다.
 
 import AmbientEffects from '@/components/AmbientEffects'
 import {BotTracker} from '@/components/BotTracker'
@@ -43,6 +40,7 @@ import LayoutWrapper from '@/components/LayoutWrapper'
 import NavigationDirection from '@/components/NavigationDirection'
 import {ServiceWorkerRegistration} from '@/components/ServiceWorkerRegistration'
 import {SiteConfig} from '@/config'
+import {Providers} from '@/shared/components'
 import {buildOgImageUrl} from '@/utils/og'
 // import {getAllPosts, getAllTagsFromPosts} from '@/utils/Post'
 
@@ -53,7 +51,7 @@ export const metadata: Metadata = {
   referrer: 'origin-when-cross-origin',
   creator: SiteConfig.author.name,
   publisher: SiteConfig.author.name,
-  metadataBase: new URL('https://personal-blog.vercel.app'),
+  metadataBase: new URL(SiteConfig.url),
   formatDetection: {
     email: false,
     address: false,
@@ -62,7 +60,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: SiteConfig.title,
     description: 'Frontend-focused full stack engineer',
-    url: 'https://personal-blog.vercel.app',
+    url: SiteConfig.url,
     siteName: SiteConfig.title,
     images: [
       {
@@ -119,7 +117,7 @@ export default async function Layout({children}: {children: ReactNode}) {
         lang="ko"
         data-scroll-behavior="smooth"
         suppressHydrationWarning
-        className={`${inter.variable} ${jetbrainsMono.variable} ${fraunces.variable} ${manrope.variable}`}
+        className={`${interTight.variable} ${jetbrainsMono.variable} ${fraunces.variable}`}
       >
         <head>
           <script

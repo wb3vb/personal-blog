@@ -1,4 +1,5 @@
 import {cacheLife, cacheTag} from 'next/cache'
+import Image from 'next/image'
 import Link from 'next/link'
 import {notFound} from 'next/navigation'
 import Script from 'next/script'
@@ -11,6 +12,7 @@ import MathLoader from '@/components/layouts/Post/math'
 import {PostArticle} from '@/components/PostArticle'
 import ProfileImage from '@/components/ProfileImage'
 import RelatedPosts from '@/components/RelatedPosts'
+import SeriesNavigation from '@/components/SeriesNavigation'
 import TableOfContents from '@/components/TableOfContents'
 import Tag from '@/components/Tag'
 import {SiteConfig} from '@/config'
@@ -20,6 +22,7 @@ import {
   findPostByYearAndSlug,
   getFeaturedSlugs,
   getRelatedPosts,
+  getSeriesPosts,
 } from '@/utils/Post'
 
 export async function generateMetadata(props: {
@@ -115,14 +118,15 @@ async function EnPostBody({year, slug}: {year: string; slug: string[]}) {
   }
 
   const {
-    frontMatter: {title, tags, date, description},
+    frontMatter: {title, tags, date, description, series},
     body,
     path,
     fields: {slug: postSlug},
     readingTime,
   } = post
 
-  const relatedPosts = await getRelatedPosts(postSlug, tags, 'en')
+  const seriesPosts = series ? await getSeriesPosts(series, 'en') : []
+  const relatedPosts = await getRelatedPosts(postSlug, tags, 'en', series)
 
   const updatedAt = format(new Date(date), 'yyyy-MM-dd')
   const transitionName = `post-${postSlug.replace(/\//g, '-')}`
@@ -187,7 +191,9 @@ async function EnPostBody({year, slug}: {year: string; slug: string[]}) {
         </Link>
 
         <section className="post-masthead">
-          <div className="post-eyebrow">◆ ESSAY</div>
+          <div className="post-eyebrow">
+            ◆ {series ? `SERIES · ${series}` : 'ESSAY'}
+          </div>
           <ViewTransition name={transitionName}>
             <h1 className="post-title">
               {titleParts.map((part, i) =>
@@ -230,6 +236,29 @@ async function EnPostBody({year, slug}: {year: string; slug: string[]}) {
             </ViewTransition>
           )}
         </section>
+
+        {thumbnail && (
+          <figure className="post-cover">
+            <Image
+              src={thumbnail}
+              alt=""
+              width={2000}
+              height={1333}
+              sizes="(min-width: 760px) 720px, 100vw"
+              priority
+            />
+          </figure>
+        )}
+
+        {series && seriesPosts.length > 1 && (
+          <SeriesNavigation
+            seriesName={series}
+            seriesPosts={seriesPosts}
+            currentSlug={postSlug}
+            pathPrefix="/en"
+            labels={{kicker: 'SERIES', list: 'View all parts'}}
+          />
+        )}
 
         <PostArticle body={body} path={path} />
 
