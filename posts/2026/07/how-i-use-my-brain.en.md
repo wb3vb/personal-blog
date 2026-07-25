@@ -1,12 +1,12 @@
 ---
-title: '[AI Dev Log] #6. How I Actually Use the Brain These Days'
+title: '[Neurain Dev Log] #6. How I Actually Use the Brain These Days'
 category: ai
 tags:
   - ai
   - second brain
 published: true
 date: 2026-07-21 07:50:00
-series: 'AI Dev Log'
+series: 'Neurain Dev Log'
 seriesOrder: 6
 description: 'I asked for a deck and got back more than I asked for, because it had pulled old meetings and past decisions out of the brain. Records compound. Past the two-month mark, output quality is decided by what has accumulated rather than by the prompt.'
 ---

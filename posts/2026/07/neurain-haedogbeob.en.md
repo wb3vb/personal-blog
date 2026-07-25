@@ -1,12 +1,12 @@
 ---
-title: '[AI Dev Log] #5. How to Read Neurain'
+title: '[Neurain Dev Log] #5. How to Read Neurain'
 category: ai
 tags:
   - ai
   - second brain
 published: true
 date: 2026-07-09 13:30:00
-series: 'AI Dev Log'
+series: 'Neurain Dev Log'
 seriesOrder: 5
 description: 'The system is called Neurain. Split it into three parts, knowledge, operating rules, and a swappable AI host, and the structure snaps into focus. I took apart nineteen comparable products, and here is what I copied, what I refused, and what moat is left.'
 ---

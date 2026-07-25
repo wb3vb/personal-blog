@@ -29,8 +29,9 @@ export const SiteConfig = {
   location: 'SEOUL', // TODO: 거주 도시
   hero: {
     // 홈 히어로 대형 문구 (3줄). 2번째 줄이 그라데이션 강조된다.
-    // 본인 삶의 모토를 그대로 옮긴 문장이므로 임의로 바꾸지 말 것.
-    titleLines: ['NOTHING', 'HAPPENS', 'UNLESS I DO.'],
+    // 본인 삶의 모토를 그대로 옮긴 문장이라 본인 승인 없이 바꾸지 말 것.
+    // 2026-07-25: 'UNLESS I DO.' → 'UNLESS I ACT.' (본인 요청)
+    titleLines: ['NOTHING', 'HAPPENS', 'UNLESS I ACT.'],
     tagline:
       'Life is not what you are dealt, it is what you decide. I start things, finish them, and write down what actually happened.',
     // About 페이지 히어로 아래 한 줄 소개 (About 페이지는 영문 단일 언어로 운영)

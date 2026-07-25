@@ -1,12 +1,12 @@
 ---
-title: '[AI 개발일지] #7. 나만 쓰기 아까워서: npm 데뷔, 그리고 남은 숙제'
+title: '[Neurain 개발일지] #7. 나만 쓰기 아까워서: npm 데뷔, 그리고 남은 숙제'
 category: ai
 tags:
   - ai
   - second brain
 published: true
 date: 2026-07-25 23:15:00
-series: 'AI 개발일지'
+series: 'Neurain 개발일지'
 seriesOrder: 7
 description: '설치 한 줄을 목표로 npm까지 갔지만, 독립 감사 점수는 100점 만점에 42.7점이었다. 두 달의 성적표와 앞으로 고칠 아홉 가지를 우선순위와 함께 남긴다.'
 ---

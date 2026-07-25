@@ -1,12 +1,12 @@
 ---
-title: '[AI 개발일지] #2. 코딩 도구에 코드 대신 뇌를 넣었다'
+title: '[Neurain 개발일지] #2. 코딩 도구에 코드 대신 뇌를 넣었다'
 category: ai
 tags:
   - ai
   - second brain
 published: true
 date: 2026-06-19 22:10:00
-series: 'AI 개발일지'
+series: 'Neurain 개발일지'
 seriesOrder: 2
 description: '카파시의 LLM Wiki 메모에서 위키를 AI가 유지보수한다는 역할 역전을 발견했고, 폴더를 지정해 일하는 코딩 도구가 그 그릇이 될 수 있다는 결론에 닿았다. 원안을 그대로 쓰지 않고 내 삶에 맞게 고쳐 쓴 지점들이 지금의 Neurain이 됐다.'
 ---

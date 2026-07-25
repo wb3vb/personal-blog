@@ -1,12 +1,12 @@
 ---
-title: '[AI 개발일지] #1. 내 AI 비서는 매일 아침 기억을 잃는다'
+title: '[Neurain 개발일지] #1. 내 AI 비서는 매일 아침 기억을 잃는다'
 category: ai
 tags:
   - ai
   - second brain
 published: true
 date: 2026-06-15 09:40:00
-series: 'AI 개발일지'
+series: 'Neurain 개발일지'
 seriesOrder: 1
 description: 'AI를 텔레그램 비서로 부리며 활용의 저변은 넓어졌지만, 대화는 잊히고 세션은 끊기고 모델을 갈아타면 리셋됐다. 병목은 모델의 지능이 아니라 맥락을 유지하는 구조의 부재라는 가설에서 세컨드 브레인 만들기가 시작됐다.'
 ---

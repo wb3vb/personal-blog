@@ -1,12 +1,12 @@
 ---
-title: '[AI 개발일지] #3. 코드 한 줄 못 쓰는데 커밋 518개'
+title: '[Neurain 개발일지] #3. 코드 한 줄 못 쓰는데 커밋 518개'
 category: ai
 tags:
   - ai
   - second brain
 published: true
 date: 2026-06-30 08:25:00
-series: 'AI 개발일지'
+series: 'Neurain 개발일지'
 seriesOrder: 3
 description: '한국어로 요구하고, 클로드가 만들고, 코덱스가 공격하고, 판정과 위험한 버튼만 내가 맡는다. 코드를 못 읽는 사람이 결과물을 믿는 방법은 코드를 읽는 게 아니라 행동을 측정하는 것이었다.'
 ---

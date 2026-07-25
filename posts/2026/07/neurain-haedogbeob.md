@@ -1,12 +1,12 @@
 ---
-title: '[AI 개발일지] #5. Neurain 해독법'
+title: '[Neurain 개발일지] #5. Neurain 해독법'
 category: ai
 tags:
   - ai
   - second brain
 published: true
 date: 2026-07-09 13:30:00
-series: 'AI 개발일지'
+series: 'Neurain 개발일지'
 seriesOrder: 5
 description: '시스템의 이름은 Neurain이다. 지식과 운영 규칙과 AI 호스트라는 세 부품으로 나누면 구조가 한눈에 잡힌다. 비슷한 제품 열아홉 개를 뜯어 보며 무엇을 베끼고 무엇을 거부했는지, 그리고 남는 해자가 무엇인지까지 정리했다.'
 ---

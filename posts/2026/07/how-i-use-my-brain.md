@@ -1,12 +1,12 @@
 ---
-title: '[AI 개발일지] #6. 요즘 나는 뇌를 이렇게 쓴다'
+title: '[Neurain 개발일지] #6. 요즘 나는 뇌를 이렇게 쓴다'
 category: ai
 tags:
   - ai
   - second brain
 published: true
 date: 2026-07-21 07:50:00
-series: 'AI 개발일지'
+series: 'Neurain 개발일지'
 seriesOrder: 6
 description: '발표자료를 시켰더니 시킨 것 이상이 돌아왔다. 과거 회의와 예전 결정을 뇌에서 찾아 얹은 결과물이었다. 기록은 복리로 불어나고, 두 달을 넘기면 산출물의 품질이 프롬프트가 아니라 쌓인 기록에서 결정된다.'
 ---

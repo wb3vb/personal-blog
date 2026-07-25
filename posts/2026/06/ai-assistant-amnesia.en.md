@@ -1,12 +1,12 @@
 ---
-title: '[AI Dev Log] #1. My AI Assistant Loses Its Memory Every Morning'
+title: '[Neurain Dev Log] #1. My AI Assistant Loses Its Memory Every Morning'
 category: ai
 tags:
   - ai
   - second brain
 published: true
 date: 2026-06-15 09:40:00
-series: 'AI Dev Log'
+series: 'Neurain Dev Log'
 seriesOrder: 1
 description: 'Running an AI as a Telegram assistant widened what I could hand off, but conversations were forgotten, sessions never talked to each other, and switching models reset everything. The bottleneck was not model intelligence. It was the absence of a structure that holds context.'
 ---

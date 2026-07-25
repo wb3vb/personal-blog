@@ -1,12 +1,12 @@
 ---
-title: '[AI 개발일지] #4. 완성된 뇌의 해부도'
+title: '[Neurain 개발일지] #4. 완성된 뇌의 해부도'
 category: ai
 tags:
   - ai
   - second brain
 published: true
 date: 2026-07-06 21:05:00
-series: 'AI 개발일지'
+series: 'Neurain 개발일지'
 seriesOrder: 4
 description: '질문 하나를 던지면 3초 동안 검색이 네 단계를 거친다. 단어를 쪼개 동의어로 넓히고, 문서 4,700개에서 후보를 추리고, 근거를 가려내고, 그 위에서 답을 조합한다. 답변의 품질은 모델이 아니라 근거의 품질에서 갈린다.'
 ---

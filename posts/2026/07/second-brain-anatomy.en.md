@@ -1,12 +1,12 @@
 ---
-title: '[AI Dev Log] #4. An Anatomy of the Finished Brain'
+title: '[Neurain Dev Log] #4. An Anatomy of the Finished Brain'
 category: ai
 tags:
   - ai
   - second brain
 published: true
 date: 2026-07-06 21:05:00
-series: 'AI Dev Log'
+series: 'Neurain Dev Log'
 seriesOrder: 4
 description: 'Ask one question and search runs four stages over three seconds. Split the words and widen them with synonyms, pull candidates from 4,700 documents, filter down to real evidence, then compose the answer on top of it. Answer quality is decided by the evidence, not the model.'
 ---

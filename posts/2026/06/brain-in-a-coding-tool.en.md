@@ -1,12 +1,12 @@
 ---
-title: '[AI Dev Log] #2. I Put a Brain, Not Code, Into a Coding Tool'
+title: '[Neurain Dev Log] #2. I Put a Brain, Not Code, Into a Coding Tool'
 category: ai
 tags:
   - ai
   - second brain
 published: true
 date: 2026-06-19 22:10:00
-series: 'AI Dev Log'
+series: 'Neurain Dev Log'
 seriesOrder: 2
 description: 'Karpathy''s LLM Wiki note flips the roles: the wiki is maintained by an AI, not by people. A coding tool that works inside a folder you point it at turned out to be the right vessel. What I changed rather than copied is what became Neurain.'
 ---

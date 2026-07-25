@@ -1,12 +1,12 @@
 ---
-title: '[AI Dev Log] #7. Too Good to Keep to Myself: An npm Debut and the Homework Left'
+title: '[Neurain Dev Log] #7. Too Good to Keep to Myself: An npm Debut and the Homework Left'
 category: ai
 tags:
   - ai
   - second brain
 published: true
 date: 2026-07-25 23:15:00
-series: 'AI Dev Log'
+series: 'Neurain Dev Log'
 seriesOrder: 7
 description: 'I got all the way to npm chasing a one-line install, and then an independent audit scored it 42.7 out of 100. Here is the two-month report card and the nine things left to fix, in priority order.'
 ---

@@ -1,12 +1,12 @@
 ---
-title: '[AI Dev Log] #3. 518 Commits From Someone Who Cannot Write Code'
+title: '[Neurain Dev Log] #3. 518 Commits From Someone Who Cannot Write Code'
 category: ai
 tags:
   - ai
   - second brain
 published: true
 date: 2026-06-30 08:25:00
-series: 'AI Dev Log'
+series: 'Neurain Dev Log'
 seriesOrder: 3
 description: 'I state what I want in Korean, Claude builds it, Codex attacks it, and I keep only the rulings and the dangerous buttons. For someone who cannot read code, trusting the output means measuring behavior rather than reading the source.'
 ---

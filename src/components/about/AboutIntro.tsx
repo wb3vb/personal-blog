@@ -64,22 +64,19 @@ export function AboutIntro() {
     <div className="pb-8 pt-8 xl:col-span-2">
       <div className="prose about-dense max-w-none dark:prose-dark">
         <p className="lead">
-          My motto is a book title I picked up on a bad day: if you do nothing,
-          nothing happens.
+          Nothing happens unless I act. That is not a line I read somewhere. It
+          is the one pattern my own life keeps repeating.
         </p>
         <p>
-          It sounds like a lecture about laziness. It is the opposite. Ichiro
-          Kishimi is writing about Adler, and the point is that a life is not
-          the hand you were dealt, it is what you decide to do with it. I read
-          it during the hardest stretch I have had at work, when I was measuring
-          myself entirely by other people’s reactions. What changed was not my
-          circumstances. It was that I stopped waiting for someone to hand me
-          permission, and started moving first.
+          The stretches that went well all started the same way. I moved before
+          anyone told me to. The bad ones were when I waited for permission and
+          measured myself by other people’s reactions. Circumstances almost
+          never changed on their own. What changed was whether I started.
         </p>
         <p>
-          That is most of what you need to know about how I work. I take on the
-          things with no precedent, because nobody is coming to write the
-          playbook for them.
+          So I take on work with no precedent, because nobody is coming to write
+          the playbook for it. And I write down what actually happened, not what
+          I meant to happen.
         </p>
 
         <h2>Now</h2>
