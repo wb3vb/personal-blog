@@ -92,10 +92,14 @@ export async function GET(request: Request) {
     const pathParam = searchParams.get('path')
     const urlParam = searchParams.get('url')
 
+    // 카드 하단 주소. 프로토콜과 끝 슬래시는 뺀다.
+    // path=/ 인 홈 카드가 'wb3vb.com/' 로 찍히던 것을 막는다.
     const address = (
       urlParam ??
       (pathParam ? `${SiteConfig.url}${pathParam}` : SiteConfig.url)
-    ).replace(/^https?:\/\//, '')
+    )
+      .replace(/^https?:\/\//, '')
+      .replace(/\/+$/, '')
 
     // 사이트/고정 페이지 카드는 브랜드 문구를, 글 카드는 글의 태그를 eyebrow 로 쓴다.
     const eyebrow = isBrand
