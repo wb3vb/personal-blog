@@ -9,7 +9,7 @@
 |---|---|
 | Framework | Next.js 16 (App Router, `cacheComponents`, View Transitions) |
 | UI | React 19 + Tailwind CSS 4 (v3 config 하이브리드, `@config` 지시어) |
-| Language | TypeScript 5 (**5.x 고정 필수** — 7.x preview 가 들어오면 빌드가 깨진다) |
+| Language | TypeScript 5 (**5.x 고정 필수**, 7.x preview 가 들어오면 빌드가 깨진다) |
 | Content | 파일 기반 `posts/YYYY/MM/slug.md`. CMS 없음 |
 | Package Manager | pnpm 10.6.5 |
 | Runtime | Node.js 24.14.1 |

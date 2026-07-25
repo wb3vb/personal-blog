@@ -1,4 +1,4 @@
-# design.md — 디자인 시스템 명세
+# design.md · 디자인 시스템 명세
 
 > 목표: [yceffort.kr](https://yceffort.kr) (yceffort/blog 저장소, `apps/blog`)의 디자인을 1:1로 재현한다.
 > 이 문서의 모든 값은 원본 저장소의 `apps/blog/src/app/tailwind.css`(3,048줄), `apps/blog/tailwind.config.js`, `apps/blog/src/app/layout.tsx` 및 각 컴포넌트 소스에서 검증한 실측값이다. 임의로 값을 바꾸지 않는다.
@@ -9,7 +9,7 @@
 
 - **Tailwind CSS v4 + v3 config 하이브리드**: `postcss.config.js`에는 `@tailwindcss/postcss` 플러그인 하나만 등록한다. 진입 CSS(`src/app/tailwind.css`) 첫 줄은 `@import 'tailwindcss'`, 둘째 줄은 `@config '../../tailwind.config.js'`로 v3 형식 JS 설정을 로드한다.
 - `tailwind.config.js` 핵심: `darkMode: 'class'`, `content: ['./src/**/*.ts*', ...]`, `plugins: [@tailwindcss/forms, @tailwindcss/typography]`, `variants: {typography: ['dark']}`.
-- **Tailwind v4 보더색 호환 셰임**(필수 — 없으면 모든 보더가 currentColor가 됨):
+- **Tailwind v4 보더색 호환 셰임**(필수, 없으면 모든 보더가 currentColor가 됨):
   ```css
   @layer base {
     *, ::after, ::before, ::backdrop, ::file-selector-button {
@@ -35,7 +35,7 @@
 
 ## 2. 컬러 토큰
 
-### 2.1 CSS 변수 — 라이트(`:root`) / 다크(`html.dark`)
+### 2.1 CSS 변수: 라이트(`:root`) / 다크(`html.dark`)
 
 | 토큰 | 라이트 | 다크 | 용도 |
 |---|---|---|---|
@@ -96,9 +96,9 @@ Tailwind 유틸 별칭: `colors`에 `bg/bg-2/surface/surface-2/ink/ink-2/ink-3/i
 |---|---|---|
 | `--font-sans` | Inter | html className에 variable 부착 |
 | `--font-mono` | JetBrains_Mono | 라벨·메타·코드 |
-| `--font-serif` | Fraunces | `style: ['italic', 'normal']` — blockquote·em 강조 |
+| `--font-serif` | Fraunces | `style: ['italic', 'normal']`: blockquote·em 강조 |
 
-- body 스택: `var(--font-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif` — **한글은 시스템 폰트 폴백. 한글 웹폰트를 로드하지 않는다.**
+- body 스택: `var(--font-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif`: **한글은 시스템 폰트 폴백. 한글 웹폰트를 로드하지 않는다.**
 - `.font-mono`: `var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace`
 - `.font-serif`: `var(--font-serif), ui-serif, Georgia, 'Times New Roman', serif` + `font-optical-sizing: auto`
 - body는 `antialiased`.
@@ -115,7 +115,7 @@ Tailwind 유틸 별칭: `colors`에 `bg/bg-2/surface/surface-2/ink/ink-2/ink-3/i
 | `.logo-name` | 18px | 800 / 1.1 / -0.02em |
 
 - 그라데이션 강조(`.accent`, 타이틀 내 `em`): `linear-gradient(120deg, var(--primary) 0%, var(--primary-2) 50%, var(--primary-3) 100%)` + `background-clip: text` + `background-size: 200% 100%` + `animation: hero-hue 10s ease-in-out infinite`.
-- `.hero-title .stroke`: `color: var(--ink-4)`, weight 700. `.page-title .stroke`: `color: transparent` + `-webkit-text-stroke: 2px var(--ink-3)` (두 페이지가 다름 — 주의).
+- `.hero-title .stroke`: `color: var(--ink-4)`, weight 700. `.page-title .stroke`: `color: transparent` + `-webkit-text-stroke: 2px var(--ink-3)` (두 페이지가 다름, 주의).
 - 모노 라벨 공통형: `font-family: var(--font-mono)` / 10~12px / uppercase / letter-spacing 0.08~0.35em / `var(--ink-3)` 또는 `var(--primary)`.
 
 ### 3.3 본문(`.post-article`) 스케일
@@ -182,7 +182,7 @@ Tailwind 유틸 별칭: `colors`에 `bg/bg-2/surface/surface-2/ink/ink-2/ink-3/i
 - `.header-sep`: 1×22px, 세로 그라데이션(`transparent → var(--border-2) → transparent`), 640px 이상 표시
 - 모바일: 햄버거(`sm:hidden`, h-10 w-10) → 바텀시트(`rounded-t-[28px]`, bg `var(--surface)`, shadow `0 -24px 60px -20px rgba(0,0,0,0.45)`, 드래그 핸들 `h-[5px] w-11`)
 
-### 5.2 푸터 (`Footer.tsx` — Tailwind 유틸)
+### 5.2 푸터 (`Footer.tsx`, Tailwind 유틸)
 
 ```
 <footer><div class="mt-16 flex flex-col items-center">
@@ -228,7 +228,7 @@ Tailwind 유틸 별칭: `colors`에 `bg/bg-2/surface/surface-2/ink/ink-2/ink-3/i
 - `.floating-toc-panel`: width 288px, `max-height: 60vh`, bottom 64px 우측 정렬, radius 12px, shadow `0 20px 50px -20px rgba(0,0,0,0.35)`; 닫힘 `translateY(16px) scale(0.9) opacity 0`, 열림 전환 `240ms cubic-bezier(0.16,1,0.3,1)`
 - 리스트 링크: 13px, padding `6px 0 6px 12px`, border-left 2px transparent; `data-active='true'`면 border-left `var(--primary)` + `color: var(--primary)` + 500
 - 별도 `.floating-toc-scroll-top`: 40px 원형, `data-show='false'`면 `translateY(8px) opacity 0`
-- (remark-toc 본문 TOC 박스, prose): `.prose h2[id^='table-of-contents'] + ul` → `bg-gray-50 dark:bg-gray-800/50 rounded-lg p-5 border border-gray-200 dark:border-gray-700 list-none`; 1단계 링크 `font-semibold text-gray-800 dark:text-gray-200 no-underline hover:text-primary-600`, 2단계 `pl-4 border-l-2 text-sm text-gray-600`, 3단계 `text-xs text-gray-500`, 4단계 `pl-3 text-xs text-gray-400` — 4단계 중첩까지 정의
+- (remark-toc 본문 TOC 박스, prose): `.prose h2[id^='table-of-contents'] + ul` → `bg-gray-50 dark:bg-gray-800/50 rounded-lg p-5 border border-gray-200 dark:border-gray-700 list-none`; 1단계 링크 `font-semibold text-gray-800 dark:text-gray-200 no-underline hover:text-primary-600`, 2단계 `pl-4 border-l-2 text-sm text-gray-600`, 3단계 `text-xs text-gray-500`, 4단계 `pl-3 text-xs text-gray-400`: 4단계 중첩까지 정의
 
 ### 5.8 코드블록
 
@@ -283,9 +283,9 @@ Tailwind 유틸 별칭: `colors`에 `bg/bg-2/surface/surface-2/ink/ink-2/ink-3/i
 - 순서: `.post-back` → `.post-masthead` → (`.post-cover`) → `.post-article` → `.post-series-nav` → `.post-footer` → `.post-related` + `.floating-toc`
 - `.post-back`: mono 11px ls 0.16em uppercase `var(--ink-3)`, 22px 원형 `.dot`(border + `var(--surface-2)`), hover `var(--primary)`
 - `.post-masthead`: flex column gap 20px, padding `24px 0 20px`
-  - `.post-eyebrow`: mono 11px ls 0.2em uppercase `var(--primary)` — `◆ SERIES · {name}` 또는 `◆ ESSAY`
+  - `.post-eyebrow`: mono 11px ls 0.2em uppercase `var(--primary)`: `◆ SERIES · {name}` 또는 `◆ ESSAY`
   - `.post-title`: §3.2. 제목 내 `em`은 120deg 그라데이션 + `hero-hue 10s` (frontmatter `<em>` 문법, 없으면 첫 단어 자동 강조)
-  - `.post-meta-row`: border-top 1px, padding-top 16px, space-between; `.post-author .nm` 14px/600, `.sub` mono 11.5px `{yyyy-MM-dd} · {n}분`; `.post-stats` mono 11px uppercase gap 22px, `b` sans 18px/700 — `N min / YYYY year / KO original`
+  - `.post-meta-row`: border-top 1px, padding-top 16px, space-between; `.post-author .nm` 14px/600, `.sub` mono 11.5px `{yyyy-MM-dd} · {n}분`; `.post-stats` mono 11px uppercase gap 22px, `b` sans 18px/700: `N min / YYYY year / KO original`
   - 태그: `Tag.tsx` 최대 5개
 - `.post-cover`: margin `28px 0 40px`, radius 16px, `aspect-ratio: 1200/630`, `::after` 하단 그라데이션(`transparent 35% → bg 85% mix`)
 - 본문: `.post-article`(§3.3) + 코드블록(§5.8) + KaTeX(`.math-display { overflow-x: auto }`)
@@ -306,7 +306,7 @@ Tailwind 유틸 별칭: `colors`에 `bg/bg-2/surface/surface-2/ink/ink-2/ink-3/i
 - 컨테이너: `max-w-6xl`
 - `.about-hero`: grid `1fr`(≥900px `1.3fr 1fr`), align-items center, padding `24px 0 32px`, gap 24px
   - 좌: `.page-title-fx`(height `clamp(140px, 22vw, 240px)`, WebGL 파티클 텍스트 캔버스) + 소개문 + `.about-socials`(mono 13px; 링크는 padding `8px 14px` border+radius 8px bg `var(--surface)`, hover 보더/색 `var(--primary)`)
-  - 우: `.hero-fx-b`(320×320 캔버스, `border-radius: 50%`, `cursor: crosshair` — 프로필 파티클 디졸브), `.hero-fx-hint` mono 10px ls 0.12em uppercase opacity 0.65
+  - 우: `.hero-fx-b`(320×320 캔버스, `border-radius: 50%`, `cursor: crosshair`, 프로필 파티클 디졸브), `.hero-fx-hint` mono 10px ls 0.12em uppercase opacity 0.65
 - `.tabs`(About/Resume 전환): flex, margin `32px 0 24px`, border-bottom 1px; `a`는 flex-1, padding `12px 24px`, 14px/600 center, `var(--ink-3)`(활성 `var(--ink)`); `a::after` 2px `var(--primary)` 언더라인 `scaleX(0→1)` 240ms `cubic-bezier(0.2,0.9,0.2,1)`
 - Resume 본문(순수 Tailwind 카드): section `rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-800/50 md:p-10`, 타임라인 `ol.relative.border-l border-gray-200 dark:border-gray-700` + 도트 `absolute -left-3 h-6 w-6 rounded-full bg-gray-100 ring-8 ring-white dark:ring-gray-800`(내부 `h-3 w-3 rounded-full bg-gray-400`), 스킬 필 `rounded-full bg-gray-100 px-3 py-1 text-sm font-medium`, 링크 `text-primary-600 dark:text-primary-400 hover:underline`
 - `prefers-reduced-motion`에서 두 캔버스 모두 `display: none`
@@ -328,7 +328,7 @@ Tailwind 유틸 별칭: `colors`에 `bg/bg-2/surface/surface-2/ink/ink-2/ink-3/i
 4. **prism/highlight.js 테마 CSS 임포트 금지**: 코드 색은 토큰 클래스 치환(§5.8) + `code`/`code-light` 팔레트만. 외부 테마를 얹으면 라이트/다크 팔레트가 무너진다.
 5. **이징·시간 임의 추가 금지**: `cubic-bezier(0.2,0.9,0.2,1)`(일반)과 `cubic-bezier(0.16,1,0.3,1)`(패널)만 사용. `ease-in-out` 등은 소스에 있는 자리(View Transition 0.3s/0.5s, hero-hue 등)만.
 6. **radius 스케일 이탈 금지**: 카드 `var(--radius)`(12px) / 이미지·pre·thumb 10px / 버튼·아이콘 8~10px / 필·칩 999px / 검색·커버 16px. 임의 radius 금지.
-7. **다크모드 media query 전략 금지**: `html.dark` 클래스 전략 단일(§6). 수제 CSS 컴포넌트에 `dark:` 분기를 늘리는 것도 원칙 위반 — 토큰 재정의로 해결할 것.
+7. **다크모드 media query 전략 금지**: `html.dark` 클래스 전략 단일(§6). 수제 CSS 컴포넌트에 `dark:` 분기를 늘리는 것도 원칙 위반: 토큰 재정의로 해결할 것.
 8. **폰트 추가·한글 웹폰트 로드 금지**: Inter/JetBrains Mono/Fraunces 3종 + 시스템 폴백('Apple SD Gothic Neo', 'Noto Sans KR')이 전부. 히어로/blockquote 세리프는 반드시 Fraunces(`--font-serif`).
 9. **본문 컬럼 폭 위반 금지**: `.post-article` 등 상세 컬럼은 820px 고정. prose에 `max-w-*`를 새로 걸거나 컨테이너 폭 규칙(§4.1)을 페이지별로 재발명하지 않는다.
 10. **z-index 임의 값 금지**: §4.3 계층(0/40/45/50/80/90/100)만 사용.

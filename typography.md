@@ -1,4 +1,4 @@
-# Typography System — `typography.md`
+# Typography System · `typography.md`
 
 이 문서는 블로그의 **폰트/타이포그래피**를 정의하는 단일 기준(Single Source of Truth)이다.
 `design.md`가 색·레이아웃·컴포넌트를 정의하듯, 글꼴·굵기·자간·줄간격·타입스케일은 여기서 관리한다.
@@ -25,9 +25,9 @@
 
 실측 검증값(2026-07-25, dev):
 
-- KO `/2026/07/npm-debut` — `html` 자간 `-0.32px`, `body` 굵기 `500`,
+- KO `/2026/07/npm-debut`: `html` 자간 `-0.32px`, `body` 굵기 `500`,
   `.post-article` = Inter Tight / 16px / `22.4px`(=1.4) / 폭 `720px`
-- EN `/en/...` — `html` 자간 `-0.096px`, `body` 굵기 `450`, 글꼴 Inter Tight
+- EN `/en/...`: `html` 자간 `-0.096px`, `body` 굵기 `450`, 글꼴 Inter Tight
 - 로드된 웹폰트: `Inter Tight 100–900`, `JetBrains Mono 100–800`, `Fraunces 100–900` (Manrope 제거됨)
 
 ---
@@ -117,7 +117,7 @@ KO/EN 스타일 분기의 기준은 `<html>`의 `lang` 속성이다.
 ```css
 /* ========= KR TYPOGRAPHY (planwedding.io-inspired: tight tracking + medium weight) ========= */
 html[lang='ko'] {
-  letter-spacing: -0.02em; /* ≈ planwedding -0.3px @16px — tight Korean tracking */
+  letter-spacing: -0.02em; /* ≈ planwedding -0.3px @16px, tight Korean tracking */
 }
 html[lang='ko'] body {
   font-weight: 500; /* medium body weight, like planwedding */
@@ -142,15 +142,15 @@ html[lang='en'] body {
 - EN 자간을 KO(−0.02em)만큼 조이지 않은 이유: 라틴 소문자는 한글보다 자간 민감도가 높아 −0.02em이면
   글자가 서로 붙어 보인다. Inter Tight로 이미 폭이 줄었으므로 −0.006em이면 충분하다.
 
-### 4.2 planwedding.io 대조표 — 측정 vs 채택 (KO)
+### 4.2 planwedding.io 대조표: 측정 vs 채택 (KO)
 
 | 속성 | planwedding.io/guide (측정) | 우리 KO (채택) | 판단 |
 |---|---|---|---|
-| 글꼴 | 전부 시스템 폰트(웹폰트 없음) | 한글 시스템, 라틴 Inter Tight | **부분 채택** — 한글은 동일(Apple SD Gothic Neo), 숫자/영문은 웹폰트가 더 깔끔 |
+| 글꼴 | 전부 시스템 폰트(웹폰트 없음) | 한글 시스템, 라틴 Inter Tight | **부분 채택**: 한글은 동일(Apple SD Gothic Neo), 숫자/영문은 웹폰트가 더 깔끔 |
 | 본문 크기 | 16px | 16px | 동일 |
 | 본문 굵기 | 500 (medium) | **500** | 동일 채택 |
 | 본문 자간 | −0.3px | **−0.02em (≈−0.32px)** | 사실상 동일 채택 |
-| 본문 줄간격 | ~normal (≈1.2, UI 성격) | **1.4** | **의도적 이탈** — planwedding은 UI/가이드 화면이라 촘촘하지만 장문 읽기에는 답답하다. 1.8~1.0을 오간 끝에 1.4로 확정 |
+| 본문 줄간격 | ~normal (≈1.2, UI 성격) | **1.4** | **의도적 이탈**: planwedding은 UI/가이드 화면이라 촘촘하지만 장문 읽기에는 답답하다. 1.8~1.0을 오간 끝에 1.4로 확정 |
 | 제목 자간 | −0.3px | −0.02em~−0.045em | 동일 방향(타이트) |
 
 **요약:** planwedding의 정체성인 *타이트한 자간 + 미디엄 굵기*는 그대로 가져오고, 장문 가독성을 위해 줄간격만
@@ -173,9 +173,9 @@ html[lang='en'] body {
 | 본문 H4 | `.post-article h4` | 17px | 600 | 1.3 | −0.02em |
 | 인용/TL;DR 블록 | `.post-article blockquote` | 15px | 400 (`strong` 700) | 1.6 | (상속) |
 | 로고 이름 | `.logo-name` | 16px | 800 | 1.1 | −0.02em |
-| 네비 링크 | `.nav-link` | 13.5px | 500 | — | −0.005em |
-| 태그 그래프 노드 | `.tg-node text` | 10.5px (카테고리 12.5px) | 500 / 700 | — | −0.02em (JetBrains Mono) |
-| 코드/메타 | `.font-mono` | (요소별) | — | — | — (JetBrains Mono) |
+| 네비 링크 | `.nav-link` | 13.5px | 500 | - | −0.005em |
+| 태그 그래프 노드 | `.tg-node text` | 10.5px (카테고리 12.5px) | 500 / 700 | - | −0.02em (JetBrains Mono) |
+| 코드/메타 | `.font-mono` | (요소별) | - | - | - (JetBrains Mono) |
 
 > 히어로/제목/네비는 자기 `letter-spacing`을 명시하므로 전역 상속을 덮어쓴다(의도됨). 로케일 자간이
 > 실제로 바뀌는 건 본문·라벨 등 **자간 미지정 텍스트**다.
@@ -252,27 +252,27 @@ computed style 재측정(글꼴/자간/굵기/줄간격).
 
 ## 10. 결정 로그 (Decisions log)
 
-- **2026-07-25 — 본문 인용 블록을 세리프 이탤릭에서 산세리프 정체로.** 인용/TL;DR 블록이
+- **2026-07-25 · 본문 인용 블록을 세리프 이탤릭에서 산세리프 정체로.** 인용/TL;DR 블록이
   Fraunces 17px 이탤릭이었는데, 한글에 이탤릭 자형이 없어 가짜 이탤릭으로 렌더돼 낡아 보였다.
   `--font-sans` 15px 정체 / 줄간 1.6 / 색 `--ink-2`로 바꾸고, 구분은 왼쪽 선과 배경으로만 준다.
   여러 문단 인용에 `p + p { margin-top: 12px }`를 추가하고, `strong`은 `--ink`로 대비를 살렸다.
   같은 날 `prose`가 blockquote에 자동으로 붙이던 따옴표(`open-quote`/`close-quote`)도 껐다.
   인용문은 마크다운에 이미 따옴표가 있어 두 겹이 됐고 TL;DR 블록은 인용이 아닌데도 씌워졌다.
-- **2026-07-25 — 라틴 글꼴을 Inter Tight로 교체하고 글 본문까지 통일. EN 밀도 상향. 문서명 `font.md` → `typography.md`.**
+- **2026-07-25 · 라틴 글꼴을 Inter Tight로 교체하고 글 본문까지 통일. EN 밀도 상향. 문서명 `font.md` → `typography.md`.**
   사용자가 영문이 "깔끔/심플/밀도 있는" 쪽이면 좋겠다고 요청. 임시 비교 페이지(`/font-lab`)에서
   Inter / Inter Tight / Geist를 히어로·부제·본문(영문)·본문(한글 혼용)·목록 제목 다섯 요소로 대조한 뒤
   **Inter Tight** 채택. 동시에 적용 범위를 **글 본문까지 통일**로 결정해 `--font-manrope`와 Manrope 로드를 제거하고
   `.post-article`을 `--font-sans`로 변경(웹폰트 4종 → 3종). EN에 `letter-spacing: -0.006em`과
   `body { font-weight: 450 }`을 신설하고, `.hero-sub p` 줄간격을 1.6 → 1.5로 조정.
   이로써 철학 2번이 "영문은 공기"에서 "국·영문 모두 밀도"로 바뀌었다.
-- **2026-07 — 글 본문에 Ghost 값 일부만 채택(720/1.4/Manrope).** Ghost 전면 정렬을 적용했다가
+- **2026-07 · 글 본문에 Ghost 값 일부만 채택(720/1.4/Manrope).** Ghost 전면 정렬을 적용했다가
   전부 되돌린 뒤(제목 세리프·인용·이미지 브레이크아웃 등 폐기), 사용자가 **읽기 컬럼 720px·줄간격 1.4·본문
   폰트 Manrope** 세 가지만 재적용 요청. 줄간격은 1.7→1.3→1.0→1.3→1.5→1.8을 오간 뒤 **1.4로 확정**.
   이 중 Manrope는 2026-07-25에 철회됐고, 720px과 1.4는 유지된다.
-- **2026-07 — KO에 planwedding 한글 스타일 적용.** 사용자가 `planwedding.io/guide`의 한글 폰트 스타일
+- **2026-07 · KO에 planwedding 한글 스타일 적용.** 사용자가 `planwedding.io/guide`의 한글 폰트 스타일
   (타이트 자간·미디엄 굵기)을 국문판에 이식 요청. `html[lang='ko']` 스코프로 자간 `−0.02em`, 본문 굵기 `500` 적용.
   당시 EN은 원본(Inter 기본값) 유지.
-- **초기 — 한글 웹폰트 미도입.** 로딩 비용/FOUT 회피 위해 한글은 시스템 폰트(Apple SD Gothic Neo)로 렌더,
+- **초기 · 한글 웹폰트 미도입.** 로딩 비용/FOUT 회피 위해 한글은 시스템 폰트(Apple SD Gothic Neo)로 렌더,
   라틴/숫자만 웹폰트 사용.
 
 ---
