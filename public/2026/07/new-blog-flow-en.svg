@@ -1,0 +1,70 @@
+<svg width="760" height="724" viewBox="0 0 760 724" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Pretendard', sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#6b6b7e"/>
+    </marker>
+    <marker id="b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#8b8bf5"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="724" rx="18" fill="#0e0e14"/>
+  <rect x="0.5" y="0.5" width="759" height="723" rx="18" fill="none" stroke="#26262f"/>
+
+  <text x="380" y="46" text-anchor="middle" fill="#e9e9ef" font-size="20" font-weight="700">After I stopped at the renewal screen</text>
+  <text x="380" y="70" text-anchor="middle" fill="#8a8a96" font-size="12">three problems, and where they left me</text>
+
+  <rect x="190" y="96" width="380" height="56" rx="12" fill="#171722" stroke="#8b8bf5" stroke-width="1.2"/>
+  <text x="380" y="120" text-anchor="middle" fill="#c7c7ff" font-size="12" font-weight="700">STARTING POINT</text>
+  <text x="380" y="140" text-anchor="middle" fill="#e9e9ef" font-size="14">Could I just build this myself?</text>
+  <line x1="380" y1="152" x2="380" y2="176" stroke="#6b6b7e" stroke-width="1.4" marker-end="url(#a)"/>
+
+  <rect x="100" y="180" width="254" height="76" rx="12" fill="#15151d" stroke="#3a3a48"/>
+  <text x="227" y="206" text-anchor="middle" fill="#8a8a96" font-size="11" font-weight="700">WHAT I CANNOT DO</text>
+  <text x="227" y="228" text-anchor="middle" fill="#b9b9c3" font-size="12.5">Write code</text>
+  <text x="227" y="246" text-anchor="middle" fill="#b9b9c3" font-size="12.5">Judge whether code is right</text>
+
+  <rect x="406" y="180" width="254" height="76" rx="12" fill="#171722" stroke="#8b8bf5" stroke-width="1.2"/>
+  <text x="533" y="206" text-anchor="middle" fill="#c7c7ff" font-size="11" font-weight="700">WHAT I CAN DO</text>
+  <text x="533" y="228" text-anchor="middle" fill="#e9e9ef" font-size="12.5">Decide what to build</text>
+  <text x="533" y="246" text-anchor="middle" fill="#e9e9ef" font-size="12.5">Judge whether it is right</text>
+
+  <path d="M 227 256 L 227 276 L 380 276" fill="none" stroke="#6b6b7e" stroke-width="1.4"/>
+  <path d="M 533 256 L 533 276 L 380 276" fill="none" stroke="#6b6b7e" stroke-width="1.4"/>
+  <line x1="380" y1="276" x2="380" y2="296" stroke="#6b6b7e" stroke-width="1.4" marker-end="url(#a)"/>
+
+  <text x="64" y="322" fill="#8b8bf5" font-size="13" font-weight="700">THE THREE I HAD TO CLEAR</text>
+
+  <rect x="64" y="334" width="296" height="62" rx="12" fill="#15151d" stroke="#2e2e3a"/>
+  <text x="80" y="358" fill="#8a8a96" font-size="11">PROBLEM 1</text>
+  <text x="80" y="380" fill="#e9e9ef" font-size="13">Can I take everything with me?</text>
+  <line x1="360" y1="365" x2="396" y2="365" stroke="#8b8bf5" stroke-width="1.4" marker-end="url(#b)"/>
+  <rect x="400" y="334" width="296" height="62" rx="12" fill="#12121a" stroke="#3a3a48"/>
+  <text x="416" y="358" fill="#b9b9c3" font-size="12.5">Preserve 40 old URLs first,</text>
+  <text x="416" y="378" fill="#b9b9c3" font-size="12.5">then check every reference by machine</text>
+
+  <rect x="64" y="410" width="296" height="62" rx="12" fill="#15151d" stroke="#2e2e3a"/>
+  <text x="80" y="434" fill="#8a8a96" font-size="11">PROBLEM 2</text>
+  <text x="80" y="456" fill="#e9e9ef" font-size="13">I did not know my own taste</text>
+  <line x1="360" y1="441" x2="396" y2="441" stroke="#8b8bf5" stroke-width="1.4" marker-end="url(#b)"/>
+  <rect x="400" y="410" width="296" height="62" rx="12" fill="#12121a" stroke="#3a3a48"/>
+  <text x="416" y="434" fill="#b9b9c3" font-size="12.5">Push each value to both extremes,</text>
+  <text x="416" y="454" fill="#b9b9c3" font-size="12.5">read, then split values by language</text>
+
+  <rect x="64" y="486" width="296" height="62" rx="12" fill="#15151d" stroke="#2e2e3a"/>
+  <text x="80" y="510" fill="#8a8a96" font-size="11">PROBLEM 3</text>
+  <text x="80" y="532" fill="#e9e9ef" font-size="13">I had never checked if it was safe</text>
+  <line x1="360" y1="517" x2="396" y2="517" stroke="#8b8bf5" stroke-width="1.4" marker-end="url(#b)"/>
+  <rect x="400" y="486" width="296" height="62" rx="12" fill="#12121a" stroke="#3a3a48"/>
+  <text x="416" y="510" fill="#b9b9c3" font-size="12.5">Ran my own audit, 73 findings,</text>
+  <text x="416" y="530" fill="#b9b9c3" font-size="12.5">one real leak closed</text>
+
+  <line x1="380" y1="548" x2="380" y2="576" stroke="#6b6b7e" stroke-width="1.4" marker-end="url(#a)"/>
+
+  <rect x="146" y="580" width="468" height="76" rx="12" fill="#171722" stroke="#8b8bf5" stroke-width="1.2"/>
+  <text x="380" y="606" text-anchor="middle" fill="#c7c7ff" font-size="12" font-weight="700">NOW</text>
+  <text x="380" y="628" text-anchor="middle" fill="#e9e9ef" font-size="14">30 posts and 30 English versions, all as files</text>
+  <text x="380" y="647" text-anchor="middle" fill="#8a8a96" font-size="12">If something bothers me, I no longer search. I fix it.</text>
+
+  <text x="380" y="692" text-anchor="middle" fill="#8a8a96" font-size="12">Writing code was the only thing I could not do. The rest was judgment.</text>
+</svg>
