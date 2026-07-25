@@ -4,6 +4,7 @@ import {stripTitleEmphasis} from '@/shared/utils'
 
 import {SiteConfig} from '@/config'
 import {getAllPosts} from '@/utils/Post'
+import {xmlEscape} from '@/utils/xml'
 
 export async function GET() {
   const allPosts = await getAllPosts('en')
@@ -31,13 +32,13 @@ export async function GET() {
 
         return `
         <item>
-          <title><![CDATA[${stripTitleEmphasis(post.frontMatter.title)}]]></title>
-          <link>${postUrl}</link>
-          <guid>${postUrl}</guid>
+          <title>${xmlEscape(stripTitleEmphasis(post.frontMatter.title))}</title>
+          <link>${xmlEscape(postUrl)}</link>
+          <guid>${xmlEscape(postUrl)}</guid>
           <pubDate>${postDate.toUTCString()}</pubDate>
-          <description><![CDATA[${postDescription}]]></description>
+          <description>${xmlEscape(postDescription)}</description>
           ${post.frontMatter.tags
-            .map((tag) => `<category><![CDATA[${tag}]]></category>`)
+            .map((tag) => `<category>${xmlEscape(tag)}</category>`)
             .join('')}
         </item>
       `

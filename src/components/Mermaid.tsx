@@ -91,7 +91,10 @@ export default function Mermaid({chart}: {chart: string}) {
       mermaid.initialize({
         startOnLoad: false,
         theme: isDark ? 'dark' : 'base',
-        securityLevel: 'loose',
+        // 'loose'는 다이어그램 안의 javascript: 링크와 임의 함수 호출을 그대로 통과시킨다.
+        // 이 컴포넌트는 결과 SVG를 innerHTML로 직접 꽂으므로 React의 방어가 닿지 않는다.
+        // 'antiscript'는 라벨의 <br/> 같은 안전한 HTML은 남기고 스크립트만 제거한다.
+        securityLevel: 'antiscript',
         fontFamily: 'inherit',
         fontSize: 20,
         flowchart: {useMaxWidth: false},

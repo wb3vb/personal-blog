@@ -34,3 +34,15 @@ yarn-error.log*
 
 # claude code local config
 .claude/
+
+# 자격증명 파일 (실수로 커밋되면 공개 저장소라 즉시 노출된다)
+# 문서 안내대로 GCP 서비스 계정 JSON 키를 내려받아 폴더에 두는 경우를 대비한 그물망이다.
+*-service-account*.json
+*serviceaccount*.json
+*-credentials*.json
+gcp-*.json
+*.key
+*.p12
+*.pfx
+credentials.json
+client_secret*.json

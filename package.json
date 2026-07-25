@@ -9,8 +9,9 @@
     "node": ">=24.14.1"
   },
   "scripts": {
-    "build": "next build",
+    "build": "node scripts/check-posts-safety.mjs && next build",
     "check:analytics": "node scripts/check-analytics.mjs",
+    "check:posts": "node scripts/check-posts-safety.mjs",
     "dev": "next dev",
     "lint": "eslint '**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx,yaml,yml,json}'",
     "lint:fix": "eslint '**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx,yaml,yml,json}' --fix",
@@ -40,7 +41,7 @@
     "isbot": "^5.1.35",
     "mermaid": "^11.12.2",
     "minisearch": "^7.2.0",
-    "next": "^16.2.7",
+    "next": "^16.2.11",
     "next-mdx-remote-client": "^2.1.9",
     "next-themes": "^0.4.6",
     "postcss": "^8.5.10",
