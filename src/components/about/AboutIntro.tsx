@@ -64,8 +64,8 @@ export function AboutIntro() {
     <div className="pb-8 pt-8 xl:col-span-2">
       <div className="prose about-dense max-w-none dark:prose-dark">
         <p className="lead">
-          Nothing happens unless I act. That is not a line I read somewhere. It
-          is the one pattern my own life keeps repeating.
+          Nothing happens unless I act. It is the one pattern my own life keeps
+          repeating.
         </p>
         <p>
           The stretches that went well all started the same way. I moved before
