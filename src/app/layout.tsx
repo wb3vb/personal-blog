@@ -154,7 +154,11 @@ export default async function Layout({children}: {children: ReactNode}) {
           <Providers>
             <LayoutWrapper>{children}</LayoutWrapper>
           </Providers>
-          {GA_MEASUREMENT_ID && (
+          {/*
+            개발 중 방문까지 GA로 보내면 그 조회수가 인기글 순위에 그대로 섞인다.
+            아래 Vercel Analytics와 같은 기준으로 프로덕션에서만 실행한다.
+          */}
+          {GA_MEASUREMENT_ID && process.env.NODE_ENV === 'production' && (
             <>
               <Script
                 strategy="afterInteractive"

@@ -69,7 +69,9 @@ export async function getPopularPostSlugs(count: number): Promise<string[]> {
     }
 
     return response.rows
-      .map((row) => row.dimensionValues?.[0]?.value?.replace(/^\//, '') ?? '')
+      // GA가 `/2026/07/25/글` 과 `/2026/07/25/글/` 을 따로 기록하는 경우가 있어
+      // 앞뒤 슬래시를 모두 떼야 fields.slug와 매칭된다.
+      .map((row) => row.dimensionValues?.[0]?.value?.replace(/^\/|\/$/g, '') ?? '')
       .filter(Boolean)
       .slice(0, count)
   } catch (error) {
