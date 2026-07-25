@@ -1,7 +1,7 @@
 /**
  * About 페이지 본문.
  * 한국어/영어 라우트 모두 이 영문 버전을 그대로 쓴다(의도된 단일 언어).
- * 업무 성과는 Resume 탭이 담당하고, 여기서는 관심사와 원칙만 다룬다.
+ * 업무 성과는 Experience 탭(/resume)이 담당하고, 여기서는 관심사와 원칙만 다룬다.
  * 문체 규칙: em dash 금지, 문장은 짧게, 수식보다 사실.
  */
 
@@ -110,7 +110,7 @@ export function AboutIntro() {
         <p>
           Where I keep the reasoning behind what I build and what I bet on.
           Writing it down is how I check that I actually did something. For the
-          work history, see the <a href="/resume">Resume</a> tab.
+          work history, see the <a href="/resume">Experience</a> tab.
         </p>
       </div>
     </div>

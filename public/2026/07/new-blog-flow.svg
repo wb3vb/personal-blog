@@ -1,0 +1,76 @@
+<svg width="760" height="724" viewBox="0 0 760 724" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Pretendard', 'Segoe UI', sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#6b6b7e"/>
+    </marker>
+    <marker id="b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#8b8bf5"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="724" rx="18" fill="#0e0e14"/>
+  <rect x="0.5" y="0.5" width="759" height="723" rx="18" fill="none" stroke="#26262f"/>
+
+  <text x="380" y="46" text-anchor="middle" fill="#e9e9ef" font-size="20" font-weight="700">구독 연장 화면 앞에서 멈춘 뒤</text>
+  <text x="380" y="70" text-anchor="middle" fill="#8a8a96" font-size="12">세 개의 문제를 넘어 지금에 이르기까지</text>
+
+  <!-- 출발 -->
+  <rect x="190" y="96" width="380" height="56" rx="12" fill="#171722" stroke="#8b8bf5" stroke-width="1.2"/>
+  <text x="380" y="120" text-anchor="middle" fill="#c7c7ff" font-size="12" font-weight="700">출발점</text>
+  <text x="380" y="140" text-anchor="middle" fill="#e9e9ef" font-size="14">그냥 내가 만들면 되는 거 아닌가</text>
+  <line x1="380" y1="152" x2="380" y2="176" stroke="#6b6b7e" stroke-width="1.4" marker-end="url(#a)"/>
+
+  <!-- 분업 판단 -->
+  <rect x="100" y="180" width="254" height="76" rx="12" fill="#15151d" stroke="#3a3a48"/>
+  <text x="227" y="206" text-anchor="middle" fill="#8a8a96" font-size="11" font-weight="700">내가 못 하는 것</text>
+  <text x="227" y="228" text-anchor="middle" fill="#b9b9c3" font-size="12.5">코드를 쓰는 것</text>
+  <text x="227" y="246" text-anchor="middle" fill="#b9b9c3" font-size="12.5">코드가 맞는지 보는 것</text>
+
+  <rect x="406" y="180" width="254" height="76" rx="12" fill="#171722" stroke="#8b8bf5" stroke-width="1.2"/>
+  <text x="533" y="206" text-anchor="middle" fill="#c7c7ff" font-size="11" font-weight="700">내가 할 수 있는 것</text>
+  <text x="533" y="228" text-anchor="middle" fill="#e9e9ef" font-size="12.5">무엇을 만들지 정하는 것</text>
+  <text x="533" y="246" text-anchor="middle" fill="#e9e9ef" font-size="12.5">원한 결과인지 보는 것</text>
+
+  <path d="M 227 256 L 227 276 L 380 276" fill="none" stroke="#6b6b7e" stroke-width="1.4"/>
+  <path d="M 533 256 L 533 276 L 380 276" fill="none" stroke="#6b6b7e" stroke-width="1.4"/>
+  <line x1="380" y1="276" x2="380" y2="296" stroke="#6b6b7e" stroke-width="1.4" marker-end="url(#a)"/>
+
+  <text x="64" y="322" fill="#8b8bf5" font-size="13" font-weight="700">넘어야 했던 세 개</text>
+
+  <!-- 문제 1 -->
+  <rect x="64" y="334" width="296" height="62" rx="12" fill="#15151d" stroke="#2e2e3a"/>
+  <text x="80" y="358" fill="#8a8a96" font-size="11">문제 1</text>
+  <text x="80" y="380" fill="#e9e9ef" font-size="13">글을 통째로 들고 나올 수 있나</text>
+  <line x1="360" y1="365" x2="396" y2="365" stroke="#8b8bf5" stroke-width="1.4" marker-end="url(#b)"/>
+  <rect x="400" y="334" width="296" height="62" rx="12" fill="#12121a" stroke="#3a3a48"/>
+  <text x="416" y="358" fill="#b9b9c3" font-size="12.5">옛 주소 40개를 먼저 보존하고</text>
+  <text x="416" y="378" fill="#b9b9c3" font-size="12.5">참조 누락을 기계로 대조</text>
+
+  <!-- 문제 2 -->
+  <rect x="64" y="410" width="296" height="62" rx="12" fill="#15151d" stroke="#2e2e3a"/>
+  <text x="80" y="434" fill="#8a8a96" font-size="11">문제 2</text>
+  <text x="80" y="456" fill="#e9e9ef" font-size="13">내 취향이 뭔지 나도 몰랐다</text>
+  <line x1="360" y1="441" x2="396" y2="441" stroke="#8b8bf5" stroke-width="1.4" marker-end="url(#b)"/>
+  <rect x="400" y="410" width="296" height="62" rx="12" fill="#12121a" stroke="#3a3a48"/>
+  <text x="416" y="434" fill="#b9b9c3" font-size="12.5">양 끝까지 밀어보고 직접 읽어</text>
+  <text x="416" y="454" fill="#b9b9c3" font-size="12.5">언어별로 값을 갈라 확정</text>
+
+  <!-- 문제 3 -->
+  <rect x="64" y="486" width="296" height="62" rx="12" fill="#15151d" stroke="#2e2e3a"/>
+  <text x="80" y="510" fill="#8a8a96" font-size="11">문제 3</text>
+  <text x="80" y="532" fill="#e9e9ef" font-size="13">안전한지 확인해본 적이 없다</text>
+  <line x1="360" y1="517" x2="396" y2="517" stroke="#8b8bf5" stroke-width="1.4" marker-end="url(#b)"/>
+  <rect x="400" y="486" width="296" height="62" rx="12" fill="#12121a" stroke="#3a3a48"/>
+  <text x="416" y="510" fill="#b9b9c3" font-size="12.5">직접 점검해 73건 확인</text>
+  <text x="416" y="530" fill="#b9b9c3" font-size="12.5">실제로 새던 통로 하나 차단</text>
+
+  <line x1="380" y1="548" x2="380" y2="576" stroke="#6b6b7e" stroke-width="1.4" marker-end="url(#a)"/>
+
+  <!-- 결과 -->
+  <rect x="146" y="580" width="468" height="76" rx="12" fill="#171722" stroke="#8b8bf5" stroke-width="1.2"/>
+  <text x="380" y="606" text-anchor="middle" fill="#c7c7ff" font-size="12" font-weight="700">지금</text>
+  <text x="380" y="628" text-anchor="middle" fill="#e9e9ef" font-size="14">국문 30편 · 영문 30편이 파일로 있는 블로그</text>
+  <text x="380" y="647" text-anchor="middle" fill="#8a8a96" font-size="12">마음에 안 들면 검색하지 않고 그냥 고친다</text>
+
+  <text x="380" y="692" text-anchor="middle" fill="#8a8a96" font-size="12">코드를 쓰는 일만 못 했고, 나머지는 전부 판단하는 일이었다</text>
+</svg>

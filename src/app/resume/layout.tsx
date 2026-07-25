@@ -5,16 +5,16 @@ import {SiteConfig} from '@/config'
 import {buildOgImageUrl} from '@/utils/og'
 
 export const metadata: Metadata = {
-  title: 'Resume - ' + SiteConfig.title,
+  title: 'Experience - ' + SiteConfig.title,
   description: SiteConfig.preview.en.resume,
   openGraph: {
-    title: 'Resume - ' + SiteConfig.title,
+    title: 'Experience - ' + SiteConfig.title,
     description: SiteConfig.preview.en.resume,
     url: `${SiteConfig.url}/resume`,
     images: [
       {
         url: buildOgImageUrl({
-          title: 'Resume - ' + SiteConfig.title,
+          title: 'Experience - ' + SiteConfig.title,
           description: SiteConfig.preview.en.resume,
           locale: 'en',
           path: '/resume',

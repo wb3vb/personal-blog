@@ -7,7 +7,7 @@ export function AboutTabs({active}: {active: 'about' | 'resume'}) {
         About
       </Link>
       <Link href="/resume" data-active={active === 'resume'}>
-        Resume
+        Experience
       </Link>
     </div>
   )
