@@ -46,3 +46,7 @@ gcp-*.json
 *.pfx
 credentials.json
 client_secret*.json
+
+# 내부 문서 (로컬 전용, 공개 저장소에 올리지 않음)
+# 블로그 집필 방법론. 로컬에서는 그대로 쓰고 git 에는 올라가지 않는다.
+writing.md
